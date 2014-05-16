@@ -1,0 +1,20 @@
+% latex table generated in R 3.0.2 by xtable 1.7-3 package
+% Fri May 16 02:38:20 2014
+\begin{table}[H]
+\centering
+\begin{tabular}{rrcccc}
+  \hline
+{\bf Number of Voxels} & {\bf P-value} & {\bf Adjusted R$^2$} & {\bf R$^2$} & {\bf AIC} & {\bf RMSE} \\ 
+  \hline
+Location Model &  & 0.129 & 0.178 & 18.60 & 8.116 \\ 
+  1000 & 0.0005 & 0.236 & 0.265 & 2.47 & 7.598 \\ 
+  2000 & 0.0009 & 0.234 & 0.263 & 2.81 & 7.610 \\ 
+  2422 & 0.0010 & 0.247 & 0.275 & 0.98 & 7.545 \\ 
+  3000 & 0.0013 & 0.244 & 0.272 & 1.46 & 7.562 \\ 
+  19047 & 0.0100 & 0.254 & 0.282 & 0.00 & 7.511 \\ 
+  47736 & 0.0500 & 0.248 & 0.276 & 0.77 & 7.538 \\ 
+   \hline
+\end{tabular}
+\caption{Table of model-fit measures for NIHSS score: reader-based location model vs. CT voxel-based ROI coverage models. We see that the model using a p-value threshold of 0.0100 corresponds to the best model on all model-fit measures: adjusted and unadjusted $R^2$ are the highest; AIC, and RMSE are the smallest.  The models using ROI coverage have comparable fit measures, but each ROI coverage model outperforms the reader-based location model, notably in the $R^2$ measures.  Thus, we infer that using CT-based regions of interest may help in prediction of NIHSS score.} 
+\label{t:nihss}
+\end{table}

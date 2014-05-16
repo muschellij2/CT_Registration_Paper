@@ -1,0 +1,633 @@
+% Template for PLoS
+% Version 1.0 January 2009
+%
+% To compile to pdf, run:
+% latex plos.template
+% bibtex plos.template
+% latex plos.template
+% latex plos.template
+% dvipdf plos.template
+
+\documentclass[10pt]{article}
+
+\usepackage{amsmath, amssymb, graphicx, cite, color}
+
+% Use doublespacing - comment out for single spacing
+%\usepackage{setspace} 
+%\doublespacing
+
+% Text layout
+\topmargin 0.0cm
+\oddsidemargin 0.5cm
+\evensidemargin 0.5cm
+\textwidth 16cm 
+\textheight 21cm
+
+% Bold the 'Figure #' in the caption and separate it with a period
+% Captions will be left justified
+\usepackage[labelfont=bf,labelsep=period,justification=raggedright]{caption}
+
+% Use the PLoS provided bibtex style
+\bibliographystyle{plos2009}
+
+% Remove brackets from numbering in List of References
+\makeatletter
+\renewcommand{\@biblabel}[1]{\quad#1.}
+\makeatother
+\newcommand{\bbeta}{\mbox{\boldmath $\beta$}}
+
+% Leave date blank
+\date{}
+\pagestyle{myheadings}
+
+\begin{document}
+
+\begin{flushleft}
+{\Large
+\textbf{Health effects of lesion localization in multiple sclerosis: Spatial registration and confounding adjustment}
+}
+\\
+Ani Eloyan$^{1,\ast}$, 
+Haochang Shou$^{2}$, 
+Russell T. Shinohara$^{3}$,
+Elizabeth M. Sweeney$^{4}$,
+Mary Beth Nebel$^{5}$, 
+Jennifer L. Cuzzocreo$^{6}$, 
+Peter A. Calabresi$^{7}$,
+Daniel S. Reich$^{8}$, 
+Martin A. Lindquist$^{9}$, 
+Ciprian M. Crainiceanu$^{10}$
+\\
+\bf{1} Ani Eloyan Department of Biostatistics, Bloomberg School of Public Health, Johns Hopkins University, Baltimore, MD, USA
+\\
+\bf{2} Haochang Shou Department of Biostatistics, Bloomberg School of Public Health, Johns Hopkins University, Baltimore, MD, USA
+\\
+\bf{3} Russell T. Shinohara Department of Biostatistics and Epidemiology, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA, Translational Neurology Unit, Neuroimmunology Branch, National Institute of Neurological Disorders and Stroke, National Institutes of Health, Bethesda, MD, USA
+\\
+\bf{4} Elizabeth M. Sweeney Department of Biostatistics, Bloomberg School of Public Health, Johns Hopkins University, Baltimore, MD, USA, Translational Neurology Unit, Neuroimmunology Branch, National Institute of Neurological Disorders and Stroke, National Institutes of Health, Bethesda, MD, USA
+\\
+\bf{5} Mary Beth Nebel Laboratory for Neurocognitive and Imaging Research, Kennedy Krieger Institute, Baltimore, MD, USA, Department of Neurology, The Johns Hopkins University School of Medicine,  Baltimore, MD, USA
+\\
+\bf{6} Jennifer L. Cuzzocreo Department of Radiology, The Johns Hopkins University School of Medicine, Baltimore, MD, USA
+\\
+\bf{7} Peter A. Calabresi Department of Neurology, The Johns Hopkins University School of Medicine, Baltimore, MD, USA
+\\
+\bf{8} Daniel S. Reich Translational Neurology Unit, Neuroimmunology Branch, National Institute of Neurological Disorders and Stroke, National Institutes of Health, Bethesda, MD, USA, Department of Biostatistics, Bloomberg School of Public Health, Johns Hopkins University, Baltimore, MD, USA, Department of Neurology, The Johns Hopkins University School of Medicine,  Baltimore, MD, USA, Department of Radiology, The Johns Hopkins University School of Medicine, Baltimore, MD, USA
+\\
+\bf{9} Martin A. Lindquist Department of Biostatistics, Bloomberg School of Public Health, Johns Hopkins University, Baltimore, MD, USA
+\\
+\bf{10} Ciprian M. Crainiceanu Department of Biostatistics, Bloomberg School of Public Health, Johns Hopkins University, Baltimore, MD, USA
+\\
+$\ast$ E-mail: Corresponding aeloyan@jhsph.edu
+\end{flushleft}
+
+
+% Please keep the abstract between 250 and 300 words
+\section*{Abstract}
+
+Brain lesion localization in multiple sclerosis (MS) is thought to be associated with the type and severity of adverse health effects. However, several factors hinder statistical analyses of such associations using large MRI datasets: 1) spatial registration algorithms  developed for healthy individuals may be less effective on diseased brains and lead to different spatial distributions of lesions; 2) interpretation of results requires the careful selection of confounders; and 3) most approaches have focused on voxel-wise regression approaches. In this paper, we evaluated the performance of five registration algorithms and observed that conclusions regarding lesion localization can vary substantially with the choice of registration algorithm. Methods for dealing with confounding factors due to differences in disease duration and local lesion volume are introduced. Voxel-wise regression is then extended by the introduction of a metric that measures the distance between a patient-specific lesion mask and the population prevalence map.
+
+{\bf Keywords:} Goodness of Spatial Registration; Voxelwise Analysis; Multiple Sclerosis
+
+
+\section*{Introduction}
+
+Multiple sclerosis (MS) is an inflammatory demyelinating disease that results in the  formation of brain lesions that can cause various debilitating effects. The use of magnetic
+resonance imaging (MRI) has allowed researchers to investigate the
+occurrence patterns of these lesions. It has been shown that the
+nature of the resulting disabilities depends heavily on the location
+of lesions in the brain \cite{bodini2011t2}. However, the problem is
+complicated, as increased disability may not correspond to 
+noticeable changes in MRI scans or to a significant increase in the lesion burden in the patients. Alternatively, new lesions may form without resulting in a change in disability indices. Hence, there is a need for detailed information about the association between brain lesion location and the MS disease severity. In this study, we quantify MS disease severity by a common disability score: the Extended Disability Status Scale (EDSS, \cite{kurtzke1983rating}).
+
+The study of lesion localization has a successful history with
+several major quantitative results. In particular,
+\cite{charil2003statistical} showed that there is an association
+between lesion load and disability  score using standard linear
+regression at every voxel. Areas of significant association were
+estimated using thresholds of t-statistic maps. In later work,
+\cite{charil2007focal} investigated the association between average
+cortical thickness and lesion loads and disability score, showing
+that cortical atrophy occurs even in MS patients with low disability
+scores. In a related work, \cite{sepulcre2009contribution} and \cite{bendfeldt2010spatiotemporal} discussed the association of gray matter volume reduction with white matter lesion localization. \cite{vellinga2009clinical}  found a statistically significant association between lesion location and disease severity scores based on non-parametric permutation tests. 
+
+More recently \cite{filli2012spatiotemporal} described the spatiotemporal distribution of white matter lesions in patients with relapsing-remitting MS as compared with patients with secondary progressive MS. In addition, \cite{rossi2012relevance} investigated the effect of white matter lesion distribution on cognition in MS and  found that in cognitively impaired patients, lesions are not as widespread as in cognitively preserved patients though the volume is higher in the first case.  Finally, \cite{holland2012relationship} commented on the association between normal cerebral perfusion patterns and white matter lesion distributions. 
+
+All these analyses depend heavily on the ability to compare
+the location of white matter lesions across subjects. The interpretations of inferences rely on a common template space and are, thus, intrinsically linked to the spatial registration
+algorithm implemented for preprocessing. The majority of these findings are obtained using affine registration (e.g. \cite{ashburner1997incorporating}), while the effect of the specific choice of registration algorithm has not been addressed. Additionally, registration
+algorithms have only been validated on healthy controls, while their
+performance on abnormal brains remains unknown. This may be a
+serious problem in MS, where brain images contain severe pathologies
+including enlarged cerebrospinal fluid spaces and lesions whose location and shape
+are highly heterogeneous in space and time. This problem is expected to be especially severe for deformable registration algorithms. In this paper, we analyze the effect of registration choice on inferences regarding the association between detailed lesion localization
+and adverse health effects in MS.
+
+In particular, we focus on five commonly used algorithms implemented
+in four software platforms: the Advanced Normalization Tools (ANTS)
+described by \cite{avants2011advanced}, FMRIB Software Library (FSL) (see
+\cite{jenkinson2012fsl} for a general overview of FSL), Medical Image
+Processing Analysis and Visualization (MIPAV)
+(http://mipav.cit.nih.gov) and Statistical Parametric Mapping (SPM) (http://www.fil.ion.ucl.ac.uk/spm/). Our main conclusion is that the choice of the algorithm greatly impacts results of statistical parametric mapping.
+
+We also extend current methods for statistical analysis in two ways: 1) by proposing an approach to account for disease duration
+and local lesion volume; and 2) by extending the voxel-wise regression
+approach by introducing a metric that measures the distance  between
+the patient-specific lesion mask and the population average prevalence map.
+By using several voxel-wise regression models that contain
+hierarchical adjustment for confounders, we assess the effects of the
+choice of registration method on results.
+
+
+
+\section*{Materials and Methods}
+
+
+\subsection*{Patients}
+
+The study consists of 98 patients in various stages of MS. The Johns Hopkins Medicine IRB acknowledged the collection and analysis of data presented in this manuscript qualifies as exempt research under the Department of Health and Human Services regulations.  MRI and clinical data were previously collected as part of IRB approved research studies with written consent provided by participants.  The identifiable MRI and clinical information accessed by the principal investigator were recorded in such a manner that subjects cannot be identified, directly or through identifiers linked to the subjects (e.g., no codes or links were retained to allow re-identification of individuals). 
+
+Histograms of EDSS scores, age, sex, and disease duration are shown in Figure \ref{fig:histdem}, and the descriptive statistics of age, disease duration and EDSS scores are shown in Table \ref{t:dem}. The EDSS scores indicate a large heterogeneity of disease burden, with a range between $0$ (normal neurological exam) to 8 (can be out of bed for a part of the day, but mostly restricted to bed or wheelchair, retains self-care functions). The age distribution is also roughly uniform between 20 and 70 years of age. Women comprise $72$\% of the dataset, which roughly reflects the relative sex distribution in the population. Finally, the distribution of duration from first symptom onset indicates that most patients have been having symptoms within the $25$ years prior to the scanning session.
+
+[Figure \ref{fig:histdem} here.]
+
+[Table \ref{t:dem} here.]
+
+
+\subsection*{Imaging data}
+
+T1-weighted, T2-weighted, fluid-attenuated inversion recovery (FLAIR)
+and proton density (PD) volumes were acquired for all subjects. T1-MPRAGE images (repetition time (TR) = 10 ms; echo time (TE) = 6 ms; flip angle
+(FA) = 8; inversion time (TI) = 835 ms, 1.1 mm isotropic resolution), 2D T2-weighted pre-contrast FLAIR images (TR = 11000 ms; TE = 68 ms; TI = 2800 ms; in-plane resolution
+= 0.83 mm$\times$0.83 mm; slice thickness = 2.2 mm), T2-weighted images
+and PD images (TR = 4200 ms; TE = 12 ms; in-plane resolution = 0.83
+mm$\times$0.83 mm; slice thickness = 2.2 mm) were acquired at the Kennedy Krieger Institute, affiliated with the Johns Hopkins University, on a Philips 3 tesla Achieva scanner (Philips Medical Systems, Best, The Netherlands).
+
+
+\subsection*{Lesion Segmentation}
+
+The T1-weighted images were rigidly aligned as described in the next section to a common MNI template and were used for segmentation of the lesions along with the registered FLAIR images. White matter lesions for all subjects were hand-segmented by a technician with over 10 years of experience in delineating white matter MS lesions. For each image, the technician marked the lesion contours using a slice by slice approach. The hand-segmented lesion masks were used in the following analyses. While obtaining technician-drawn lesions is extremely time intensive, these segmentations are considered the gold standard. In future studies that do not have hand-segmentations, we may consider automatic cross-sectional \cite{sweeney2013oasis} or longitudinal \cite{sweeney2013automatic} segmentation algorithms using the data from all modalities.
+
+
+\subsection*{Registration Algorithms}
+
+We applied five different registration algorithms to transform the data into a template space. The first registration algorithm was a rigid registration of all subjects to a common template space.  All image processing for the rigid registration was performed in the Medical Image Processing, Analysis and Visualization (MIPAV) application \cite{mcauliffe2001medical} with Java Image Science Toolkit (JIST)  \cite{lucas2010java}.   We first applied the N3 inhomogeneity correction algorithm \cite{sled1998nonparametric} and removed extracerebral voxels using SPECTRE, a skull-stripping procedure \cite{carass2011simple}.   The T1-weighted images for each subject were then rigidly aligned (no scaling was performed) to the Montreal Neurological Institute (MNI) standard space (1mm$^3$ voxel resolution). The resulting rigidly aligned volumes were used as inputs for the other four registration algorithms and for the manual lesion segmentation. 
+
+The second registration algorithm is labeled ``ANTS affine" and consisted of applying the affine registration implemented in the ANTS package \cite{avants2011advanced} to the images obtained by rigid registration. Mutual information was specified as the similarity metric with a 4-bin square joint histogram and the weight of 1, and a Gaussian regularization term with sigma of 3. 
+
+The third registration algorithm is labeled ``ANTS diffeo", and consisted of applying the SyN[0.25] diffeomorphic model for transformation via the cross correlation similarity metric including a Gaussian regularizer with sigma of 1 with an 8-bin square joint histogram and the weight of 1 in the ANTS software \cite{avants2011advanced} to the images obtained by rigid registration. In both the affine and diffeomorphic registration models performed via the ANTS software, the hand-segmented mask of the lesions was provided to focus the optimization algorithm on the area of the brain outside of the lesion mask. 
+
+The fourth registration is labeled ``FSL nonlinear", and consisted of applying the nonlinear
+registration tool in FSL, FNIRT \cite{jenkinson2012fsl}, to the images obtained by rigid registration. Just as with ANTS, we provided the lesion masks in the registration algorithm. Default parameter settings were used for FNIRT while subsampling at levels of 4, 4, 2 and 1. The FNIRT tool in FSL provides only the nonlinear transformation of the images assuming that the images have already been linearly transformed. Hence, we first applied the FLIRT tool for affine registration of images into MNI space before proceeding to FNIRT registration. 
+
+The fifth registration algorithm labeled ``DARTEL'' consists of applying the Diffeomorphic Anatomical Registration Through Exponential Lie algebra (DARTEL) toolbox in SPM \cite{friston2011statistical}. The T1-weighted images were segmented into six tissue types. Both white matter and gray matter images were used to construct an average group template and subject-specific flow-fields which were then used to register the lesion masks into the MNI space using a final affine transformation. Default settings were used for the variables in DARTEL with two exceptions during normalization to MNI space: we decreased the kernel size for the Gaussian filter applied to the data to 1-mm and specified 1-mm isotropic voxel size  for our output images to match the resolution of the output images of the other registration methods. After directly applying DARTEL to the rigidly registered images we found that the registration quality was very poor. To alleviate the problem we filled in the lesions with the average normal appearing white matter (NAWM) intensities before applying DARTEL. In other words, for each subject the average NAWM intensity was assigned as the intensity of all voxels in each lesion 
+\cite{ceccarelli2012impact}. LesionTOADS, an open source lesion segmentation software (\cite{shiee2008topologically}, \cite{shiee2010topology}), was used for segmenting the NAWM for the 98 subjects in the study. 
+
+The images with lesions filled with the average NAWM were used as inputs for ``DARTEL'', whereas the inputs for ``ANTS affine'', ``ANTS differo'', and ``FSL nonlinear'' were the images with lesion voxels masked out as background. For the last three algorithms masking out the lesions is the recommended for preprocessing the data. To compare the registration results of all four methods for the exact same dataset with average NAWM assigned as the intensity of each voxel in each lesion, we used ``ANTS affine'', ``ANTS differo'', and ``FSL nonlinear'' to register these data as well as the data with masked lesions. 
+
+[Figure \ref{t:reg} here]
+
+The registered images for three subjects are shown in Figure \ref{t:reg} with the corresponding
+labels. We chose two subjects with enlarged ventricles and one subject with small
+ventricles. Images indicate that gross brain features remain
+relatively unchanged, though important differences that can impact
+results in subsequent statistical parametric mapping can easily be noticed. A visual inspection of the differences between the algorithms is discussed in the next section.
+
+
+
+\subsection*{Assessing Registration}
+
+Quantifying the quality of spatial registration algorithms is a
+daunting task: 1) there is no gold standard for assessing
+registration results; 2) current approaches are based largely on
+qualitative comparative assessments of the original and registered
+images; and 3) there is a lack of systematic analyses of implications of
+registration in populations of brain images, especially when the subjects in the population
+exhibits obvious pathologies. Landmark based measures have been used in the literature to compare the effectiveness of registration algorithms \cite{ardekani2005quantitative}. The general consensus favors nonlinear registration algorithms such as the SPM DARTEL method used in this manuscript \cite{klein2009evaluation}. 
+
+Here we propose an approach to assessing the quality of registration in the context of MS brain imaging. We start by performing a visual inspection of the results and notice that the relative effectiveness of the five registration approaches varies as individual anatomy deviates from the template. When the ventricles are only slightly larger than normal as for Subject 1 in Figure \ref{t:reg}, ANTS affine, ANTS diffeo, FSL Nonlinear as well as SPM DARTEL transform the image into the template space better than a simple rigid transform. However, when ventricles are very large, as is typical in subjects with MS, the quality of the registration becomes harder to assess and interpret. This happens because brains that have fundamentally different pathologies and shapes are being forced onto the same template. While this is perhaps not surprising, it should be of great concern to researchers who apply these registration methods to diseased populations, especially because it is hard to anticipate when registration will work well or fail badly. For example, Subject 2 in Figure \ref{t:reg} has both enlarged ventricles and a high total lesion volume, and both FSL Nonlinear and SPM DARTEL seem to perform better than the other registration methods. For Subject 3 in Figure \ref{t:reg}, who has enlarged ventricles and low lesion volume, DARTEL performs very poorly. 
+
+In order to develop a possible metric to evaluate registration accuracy, we note that the visible lesions segmented by the technician are all in white matter. Thus, it makes sense to expect the lesions to remain in the white matter of the template after registration is performed.
+Hence, we propose the following goodness-of-spatial-registration (GSR) metric at the subject level: the proportion of lesion voxels in the original unregistered image that
+do not appear in the white matter of template space after registration. While this only constitutes a partial solution, the idea can easily be extended to registration in general: manually identify landmark areas in the native space of the images, such as gray matter, regions of interest (ROI) such as a brain tumor or the relative spatial location of an ROI from a predefined landmark, and obtain the proportion of voxels in the template, after registration, that are misplaced. While a more complete solution is desirable, it is beyond the scope of this manuscript. Instead, we focus on the GSR metric henceforth.
+
+
+\subsection*{Prediction of EDSS Based on Lesion Localization}
+
+For each registration algorithm we evaluate the association
+between lesion localization and disease severity as measured by the
+EDSS score. At every voxel in the template space, we ran a linear
+regression model of the type
+\begin{equation}\label{eq:edss_regression}
+{\rm EDSS}_i=\beta_0+\beta_1(v) {\rm Lesion}_i(v)+X^t_i \bbeta_2 + \epsilon_{iv}, 
+\end{equation}
+where ${\rm EDSS}_i$ is the EDSS score for subject
+$i=1,\ldots,I$ with $I=98$, ${\rm Lesion}_i(v)$ is a binary covariate that indicates
+whether subject $i$ has a lesion at voxel $v$, $X^t_i$ is a vector
+of subject-specific confounders, and $\epsilon_{iv}$ are treated as
+independent homoscedastic errors. We limit our analysis to voxel
+locations where more than $5$ patients exhibit lesions. The vector of
+confounders, $X_i$, contains up to $4$ subject-specific confounders
+including age and sex. A third interesting confounder is disease
+duration, as some areas in the brain may accumulate lesions over
+time without having a strong impact on the EDSS. Thus, not
+accounting for disease duration would naturally identify strong
+associations in high lesion density areas simply because MS
+subjects' health deteriorates over time. A fourth confounder was
+designed to account for potential association between EDSS score and lesion locations that are less common across subjects. More specifically, for each subject we
+calculated a distance from the subject-specific lesion mask to the
+population lesion mask; this was done separately for each
+registration. Here the population lesion mask is defined as the
+collection of voxel locations in the template space where more than
+$5$ subjects had a lesion. We define as $n_i$ the number of voxels
+where subject $i$ has a lesion and there are no more than $5$ other
+subjects ($4.9\%$ of the study population) who have a lesion at the same voxel. If the total lesion
+volume (TLV) of  subject $i$ defined as ${\rm TLV}_i$ is the total
+number of voxels in the lesion mask of subject $i$ then we define
+the location-discrepancy index (LDI) as
+\begin{equation}\nonumber
+{\rm LDI}_{i} = \frac{n_i}{{\rm TLV}_i}.
+\end{equation}
+The ${\rm LDI}_{i}$ measure takes values between $0$ and $1$, with a
+large value indicating more atypical lesion pattern for subject $i$.
+Subjects with very large values of ${\rm LDI}_{i}$ may be viewed as
+outliers in the sense of their lesion structure. Correcting for
+${\rm LDI}_{i}$ will allow up to model the degree of departure
+from the average lesion distribution. TLV can also be considered as
+a confounder in the model. Indeed, a larger TLV may be associated
+with a longer time since disease onset.
+
+
+
+
+\section*{Results}
+
+
+\subsection*{Histograms of Lesions in the Brain}
+
+To visualize the localization of lesions, we first combined
+information from lesion masks of 98 patients with MS. As mentioned above, lesions were manually segmented in the rigidly registered space. Using the resulting lesion masks we
+obtained the 3 dimensional histogram of the lesion localization for
+our study population. More precisely, for every voxel location we
+calculated the proportion of subjects who have a lesion at that
+particular voxel. The resulting image based on the rigid
+transformation of the data is shown in Figure~\ref{fig:LesHist}.
+Here the voxels colored in red correspond to a higher proportion of
+patients with lesions at that voxel whereas light blue color
+indicates voxels with a smaller proportion of patients having
+lesions at that voxel. The histogram indicates that lesions are
+fairly widely distributed in the brain, with a higher concentration
+around ventricles.
+
+[Figure \ref{fig:LesHist} here.]
+
+
+Similar histograms were obtained for ``ANTS affine", ``ANTS diffeo", ``FSL nonlinear" and ``DARTEL''; see Figure~\ref{fig:histograms}. The ``ANTS affine" and ``ANTS diffeo" registrations appear to have shifted many of the lesions away from the ventricles of the template space; compare the results for ``rigid" displayed in
+Figure~\ref{fig:LesHist} with the first row in Figure~\ref{fig:histograms}. The ``FSL nonlinear" and ``DARTEL'' registration methods lead to results that seem to be qualitatively different from the first two registrations. The 3D histograms for ``FSL nonlinear" and ``DARTEL'' indicate a smaller number of lesions and a different spread pattern of lesions, which suggests that the registration procedures can either reduce or enlarge the size of the lesions in the same template space. Recall that the hand segmented lesion masks are provided for the ``ANTS affine", ``ANTS diffeo" and ``FSL nonlinear''. The 3D histogram for ``DARTEL'' indicates that lesions are registered outside of the ventricles in the template image, however, the localization of lesions seems to be more spread out as compared with the rigid registration map especially in the anterior of the brain. 
+
+[Figure \ref{fig:histograms} here]
+
+The differences between spatial registration techniques observed using a simple visualization tool such as the 3D histogram are striking. These differences may directly affect the reliability and interpretation of statistical parametric mapping. The main question of interest in this paper is whether and to what extent are the results of studies of association betweed lesion locations and disease severity affected by the registration algorithm or biologically irrelevant factors.
+
+
+\subsection*{Assessing the Goodness-of-Spatial-Registration}
+
+While the previous visualization approaches provide insights into
+the data and the distortions induced by spatial registration, the
+quantification of observed results remains elusive. Thus, we focus
+on quantification of the Goodness-of-Spatial-Registration (GSR). At
+the subject level, we define GSR to be the proportion of voxels that
+are in lesions in the native space, but are not in the white matter
+after registration. FAST in FSL was used to segment the white matter in the template brain. Thus, GSR is a measure that depends both on the
+subject and on the registration approach.
+
+[Figure \ref{fig:eval} here.]
+
+Figure \ref{fig:eval} displays GSR for all subjects and each registration procedure: black for ``rigid", red for ``ANTS affine", blue for ``ANTS diffeo",  green for ``FSL nonlinear" and purple for ``DARTEL''.  Table \ref{t:gsr} shows the mean, standard deviation (SD), average ranking of each method across subjects and  the mean squared error (MSE) of GSR across subjects for each of the registration algorithms. The MSE is defined as
+\begin{equation}\nonumber
+{\rm MSE} = {\rm Var}({\rm GSR}_r) + {\rm Bias}^2({\rm GSR}_r)
+\end{equation}
+where ${\rm GSR}_r$ is the statistic computed for registration algorithm $r \in $  (``rigid'', ``ANTS affine'', ``ANTS diffeo'', ``FSL nonlinear'', ``DARTEL''). The ${\rm Bias}({\rm GSR}_r)$ of the estimator is the mean bias of the $r$th algorithm GSR with respect to the truth, which, in this case, is GSR=0 (white matter lesions should be registered to white matter).
+
+First, all methods exhibit some bias and variance, though DARTEL is by far the most variable. In fact, DARTEL, exhibits good performance in a large subset of subjects and fails completely in others. 
+ As expected, on average ``rigid'' performs badly, though it exhibits low variability around bad values of GSR across subjects. We conclude that ``rigid'' performs consistently, but poorly. This is probably due to the fact that the shape of the original brain is preserved while the white-matter overlap is poor. Surprisingly, we found high variability in the performance of ``DARTEL'' in registering the lesions to the white matter of the template space correctly in terms of GSR with a mean GSR of 0.37 and standard deviation of  0.349. In fact for 6 subjects out of 98 the total white matter lesion volume after registration was equal to zero.  ``ANTS affine'', ``ANTS diffeo'' and ``FSL nonlinear'' registration procedures shift lesions to overlap better with white matter, though ``ANTS diffeo'' seems to perform the best on average, at least in terms of GSR. Indeed, its average GSR is 0.16 with a standard deviation of 0.099. ``ANTS affine'' performs similar to ``ANTS diffeo'' and ``FSL nonlinear'' with mean GSR of 0.18 and standard deviation of 0.173. However, in terms of median GSR ``FSL nonlinear'' outperforms all other methods with a median GSR of 0.12. In addition, ``FSL nonlinear'' is ranked as the better algorithm on average in terms of minimizing GSR. The complete distribution of GSR for each registration algorithm is displayed in Figure \ref{fig:eval}. We conclude that the performance of all algorithms is worrying, with an especially unpredictable behavior for  ``DARTEL'' , which performs very badly in a large proportion of subjects (e.g. 10\% of the subjects have GSR larger than 0.9). 
+
+[Table \ref{t:gsr} here.]
+
+The resulting GSR values for ``ANTS affine'' (mean GSR of 0.17, median GSR of 0.15, and standard deviation of 0.12), ``ANTS diffeo'' (mean GSR of 0.16, median GSR of 0.14, and standard deviation of 0.11), and ``FSL nonlinear'' (mean GSR of 0.25, median GSR of 0.21, and standard deviation of 0.14) when the lesion voxels of the input images were assigned the average NAWM intensity showed that masking the lesions as background is indeed better in terms of GSR, especially for ``FSL nonlinear''. 
+
+Admittedly, when registering individual images, one may select the parameters to better register the individual brains to the template space for each of the registration algorithms. However, the purpose of this paper is to show the performance of the methods for a population of patients. While we tried different settings of parameters for three of the registration algorithms, ``ANTS diffeo", ``ANTS affine" and ``FSL nonlinear'', we chose parameters for the population and did not change them for individual images. As mentioned above, the parameters for ``DARTEL'' were used as specified by the software. 
+
+Interestingly, we found some differences in total lesion volume for each subject depending on the registration algorithm. The average total lesion volumes for ``rigid'', ``FSL nonlinear'' and ``DARTEL'' were similar, however the average total lesion volume for ``ANTS affine'' and ``ANTS diffeo'' was 3 times that of the average total lesion volume for ``rigid''. As research often focuses on much smaller signals, these differences raise questions about the reliability and reproducibility of findings especially in the context of voxel-vise analysis of the data where the sheer size of the lesions may dominate the results. 
+
+While lower GSR numbers can indicate better registration, the
+measure is far from perfect. Indeed, a low GSR indicates that white
+matter lesions correctly remain in white matter, without measuring
+the relative position of the lesions with respect to various
+landmarks. Indeed, while ``ANTS diffeo" performs well at keeping
+lesions in the white matter it may actually do so at the price of
+``over-smearing" the image and providing visual representations of
+lesions in areas of the white matter that are too far from the
+ventricles. In addition, ``ANTS affine'' and ``ANTS diffeo'' methods seem to enlarge lesions, which results in a larger lesion volume in the template space compared to the size of those lesions in the native space. Currently, we are unaware of any existent quantitative method for assessing this problem.
+
+
+\subsection*{Prediction of EDSS Based on Lesion Localization}
+
+
+We run several versions of model~(\ref{eq:edss_regression}) starting with the simplest case and then building the model by incorporating different choices of potential confounders to investigate their effects on the statistically significant association between lesion locations and EDSS. More precisely, the five models are:
+
+\vspace{0.1in}
+\begin{tabular}{rll}
+\noindent $\mathcal{M}_1:$ & $ {\rm EDSS}_i =$ & \hspace{-0.18in} $\beta_0+\beta_1(v) {\rm Lesion}_i(v) + \epsilon_{iv}, $\\
+$\mathcal{M}_2:$ & $ {\rm EDSS}_i = $ & \hspace{-0.18in} $ \beta_0+\beta_1(v) {\rm Lesion}_i(v) + \gamma_1(v){\rm TLV}_i + \epsilon_{iv}, $\\
+$\mathcal{M}_3:$ & $ {\rm EDSS}_i = $ & \hspace{-0.18in} $ \beta_0+\beta_1(v) {\rm Lesion}_i(v) + \gamma_2(v){\rm LDI}_i + \epsilon_{iv}, $\\
+$\mathcal{M}_4:$ &$  {\rm EDSS}_i = $ & \hspace{-0.18in} $ \beta_0+\beta_1(v) {\rm Lesion}_i(v) + \gamma_1(v){\rm TLV}_i  +\gamma_3(v){\rm Age}_i+\gamma_4(v) {\rm Gender}_i + \epsilon_{iv},$ \\
+$\mathcal{M}_5:$ &$  {\rm EDSS}_i = $ & \hspace{-0.18in} $ \beta_0+\beta_1(v) {\rm Lesion}_i(v)  + \gamma_1(v){\rm TLV}_i +\gamma_3(v){\rm Age}_i + \gamma_4 (v) {\rm Gender}_i + $ \\
+&&\hspace{-0.18in} $ \gamma_5 (v) {\rm Duration}_i  + \epsilon_{iv},$ \\
+\end{tabular}
+\vspace{0.1in}
+
+The p-values of voxel-vise regression of EDSS scores on lesion
+incidence vectors corresponding to the test $H_{0,v}:\beta_1(v)=0$
+are shown in Figure \ref{fig:pval}. Each row in Figure
+\ref{fig:pval} corresponds to one of the models above. In the first
+model - $\mathcal{M}_1$ in the top row, the p-values based on the ``ANTS
+affine" and ``ANTS diffeo" registration are smaller with a clear
+spatial distribution of p-values smaller than 0.05 near the ventricles. Patterns of p-values that are smaller than 0.05 are far less
+clear for the ``rigid", ``FSL nonlinear" and ``DARTEL'' registration approaches.
+In all cases, the  areas highlighted in bright red display p-values of
+less than 0.05, however none survive Bonferroni correction. 
+
+[Figure \ref{fig:pval} here.]
+
+The first model indicates that if a patient has a lesion in a voxel near the ventricles, their disease
+severity score may be higher than if they do not have a lesion. An
+interesting question is whether the lower p-values in the last
+analysis are indication of structural association between lesion
+locations and EDSS or whether that is merely a factor that indirectly shows
+how long the patient has been affected by MS. In other words, the
+relationship between lesion location and EDSS may be confounded by
+the total lesion volume (TLV) measures in mm$^3$. We first note, that if we compute a registration specific TLV the numbers vary depending on the registration algorithm. This can be observed in the lesion histograms in Figure \ref{fig:histograms}. Using a simple linear regression of EDSS on the registration specific TLV for each of the 4 registration algorithms, we find that the TLV is a significant predictor of EDSS
+based on the first four registration algorithms with the following
+coefficients and p-values: ``ANTS affine'' $1.73*10^{-5}$ (0.0166),
+``ANTS diffeo'' $1.69*10^{-5}$ (0.0188), ``FSL nonlinear''
+$3.73*10^{-5}$ (0.0178) and ``rigid'' $4.57*10^{-5}$ (0.0083). The
+analysis indicates that as the TLV in the patients increases the
+EDSS score increases, as expected. However, for ``DARTEL'' the p-value was found to be 0.074 indicating that TLV is not a significant predictor of EDSS. 
+
+In the second model $\mathcal{M}_2$, we used  TLV as a second
+variable in the regression model along with the indicator variable
+of lesion prevalence. The second row of Figure \ref{fig:pval} shows
+the resulting p-values for the $H_{0,v}:\beta_1(v)=0$. The p-values
+for testing $H_{0,v}:\beta_1(v)=0$ are now larger. This suggests
+that for subjects with the same total lesion volume, the statistical association
+between the specific location of the lesion and the EDSS is not as
+strong as that estimated by $\mathcal{M}_1$.
+
+In the model $\mathcal{M}_3$, we incorporated the new measure of
+lesion discrepancy index (LDI) along with the indicator variable of
+lesion incidence. The p-value maps  for $H_{0,v}:\beta_1(v)=0$
+displayed in Figure \ref{fig:pval} indicate smaller p-values. A
+simple linear regression of the EDSS score on the LDI for each of
+the registration algorithms results in p-values as follows: 0.47 -
+``rigid'', 0.09 - ``ANTS affine'', 0.12 - ``ANTS diffeo'', 0.06 -
+``FSL nonlinear'' and 0.05 - ``DARTEL''. These results are consistent with those from
+model $\mathcal{M}_1$ and indicate insufficient statistical evidence of association between the degree of discrepancy
+of the subject-specific lesion pattern from the average distribution of lesions and EDSS score.
+
+The effects of the demographic variables such as age, duration of
+the disease, and gender of the patients are explored in models
+$\mathcal{M}_4$ and $\mathcal{M}_5$.  In model $\mathcal{M}_5$, age
+is a significant predictor of EDSS after accounting for gender and
+lesion incidence. Many of the p-values are significant for testing
+$H_{0,v}:\gamma_3(v)=0$ (localized age effect) after Bonferroni
+correction, while gender and duration of disease are not significant
+predictors of EDSS with high p-values for tests
+$H_{0,v}:\gamma_4(v)=0$ and $H_{0,v}:\gamma_5(v)=0$. We observe
+similar results for model $\mathcal{M}_4$ where age is a significant
+predictor of EDSS.
+
+As noted above, none of the p-values for testing
+$H_{0,v}:\beta_1(v)=0$ (localization effect on EDSS) obtained from
+models $\mathcal{M}_1$-$\mathcal{M}_5$  survived a Bonferroni
+correction for multiple comparisons. A major difference between our
+findings and those of \cite{charil2003statistical} is that they had
+more than $400$ subjects, whereas we only had $98$. Thus, we
+re-assessed our results by simulating the scenario of having $400$ subjects instead
+of $98$ and re-calculating p-values. This can be done simply by
+dividing our standard errors by $2$. The newly ``calculated"
+p-values were then corrected for multiple comparisons via two
+methods: the Bonferroni correction and False Discovery Rate (FDR).
+The thresholded maps of the resulting p-values at the 0.05 level are
+shown in Figure \ref{fig:pvalc}. 
+
+[Figure \ref{fig:pvalc} here.]
+
+If Bonferroni correction is used, then $5,925$ lesion voxels  out of 52,821 tests performed simultaneously were found to have a slope statistically different from zero using ``ANTS affine'', $6,520$ out of 54,614 using ``ANTS diffeo'', $1722$ out of 19,497 using ``FSL nonlinear'', $109$ out of 10,119 using ``rigid'', and $40$ out of 11,918 using ``DARTEL'' registration and model $\mathcal{M}_1$. The results are drastically different when using FDR for multiplicity correction. For instance, the number of significant slopes when ``ANTS affine'' is used for registration in Model $\mathcal{M}_1$ increases to 38,196 as compared with the 5,925 in the case of Bonferroni correction. This would lead to a different conclusion in identifying regions of the brain where the presence of lesions could be assumed to be correlated with the EDSS score. Furthermore, when including TLV in the model, the number of lesion voxels that were found to be significantly associated with the EDSS score was reduced
+dramatically to $416$ based on ``ANTS affine'', $671$ based on ``ANTS
+diffeo'', $245$ based on ``FSL nonlinear'' and $128$ based on ``DARTEL'' in model $\mathcal{M}_2$. The results from models $\mathcal{M}_4$ and
+$\mathcal{M}_5$ were similar to the results from model $\mathcal{M}_2$. 
+
+After correcting for the effect of the proposed LDI measure in model $\mathcal{M}_3$, the number of slopes that are statistically significant based on ``ANTS affine'' registration was $6,901$, based on ``ANTS diffeo'' - 7,253, based on ``FSL nonlinear'' - 566 and based on ``DARTEL'' - 23 which suggests that for the patients with similar LDI measures, the probability of having a lesion in many areas of the brain has a significant effect on their EDSS score, however, this conclusion does not hold for most voxels if ``FSL nonlinear'' or ``DARTEL'' registration methods were used. 
+
+
+
+\section*{Discussion}
+
+We began this project  as a study of association between lesion
+localization in multiple  sclerosis and EDSS. However, during the
+course of the project our focus shifted, as we encountered several methodological hurdles. The analyses presented in this paper were crafted to illustrate the influence of image registration variation and the effect of other confounding variables on the association between lesion localization and MS severity as measured by the EDSS score. One of the most important findings of this paper is that spatial registration algorithms that have been developed
+in the context of registration of healthy brains provide mediocre results for brains of subjects
+with multiple sclerosis pathology. In addition, the effectiveness of different spatial registration
+algorithms can lead to fundamentally different conclusions when one is
+quantifying the association between lesion localization and health
+outcomes. Consequently, much more in depth attempts are needed to quantify
+goodness of registration and comparison across platforms and
+diseases. We also demonstrated that after accounting for multiple testing and controlling
+for total lesion volume, the strength of the association between
+localization and EDSS score is much weaker. Finally, in our sample, particular patterns of
+lesions as measured by LDI do not seem to be significantly associated with EDSS score.
+
+In an attempt to quantify the registration accuracy we proposed a
+new Goodness-of-Spatial-Registration measure as the
+proportion of lesion voxels in the transformed image that are not in
+white matter, which is essentially a measure of a combination of tissue classification and spatial registration. When comparing the five different registration
+algorithms via GSR, we find that the ANTS and FSL perform better
+than SPM or rigid registration. When comparing the number of lesion
+voxels in ANTS registered images with FSL or SPM registered images, we found
+that the TLV for ``ANTS affine'' and ``ANTS diffeo'' are much higher
+than the TLV for ``FSL nonlinear'', ``rigid'' and ``DARTEL''. There are several
+other aspects of the registration accuracy that can be considered,
+such as whether the lesion volumes are preserved after the
+transformation or if the lesions have the correct placement in the
+template space in reference to other brain regions, etc.
+
+The segmentation/registration of images using SPM was most troubling for some of the subjects in the study. As discussed above, we used the parameter settings recommended by SPM8 (with 2 exceptions: we decreased the kernel size for the Gaussian filter applied to the data to 1-mm and specified 1-mm isotropic voxels for our output images to match the resolution of the output images of the other registration methods). We first used the rigidly registered images as inputs for SPM's segmentation procedure and the resulting gray and white matter images as inputs for DARTEL, and found that the performance of the method was much worse (results not shown.) We assumed that since we did not exclude the white matter lesions from the rigidly registered images as we did with ANTS and FSL implementations, these areas may have been mislabeled as gray matter by SPM \cite{bendfeldt2010spatiotemporal}. To mitigate the issue, we proceeded by filling in the lesions with average normal appearing white matter based on the white matter segmentations we obtained from FSL FAST. When using the new images as inputs for SPM's segmentation procedure and the resulting gray and white matter images as inputs for DARTEL, the results improved for some of the subjects, though overall the performance of the algorithm remained dismal for a number of subjects. Interestingly, most of the subjects who continued to have very high GSR values had low lesion loads. After further investigation of the SPM segmentation results, we have found that the SPM tissue segmentation of these images was poor; this could be a possible explanation for some of the high GSR values. 
+
+In addition, DARTEL works by iteratively estimating the deformations that match subject-specific tissue class images to a template and then using the latest deformation estimates to update the template \cite{ashburner2007fast}, \cite{ashburner2009computing}. Because the final template used for registration depends on all subject-specific tissue segmentations, inclusion of poorly classified gray and white matter images from several subjects as inputs to DARTEL could reduce the effectiveness of DARTEL to register images even from subjects whose gray and white matter tissue had been adequately classified. Hence, it may be reasonable to exclude the subjects with high GSR values from the study to improve the registration accuracy for the population. 
+
+One decision that might have contributed to the worse-than-expected performance of all of the algorithms is that we used the rigidly registered images as inputs for all the algorithms whereas it may be reasonable to try and minimize the number of image interpolation steps and use the observed images in the native space as inputs for each registration algorithm. Nevertheless,  some algorithms, such as FNIRT in FSL, require input images that have already undergone an affine registration. When we used the rigidly registered images in our first run of ``FSL nonlinear'' the resulting GSR values were very high and the registration was poor. Hence, it is important to check the steps of the registration procedures as well as check the results by a metric such as GSR before commencing the statistical analysis. 
+
+Another important point is that the healthy MNI template was used for registration. As a result the highly deformed brains are registered to the template that was constructed from typical brains. In some studies it may be reasonable to construct a study specific template for population-level analysis; however, in that case, comparisons between analyses may be impossible. An important open question is what types of features one might expect in a nonlinearly registered brain in terms of the deformation of lesions and other structures of the brain. This problem extends to healthy brains as well, since brain tissue is lost with age. In MS particularly, a significant amount of tissue may be lost as the disease progresses. Hence, when nonlinearly aligning MS patient's scan to any template the algorithm is often trying to register the remaining tissue to the lost structure. There are no guidelines for the algorithm for performing this, nor can there be, since we may not know what tissue is lost in the MS patient's brain. The results can be different depending on the optimization routine used by the algorithm. This can adversely affect the analysis of the resulting images, especially in the case of voxelwise inference of associations. 
+
+Some studies described the relationship of lesions localization in MS as compared with other neurological disorders such as neuromyelitis optica spectrum disorder \cite{matthews2013distinction}. \cite{giorgio2013location} and \cite{charil2013predicting} commented on the relevance of lesion location in clinically isolated syndrome (CIS) patients when predicting the short-term conversion to MS, whereas \cite{dalton2012brain} investigated the effect for up to 20 years period after presentation of CIS in MS patients. \cite{riccitelli2011voxelwise} discussed the distribution of lesions in MS patients with fatigue. Even though the proposed lesion discrepancy index was not found to be significantly associated with the EDSS score, it may be useful in diagnosing MS and distinguishing MS from other causes of white matter lesions. A study of patients with white matter lesions caused by different neurological disorder will be of interest in finding associations of LDI with the type of disease that causes lesions in the white matter. In addition, patients with small vessel disease along with MS may have more randomly spread out white matter lesions in unexpected locations as well as MS patients with a very high lesion load which would result in a high LDI value for these patients. The association of LDI with other metrics of disease burden can be discussed for a study with more patients in various stages of the disease. 
+
+We have found that results concerning the association of lesion locations and EDSS scores depend  heavily on the spatial image registration approach used, as well as on the statistical analysis, especially on potential confounders. Additionally, as shown in Figure \ref{fig:pvalc} the locations that were found statistically significantly associated with EDSS  are not particularly revealing in terms of functional anatomy. 
+
+
+
+\section*{Acknowledgments}
+
+The project described was supported by R01EB012547 from the National Institute of Biomedical Imaging And Bioengineering and R01NS060910 from the National Institute of Neurological Disorders and Stroke. Dr. Reich's research is supported by the Intramural Research Program of NINDS. The authors thank Peter A. Calabresi and the technicians at NIH and Kirby center for collecting the data used in the manuscript. 
+
+
+\newpage
+
+
+\bibliography{mybib}
+
+\newpage
+
+\section*{Tables}
+
+\begin{table}[ht!]
+\begin{center}
+\caption{Descriptive statistics of the demographic information on the patients.}\label{t:dem}
+\begin{tabular}{rcccccc}
+& min & median & mean & max & SD & NAs \\
+\hline
+EDSS & 0  &   3.5  &  3.9 &    8 & 2.2 & 7 \\
+age & 21.4 & 43.6 & 43.5 & 68.5 & 12.5 & 0 \\
+duration & 0  &   9  &  11.4 &   45 & 9.2 & 3\\
+\end{tabular} \\
+\end{center}
+\end{table}
+
+
+
+\begin{table}[ht!]
+\begin{center}
+\caption{Properties of the GSR statistic computed for each of the registration algorithms
+(higher is worse).}\label{t:gsr}
+\begin{tabular}{rccccc}
+& ``rigid'' & ``ANTS affine'' & ``ANTS diffeo'' & ``FSL nonlinear''  & ``DARTEL''\\
+\hline
+mean &  0.32  &  0.16 &  0.16 & 0.18 & 0.37 \\
+median & 0.27 & 0.13 & 0.14 & 0.12 & 0.19 \\
+SD &  0.206 & 0.088 & 0.099 & 0.173 & 0.349 \\
+MSE & 0.148 & 0.032 & 0.035 & 0.063 & 0.259 \\
+mean rank & 4.23 & 2.55 & 2.62 & 2.44 & 3.14 \\
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+\newpage
+
+\section*{Figure Legends}
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[scale=0.45]{histdem.pdf}
+\end{center}
+\caption{Histograms of EDSS scores, age (in years), sex, and duration from disease onset (in years) for the $98$ patients in the study.}\label{fig:histdem}
+\end{figure}
+
+
+\begin{figure}[ht!]
+
+template \hspace{0.6in} \small ``rigid''  \hspace{0.4in} \small ``ANTS affine'' \hspace{0.05in} \small ``ANTS diffeo'' \hspace{0.1in}  \small ``FSL nonlin'' \hspace{0.1in} \small ``DARTEL'' \\
+
+\includegraphics[scale=0.4]{template}    \hspace{0.1in}  \includegraphics[scale=0.4]{Subj2}  
+
+  \hspace{1.16in}  \includegraphics[scale=0.4]{Subj1}  
+
+  \hspace{1.16in}  \includegraphics[scale=0.4]{Subj3}  
+
+\caption{One slice from five different registration methods for three subjects (one subject on each row). The MNI template brain is shown on the first row (left). }\label{t:reg}
+\end{figure}
+
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[scale=0.4]{3D}
+\includegraphics[scale=0.5]{rigid}
+\end{center}
+\caption{The histogram of lesions in the brain for 98 patients based
+on a rigid  registration of the images on a template
+brain.}\label{fig:LesHist}
+\end{figure}
+
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[scale=0.37]{affine}
+\includegraphics[scale=0.37]{nonlin} \\
+\includegraphics[scale=0.37]{fnirt}
+\includegraphics[scale=0.37]{spm}
+\end{center}
+\caption{The registered image for two subjects using ``ANTS affine"
+(top left), ``ANTS diffeo" (top right), ``FSL nonlinear"  (bottom left) and ``DARTEL'' (bottom right)
+spatial registration algorithms. Red: voxels where more patients
+have lesions; Blue and light blue: voxels where fewer patients have
+lesions.}\label{fig:histograms}
+\end{figure}
+
+
+\begin{figure}[ht!]
+\begin{center}
+\includegraphics[scale=0.44]{eval.pdf}
+\includegraphics[scale=0.44]{beaneval.pdf}
+\end{center}
+\caption{GSR: the proportion of lesion voxels for each registration algorithm that are
+not in the white matter in the template space. Each dot (left) is the GSR for one subject for
+a particular registration algorithm: ``rigid'' (black), ``ANTS affine'' (red), ``ANTS diffeo''
+(blue), ``FSL nonlinear'' (green) and ``DARTEL'' (purple). Higher and more variable across subjects is worse. The size of the dots is proportional to the TLV for each patient. Larger dots correspond to higher TLV. The beanplots (right) show the distribution of GSR for each registration algorithm.}\label{fig:eval}
+\end{figure}
+
+
+\begin{figure}[ht!]
+\begin{center}
+ \hspace{0.6in} \small ``rigid''  \hspace{0.4in} \small ``ANTS affine'' \hspace{0.05in} \small ``ANTS diffeo'' \hspace{0.1in}  \small ``FSL nonlin'' \hspace{0.1in} \small ``DARTEL'' \\
+\end{center}
+$\mathcal{M}_1:$ 
+\includegraphics[scale=0.43]{pmapV}  \\
+$\mathcal{M}_2:$ 
+\includegraphics[scale=0.43]{pmapVtlv}  \\
+$\mathcal{M}_3:$ 
+\includegraphics[scale=0.43]{pmapVldi}  \\
+$\mathcal{M}_4:$ 
+\includegraphics[scale=0.43]{pmapVagtlv}  \\
+$\mathcal{M}_5:$ 
+\includegraphics[scale=0.43]{pmapVagdtlv}  \\
+\caption{P-values for testing $H_{0,v}:\beta_1(v)=0$
+using models $\mathcal{M}_1$ - $\mathcal{M}_5$. From left to right: spatial
+registrations ``rigid", ``ANTS affine", ``ANTS diffeo", ``FSL
+nonlinear", and ``DARTEL''. Bright red: small p-values. The p-value maps are plotted
+overlaid on a grayscale template.}\label{fig:pval}
+\end{figure}
+
+\begin{figure}[ht!]
+\begin{center}
+ \hspace{0.6in} \small ``rigid''  \hspace{0.4in} \small ``ANTS affine'' \hspace{0.05in} \small ``ANTS diffeo'' \hspace{0.1in}  \small ``FSL nonlin'' \hspace{0.1in} \small ``DARTEL'' \\
+$\mathcal{M}_1: \mbox{\small Bonf}$ 
+\includegraphics[scale=0.43]{pmapbonfV}  \\
+$\mathcal{M}_1: \mbox{\small FDR}$ 
+\includegraphics[scale=0.43]{pmapfdrV}  \\
+$\mathcal{M}_2: \mbox{\small Bonf}$ 
+\includegraphics[scale=0.43]{pmapbonfVtlv}  \\
+$\mathcal{M}_2: \mbox{\small FDR}$ 
+\includegraphics[scale=0.43]{pmapfdrVtlv}  \\
+$\mathcal{M}_3: \mbox{\small Bonf}$ 
+\includegraphics[scale=0.43]{pmapbonfVldi}  \\
+\end{center}
+\caption{P-values for testing $H_{0,v}:\beta_1(v)=0$
+using models $\mathcal{M}_1$ - $\mathcal{M}_3$ after applying Bonferroni and FDR corrections. From left to right: spatial registrations ``rigid", ``ANTS affine", ``ANTS diffeo", ``FSL
+nonlinear", and ``DARTEL''. Red: small p-values ($<0.05$). }\label{fig:pvalc}
+\end{figure}
+
+
+
+\end{document}
+

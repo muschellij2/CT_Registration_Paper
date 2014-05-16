@@ -1,0 +1,83 @@
+
+<html>
+<!-- WebGL Export for 3D Slicer4 powered by XTK -- http://goXTK.com -->
+  <head>
+    <title>WebGL Export</title>
+    <script type="text/javascript" src="http://get.goxtk.com/xtk_release_9.js"></script>
+    <script type="text/javascript">
+      var run = function() {
+
+        r0 = new X.renderer3D();
+        r0.container = 'r0';
+        r0.init();
+
+
+        scene = new X.mesh();
+        vtkMRMLModelNode4 = new X.mesh();
+        vtkMRMLModelNode4.file = "brain.vtk";
+        vtkMRMLModelNode4.color = [0.5, 0.5, 0.5];
+        vtkMRMLModelNode4.opacity = 0.3;
+        vtkMRMLModelNode4.visible = true;
+        vtkMRMLModelNode4.caption = "Output Geometry";
+        scene.children.push(vtkMRMLModelNode4);
+
+        vtkMRMLModelHierarchyNode1 = new X.mesh();
+        scene.children.push(vtkMRMLModelHierarchyNode1);
+
+        vtkMRMLModelNode5 = new X.mesh();
+        vtkMRMLModelNode5.file = "Model_1_1.vtk";
+        vtkMRMLModelNode5.color = [0.501961, 0.682353, 0.501961];
+        vtkMRMLModelNode5.opacity = 0.3;
+        vtkMRMLModelNode5.visible = false;
+        vtkMRMLModelNode5.caption = "Model_1_1";
+        vtkMRMLModelHierarchyNode1.children.push(vtkMRMLModelNode5);
+
+        vtkMRMLModelNode6 = new X.mesh();
+        vtkMRMLModelNode6.file = "Model_2_2.vtk";
+        vtkMRMLModelNode6.color = [0.945098, 0.839216, 0.568627];
+        vtkMRMLModelNode6.opacity = 0.5;
+        vtkMRMLModelNode6.visible = true;
+        vtkMRMLModelNode6.caption = "Model_2_2";
+        vtkMRMLModelHierarchyNode1.children.push(vtkMRMLModelNode6);
+
+        vtkMRMLModelNode7 = new X.mesh();
+        vtkMRMLModelNode7.file = "Model_3_3.vtk";
+        vtkMRMLModelNode7.color = [0.694118, 0.478431, 0.396078];
+        vtkMRMLModelNode7.opacity = 0.5;
+        vtkMRMLModelNode7.visible = true;
+        vtkMRMLModelNode7.caption = "Model_3_3";
+        vtkMRMLModelHierarchyNode1.children.push(vtkMRMLModelNode7);
+
+        vtkMRMLModelNode8 = new X.mesh();
+        vtkMRMLModelNode8.file = "Model_4_4.vtk";
+        vtkMRMLModelNode8.color = [0.435294, 0.721569, 0.823529];
+        vtkMRMLModelNode8.opacity = 0.5;
+        vtkMRMLModelNode8.visible = true;
+        vtkMRMLModelNode8.caption = "Model_4_4";
+        vtkMRMLModelHierarchyNode1.children.push(vtkMRMLModelNode8);
+
+        vtkMRMLModelNode9 = new X.mesh();
+        vtkMRMLModelNode9.file = "Model_5_5.vtk";
+        vtkMRMLModelNode9.color = [0.847059, 0.396078, 0.309804];
+        vtkMRMLModelNode9.opacity = 0.5;
+        vtkMRMLModelNode9.visible = true;
+        vtkMRMLModelNode9.caption = "Model_5_5";
+        vtkMRMLModelHierarchyNode1.children.push(vtkMRMLModelNode9);
+
+
+
+        r0.add(scene);
+        r0.camera.position = [-74.73116183617772, 455.7848707530297, 200.33985634940848];
+        r0.camera.up = [0.3500006584735743, -0.3094265025017985, 0.8841689762808742];
+        r0.render();
+
+
+
+      };
+    </script>
+  </head>
+  <body style="margin:0px; padding:0px;" onload="run()">
+        <div id="r0" style="background-color: #c1c3e8;; width: 100%; height: 100%;"></div>
+
+  </body>
+</html>

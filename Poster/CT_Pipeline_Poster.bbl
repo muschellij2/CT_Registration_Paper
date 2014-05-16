@@ -1,0 +1,448 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{ashburner_unified_2005}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Ashburner}{A.}%
+     {John}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Friston}{F.}%
+     {Karl~J.}{K.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Bias correction, Image registration, Mixture of Gaussians, Tissue
+  classification, Tissue probability maps}
+  \strng{namehash}{AJFKJ1}
+  \strng{fullhash}{AJFKJ1}
+  \field{sortinit}{A}
+  \field{abstract}{%
+  A probabilistic framework is presented that enables image registration,
+  tissue classification, and bias correction to be combined within the same
+  generative model. A derivation of a log-likelihood objective function for the
+  unified model is provided. The model is based on a mixture of Gaussians and
+  is extended to incorporate a smooth intensity variation and nonlinear
+  registration with tissue probability maps. A strategy for optimising the
+  model parameters is described, along with the requisite partial derivatives
+  of the objective function.%
+  }
+  \verb{doi}
+  \verb 10.1016/j.neuroimage.2005.02.018
+  \endverb
+  \field{issn}{1053-8119}
+  \field{number}{3}
+  \field{pages}{839\bibrangedash 851}
+  \field{shortjournal}{{NeuroImage}}
+  \field{title}{Unified segmentation}
+  \verb{url}
+  \verb http://www.sciencedirect.com/science/article/pii/S1053811905001102
+  \endverb
+  \field{volume}{26}
+  \verb{file}
+  \verb ScienceDirect Full Text PDF:/Users/johnmuschelli/Library/Application Su
+  \verb pport/Zotero/Profiles/9yinbn16.default/zotero/storage/46M9K77I/Ashburne
+  \verb r and Friston - 2005 - Unified segmentation.pdf:application/pdf;Science
+  \verb Direct Snapshot:/Users/johnmuschelli/Library/Application Support/Zotero
+  \verb /Profiles/9yinbn16.default/zotero/storage/9K6MRS4C/S1053811905001102.ht
+  \verb ml:text/html
+  \endverb
+  \field{journaltitle}{{NeuroImage}}
+  \field{day}{01}
+  \field{month}{07}
+  \field{year}{2005}
+  \field{urlday}{26}
+  \field{urlmonth}{02}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{brown_stroke_1996}{article}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Brown}{B.}%
+     {Robert D.~Jr}{R.~D.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Whisnant}{W.}%
+     {Jack~P.}{J.~P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sicks}{S.}%
+     {{JoRean}~D.}{J.~D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{O'Fallon}}{O.}%
+     {W.~Michael}{W.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wiebers}{W.}%
+     {David~O.}{D.~O.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Clinical Medicine}
+  \strng{namehash}{BRDJ+1}
+  \strng{fullhash}{BRDJWJPSJDOWMWDO1}
+  \field{sortinit}{B}
+  \field{abstract}{%
+  Background and Purpose: Trends in stroke incidence and mortality are
+  available from few sites worldwide. The unique nature of the medical care in
+  patients from Rochester, Minn, has allowed the ascertainment of virtually all
+  cases of stroke for community residents for the period dating from 1955. This
+  study updates incidence rates, stroke mortality, radiological imaging
+  availability, and prevalence for stroke and subtypes of stroke though 1989
+  and evaluates trends since 1955., Methods: Medical records of all residents
+  of Rochester with potential diagnosis of stroke during the 5-year period
+  through December 31, 1989, were screened to determine whether the case met
+  the criteria for stroke. The type of stroke was determined with the use of
+  all available data. Average annual age- and sex-adjusted incidence rates for
+  stroke and various types of stroke were calculated for 5-year periods from
+  1955 to 1989. Prevalence of stroke was also determined. Poisson regression
+  was used to better clarify the dependence of stroke incidence on multiple
+  variables. Cox proportional hazards modeling evaluated trends in short-term
+  and long-term stroke survival., Results: We found that 496 incidence cases of
+  stroke occurred among Rochester residents during 1985 to 1989. The annual
+  age- and sex-adjusted stroke incidence rate was 145 per 100 000 population,
+  which was virtually unchanged from 1980 to 1984 and 13\% higher than the rate
+  determined in 1975 to 1979. Increasing incidence rates compared with the
+  1970s were noted in all groups aged older than 54 years and in both sexes.
+  Survival after cerebral infarction was dependent on age and calendar year
+  when trends dating from 1955 were evaluated. The annual incidence rate of
+  intraparenchymal hemorrhage was twice that of subarachnoid hemorrhage.,
+  Conclusions: Incidence rates for stroke have remained at a higher rate than
+  those determined in the 1970s. Although the occurrence of untreated
+  hypertension has been reported to be stable or decreasing, the incidence rate
+  of stroke is higher than those noted during the decline in stroke incidence
+  during the 1960s and 1970s. In addition to the impact of radiological
+  imaging, increased contribution of patients with ischemic heart disease, and
+  the possible detection of milder cases of stroke, other factors, which are
+  undefined, may be contributing to the increased stroke incidence rates
+  detected over the last 10 years., (Stroke. 1996;27:373-380.), (C) 1996
+  American Heart Association, Inc.%
+  }
+  \field{issn}{0039-2499}
+  \field{number}{3}
+  \field{pages}{373\bibrangedash 380}
+  \field{shorttitle}{Stroke Incidence, Prevalence, and Survival}
+  \field{title}{Stroke Incidence, Prevalence, and Survival: Secular Trends in
+  Rochester, Minnesota, Through 1989}
+  \verb{url}
+  \verb http://ovidsp.ovid.com/ovidweb.cgi?T=JS&CSC=Y&NEWS=N&PAGE=fulltext&D=ov
+  \verb ftb&AN=00007670-199603000-00003
+  \endverb
+  \field{volume}{27}
+  \field{journaltitle}{Stroke March 1996}
+  \field{year}{1996}
+  \field{urlday}{08}
+  \field{urlmonth}{05}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{di_carlo_stroke_2003}{article}{}
+  \name{author}{10}{}{%
+    {{}%
+     {Di~Carlo}{D.~C.}%
+     {Antonio}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Baldereschi}{B.}%
+     {Marzia}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gandolfo}{G.}%
+     {Carlo}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Candelise}{C.}%
+     {Livia}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ghetti}{G.}%
+     {Augusto}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Maggi}{M.}%
+     {Stefania}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Scafato}{S.}%
+     {Emanuele}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Carbonin}{C.}%
+     {Pierugo}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Amaducci}{A.}%
+     {Luigi}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Inzitari}{I.}%
+     {Domenico}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DCA+1}
+  \strng{fullhash}{DCABMGCCLGAMSSECPALID1}
+  \field{sortinit}{D}
+  \field{number}{2}
+  \field{pages}{141–150}
+  \field{shorttitle}{Stroke in an elderly population}
+  \field{title}{Stroke in an elderly population: incidence and impact on
+  survival and daily function}
+  \verb{url}
+  \verb http://www.karger.com/Article/FullText/70594
+  \endverb
+  \field{volume}{16}
+  \verb{file}
+  \verb Snapshot:/Users/johnmuschelli/Library/Application Support/Zotero/Profil
+  \verb es/9yinbn16.default/zotero/storage/Q6N3XTZU/70594.html:text/html
+  \endverb
+  \field{journaltitle}{Cerebrovascular Diseases}
+  \field{year}{2003}
+  \field{urlday}{08}
+  \field{urlmonth}{05}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{feldmann_intracerebral_1994}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Feldmann}{F.}%
+     {Edward}{E.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Futura Publishing Company}%
+  }
+  \strng{namehash}{FE1}
+  \strng{fullhash}{FE1}
+  \field{sortinit}{F}
+  \field{title}{Intracerebral hemorrhage}
+  \field{year}{1994}
+\endentry
+
+\entry{hall_hospitalization_2012}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Hall}{H.}%
+     {Margaret~Jean}{M.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Levant}{L.}%
+     {Shaleah}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{DeFrances}}{D.}%
+     {Carol~J.}{C.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HMJLSDCJ1}
+  \strng{fullhash}{HMJLSDCJ1}
+  \field{sortinit}{H}
+  \field{number}{23}
+  \field{pages}{23}
+  \field{title}{Hospitalization for stroke in {US} hospitals, 1989–2009}
+  \verb{url}
+  \verb http://198.246.112.54/pub/Health_Statistics/NCHS/Publications/DVD/DVD_3
+  \verb /Databriefs/db95.pdf
+  \endverb
+  \field{volume}{18}
+  \verb{file}
+  \verb [PDF] from 198.246.112.54:/Users/johnmuschelli/Library/Application Supp
+  \verb ort/Zotero/Profiles/9yinbn16.default/zotero/storage/8C6V73UU/Hall et al
+  \verb . - 2012 - Hospitalization for stroke in US hospitals, 1989–2.pdf:app
+  \verb lication/pdf
+  \endverb
+  \field{journaltitle}{Diabetes}
+  \field{year}{2012}
+  \field{urlday}{08}
+  \field{urlmonth}{05}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{rorden_age-specific_2012}{article}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Rorden}{R.}%
+     {Christopher}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bonilha}{B.}%
+     {Leonardo}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Fridriksson}{F.}%
+     {Julius}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bender}{B.}%
+     {Benjamin}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Karnath}{K.}%
+     {Hans-Otto}{H.-O.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Aging, {CT}, Human, {MRI}, Stroke, Voxel-based lesion symptom mapping}
+  \strng{namehash}{RC+1}
+  \strng{fullhash}{RCBLFJBBKHO1}
+  \field{sortinit}{R}
+  \field{abstract}{%
+  Spatial normalization reshapes an individual's brain to match the shape and
+  size of a template image. This is a crucial step required for group-level
+  statistical analyses. The most popular standard templates are derived from
+  {MRI} scans of young adults. We introduce specialized templates that allow
+  normalization algorithms to be applied to stroke-aged populations. First, we
+  developed a {CT} template: while this is the dominant modality for many
+  clinical situations, there are no modern {CT} templates and popular
+  algorithms fail to successfully normalize {CT} scans. Importantly, our
+  template was based on healthy individuals with ages similar to what is
+  commonly seen in stroke (mean 65 years old). This template allows studies
+  where only {CT} scans are available. Second, we derived a {MRI} template that
+  approximately matches the shape of our {CT} template as well as processing
+  steps that aid the normalization of scans from older individuals (including
+  lesion masking and the ability to generate high quality cortical renderings
+  despite brain injury). The benefit of this strategy is that the resulting
+  templates can be used in studies where mixed modalities are present. We have
+  integrated these templates and processing algorithms into a simple {SPM}
+  toolbox (http://www.mricro.com/clinical-toolbox/spm8-scripts).%
+  }
+  \verb{doi}
+  \verb 10.1016/j.neuroimage.2012.03.020
+  \endverb
+  \field{issn}{1053-8119}
+  \field{number}{4}
+  \field{pages}{957\bibrangedash 965}
+  \field{shortjournal}{{NeuroImage}}
+  \field{title}{Age-specific {CT} and {MRI} templates for spatial
+  normalization}
+  \verb{url}
+  \verb http://www.sciencedirect.com/science/article/pii/S1053811912002935
+  \endverb
+  \field{volume}{61}
+  \verb{file}
+  \verb Rorden et al_2012_Age-specific CT and MRI templates for spatial normali
+  \verb zation.pdf:/Users/johnmuschelli/Library/Application Support/Zotero/Prof
+  \verb iles/9yinbn16.default/zotero/storage/SN4GPRGK/Rorden et al_2012_Age-spe
+  \verb cific CT and MRI templates for spatial normalization.pdf:application/pd
+  \verb f;ScienceDirect Snapshot:/Users/johnmuschelli/Library/Application Suppo
+  \verb rt/Zotero/Profiles/9yinbn16.default/zotero/storage/WRICF9ZZ/S1053811912
+  \verb 002935.html:text/html;ScienceDirect Snapshot:/Users/johnmuschelli/Libra
+  \verb ry/Application Support/Zotero/Profiles/9yinbn16.default/zotero/storage/
+  \verb ZX24V5ZM/S1053811912002935.html:text/html
+  \endverb
+  \field{journaltitle}{{NeuroImage}}
+  \field{day}{16}
+  \field{month}{07}
+  \field{year}{2012}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{wolf_secular_1992}{article}{}
+  \name{author}{7}{}{%
+    {{}%
+     {Wolf}{W.}%
+     {Philip~A.}{P.~A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{D'Agostino}}{D.}%
+     {Ralph~B.}{R.~B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{O'Neal}}{O.}%
+     {M.~Angela}{M.~A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sytkowski}{S.}%
+     {Pamela}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kase}{K.}%
+     {Carlos~S.}{C.~S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Belanger}{B.}%
+     {Albert~J.}{A.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kannel}{K.}%
+     {William~B.}{W.~B.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{WPA+1}
+  \strng{fullhash}{WPADRBOMASPKCSBAJKWB1}
+  \field{sortinit}{W}
+  \field{number}{11}
+  \field{pages}{1551–1555}
+  \field{title}{Secular trends in stroke incidence and mortality. The
+  Framingham Study.}
+  \verb{url}
+  \verb http://stroke.ahajournals.org/content/23/11/1551.short
+  \endverb
+  \field{volume}{23}
+  \verb{file}
+  \verb [PDF] from ahajournals.org:/Users/johnmuschelli/Library/Application Sup
+  \verb port/Zotero/Profiles/9yinbn16.default/zotero/storage/29TUSJE6/Wolf et a
+  \verb l. - 1992 - Secular trends in stroke incidence and mortality. .pdf:appl
+  \verb ication/pdf;Snapshot:/Users/johnmuschelli/Library/Application Support/Z
+  \verb otero/Profiles/9yinbn16.default/zotero/storage/RC8HAISQ/1551.html:text/
+  \verb html
+  \endverb
+  \field{journaltitle}{Stroke}
+  \field{year}{1992}
+  \field{urlday}{08}
+  \field{urlmonth}{05}
+  \field{urlyear}{2014}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

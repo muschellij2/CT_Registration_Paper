@@ -1,0 +1,86 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\newcommand{\degree}{\ensuremath{^\circ}}
+\newcommand{\logit}{\mbox{logit}}
+
+\usepackage{ifxetex}
+\ifxetex
+%\usepackage{fontspec}
+  \usepackage{unicode-math}
+  \setmathfont{[Asana-Math]}
+\fi
+
+\begin{document}
+
+\section{Introduction}
+\section{Materials and Methods}
+\subsection{Patients}
+
+\subsection{Imaging Data}
+
+\subsection{Lesion Segmentation}
+
+\subsection{Assessing Registration}
+
+\subsection{Prediction of EDSS Based on Lesion Localization}
+
+Image
+\begin{enumerate}
+\item Anonymization in OsiriX - .dcm files
+\item DICOM to NIfTI conversion - oro.dicom
+\item Skull Stripping - BET
+\item Moments - in R
+\item Intensity normalization - 3 planes - raw image
+\item Intensity normalization - 3 planes - skull stripped image
+\item Smoothed image - Gaussian - 3,3 blur
+\item Raw intensity value (HU)
+\item Indicator if raw value $>$ 40 HU
+\item Try over bigger neighborhood
+\end{enumerate}
+
+ROI
+\begin{enumerate}
+\item Manual segmentation using OsiriX
+\item Pixel intensities are set in program to make a mask (Supp material)
+\end{enumerate}
+
+Data
+- subjects
+Pre-processing
+Validation Scheme - fit on 10, predict on 10
+	- all combinations
+5 Train, 5 Valid, 10 Test
+Get CI for per-subject and overall ROC Curve
+Report Dice with threshold.
+Straw man - 3 different thresholds 30, 35, 40
+
+Statistical Methods (Model)
+Criteria for Model Selection (AUC)
+ROC Curves
+
+Results
+Skull Stripping - Dice/Sens Spec - Box Plots
+Segmentation
+	- ROC Curves
+	- AUC Table
+
+
+\section{Methods}
+The \verb|R| statistical software and the FMRIB Software Library (FSL, version 5.0) were used to analyze and preprocess the data.
+\subsection{Brain Extraction}
+\subsubsection{Data}
+Brain tissue was manually segmented from DICOM images in OsiriX by expert readers (NU). There were NNN scans, corresponding to NNN unique patients.  
+
+\subsection{Hemorrhage Segmentation}
+Tissue was classified was manually segmented again from DICOM images in OsiriX by expert readers.  Binary image masks were created for the hemorrage region of interest (ROI) by setting pixel intensities to $1$ if classified as hemorrhage, and $0$ otherwise.  Scans were selected so that they used a brain-tissue convolution kernel and had $0$\degree gantry tilt.  There were NNN scans selected, corresponding to NNN unique patients.  
+
+DICOM images were exported from OsiriX and then converted to the NIfTI-1 data format (CITE) using the \verb|dicom2nifti| function in the \verb|oro.dicom| \verb|R| package.  Brain extraction was run using the aforementioned algorithm and scan-specific brain masks were created.   
+
+
+
+
+\end{document}
