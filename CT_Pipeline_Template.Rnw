@@ -64,7 +64,7 @@
 
 \begin{flushleft}
 {\Large
-\textbf{Intracranial hemorrhage localization: A CT imaging pipeline}
+\textbf{Intracranial Hemorrhage Localization in a Population of Patients using Registration-based Techniques in CT Imaging}
 }
 \\
 John Muschelli$^{1,\ast}$,  
@@ -232,7 +232,7 @@ load('Voxel_Info.Rda')
 
 
 
-\section*{Introduction}
+\section{Introduction}
 
 Intracranial hemorrhage (ICH) is a neurological condition that results from a blood vessel rupturing into tissues and possibly the ventricles of the brain.  Bleeding may cause distension of the brain structures and increase in potentially lethal intracranial pressure (ICP).  ICH is a serious condition; it accounts for approximately 10-15\% of all strokes, corresponding to an estimated 79,500 annual cases \citep{go_heart_2013} and approximately 30,000 deaths \citep{qureshi_spontaneous_2001} in the US and approximately 5 million cases worldwide \citep{krishnamurthi_global_2014}. In addition to the increased likelihood of death, ICH has debilitating health effects on survivors who do not have full functional recovery after stroke.
 
@@ -262,11 +262,11 @@ Other methods have used CT image registration directly to an MRI template, but u
 Most importantly, this type of detailed mapping of strokes has never been done in the context of the highly visible MISTIE and ICES stroke clinical trials. MISTIE is the Minimally Invasive Surgery plus recombinant-tissue plasminogen activator (rtPA) for Intracerebral Evacuation trial and ICES is the Intraoperative CT-Guided Endoscopic Surgery for ICH trial.  MISTIE was a phase II clinical trial with the goal of determining the safety, efficacy, and long-term effects of treatment of ICH using thrombolytics.  ICES was a simultaneous phase I trial with the same inclusion/exclusion criteria as MISTIE and the goal to determine the effect of endoscopic surgery as opposed to thrombolytic therapy for hematoma removal.  
 We are not focusing on treatment effects; instead we are mapping stroke locations and investigate the associations between location and stroke scores before treatment was administrated. For this purpose we will use only scans, demographic and functional measures collected prior to randomization. 
 
-\section*{Materials and Methods}
+\section{Materials and Methods}
 
 All statistical analysis was done in the \verb|R| statistical programming language (\url{http://cran.r-project.org/}).  We used the \verb|oro.nifti| package \citep{whitcher_working_2011} for reading and visualizing brain images and the \verb|ggplot2| package \citep{wickham_ggplot2:_2009} to visualize histograms.
 
-\subsection*{Subjects and Demographics}
+\subsection{Subjects and Demographics}
 The study consists of \Sexpr{N} patients from MISTIE ($N=\Sexpr{n.mistie}$) and ICES ($N = \Sexpr{n.ices}$) recruited from \Sexpr{n.ctr} centers.  Patients were eligible if: they were aged 18 to 80 years old with a spontaneous ICH of greater than $20$cc that did not require an extraventricular drain (EVD), were non-pregnant, had a historical Rankin Scale \citep{rankin_cerebral_1957, swieten_interobserver_1988} score of $≤ 1$ and a diagnosis that excluded other conditions such as ruptured aneurysms, arteriovenous malformations, or other neurovascular anomaly (for full criteria, see \citet{mould_minimally_2013}).  CT and clinical data were previously collected as part of the Johns Hopkins Medicine IRB-approved ICES and MISTIE research studies with written consent provided by participants.  Each site adhered to local ethical procedures and consented to participation in the study.  All clinical data were deidentified by using a unique patient identifier and anonymizing CT images by removing all patient-identifying information.  
 
 %<<>>=
@@ -293,15 +293,15 @@ The NIHSS and GCS scores were recorded at enrollment into the study; $\Sexpr{no.
 
 
 
-\subsection*{Imaging Data}
+\subsection{Imaging Data}
 CT images were acquired for all patients, with site-specific scanning parameters.  Scans were acquired using \Sexpr{manu[1]} ($N=\Sexpr{man.tab[1]}$), \Sexpr{manu[2]} ($N=\Sexpr{man.tab[2]}$), \Sexpr{manu[3]} ($N=\Sexpr{man.tab[3]}$), and \Sexpr{manu[4]} ($N=\Sexpr{man.tab[4]}$) scanners. Gantry tilt was observed in \Sexpr{n.gant} scans.  Slice thickness of the image varied within the scan reconstruction for \Sexpr{n.var.slice} scans, which we will refer to  as variable slice thickness. For example, if a scan was reconstructed with 10 millimeter (mm) slices at the top and bottom of the brain, which are not of interest, but with 5mm slices in the middle where the hematoma is seen (see Figure~\ref{f:reg}\protect\subref*{reg:nat1}).  Therefore, the scans analyzed had different voxel dimensions and image resolution prior to registration to the template.  Different reconstructions of CT images are not available via the data-acquiring center, and represent how scans are presented for evaluation in many diagnostic cases.
 
 
-\subsection*{Hemorrhage Segmentation and Location Identification}
+\subsection{Hemorrhage Segmentation and Location Identification}
 To register the CT scan to the CT template, the hemorrhage was excluded from the algorithm, i.e. ``masked out'', using manual ICH segmentations.  ICH was manually segmented on CT scans using the OsiriX imaging software by expert readers (OsiriX v. 4.1, Pixmeo; Geneva, Switzerland).  Readers employed a semiautomated threshold-based approach using a Hounsfield unit (HU) range of $40$ to $80$ to select potential regions of ICH \citep{bergstrom_variation_1977, smith_imaging_2006}; these regions were then further quality controlled and refined by readers using direct inspection of images.  Binary image masks were created for the hemorrhage region of interest (ROI) by setting voxel intensity to $1$ if the voxel was classified as hemorrhage, and $0$ otherwise.  Readers also identified the region most engaged by the ICH before creating the binary image of the hemorrhage.
 %previous to this analysis as a standard hemorrhage characteristic.
 
-\subsection*{Image Processing: Brain Extraction, Reorientation, Registration}
+\subsection{Image Processing: Brain Extraction, Reorientation, Registration}
 CT brain images and the binary mask were exported from OsiriX to DICOM (Digital Imaging and Communications in Medicine) format.  Images with gantry tilt were corrected using a customized MATLAB (The Mathworks, Natick, Massachusetts, USA) user-written script ({\scriptsize \url{http://bit.ly/1ltIM8c}}). 
 %http://www.mathworks.com/matlabcentral/fileexchange/28141-gantry-detector-tilt-correction/content/gantry2.m
 Images were converted to the Neuroimaging Informatics Technology Initiative (NIfTI) data format using \verb|dcm2nii| (2009 version, provided with MRIcro \citep{rorden_stereotaxic_2000}).  Images were constrained to values $-1024$ and $3071$ HU to remove potential image rescaling errors and artifacts.  No interpolation was done for images with a variable slice thickness. Thickness was determined from the first slice converted and was assumed homogeneous throughout.  
@@ -322,7 +322,7 @@ where $v_{ij}$ denotes voxel $j$ for smoothed mask for person $i$, denoted $I_i$
 % ~\ref{sec:engage}.
 
 
-\subsection*{Assessing Registration}
+\subsection{Assessing Registration}
 
 Determining the quality of registration was done qualitatively by visual inspection by expert CT readers.   We acknowledge that visual inspection is subjective, but currently no automatic computer-based gold standard exists for assessing
 registration results and analysis of registration quality is not commonly done with large deformations of tissue as in patients with ICH.  
@@ -335,14 +335,14 @@ No scans were excluded due to inadequate registration.
 
 
 
-\subsection*{Histograms of ICH in the Brain}
+\subsection{Histograms of ICH in the Brain}
 
 To visualize and describe the localization of lesions, we first combined information from registered masks of \Sexpr{N} patients.  Using the registered ICH masks we obtained the $3$-dimensional (3D) histogram of the ICH localization for the study population. More precisely, for every voxel location in the template space, we calculated the proportion of patients who have an ICH at that particular voxel.  In addition to displaying results at pre-selected slices of the 3D volume, we used the \verb|R| package \verb|brainR| to create an 3D interactive map of the 3D histogram.  The interactive map is located at \url{http://muschellij2.github.io/CT_Pipeline/index.html}.  
 % We also created a (non-spatial) histogram of proportion of patients with hemorrhage at a voxel.   
 
 % EXAMPLE by tomorrow
 
-\subsection*{Prediction of Functional Score Based on Hemorrhage Location}
+\subsection{Prediction of Functional Score Based on Hemorrhage Location}
 
 
 %Although summaries of the population-level ICH engagement is useful, one area of interest is finding the relationship 
@@ -356,11 +356,11 @@ where ${\rm Y}_i$ was either the NIHSS or GCS score for patient $i=1,\ldots,\Sex
 %see if a non-parametric rank-based test resulted in a different relationship between ICH location and functional score. 
 
 
-P-values of each voxel-wise regression model of the functional scores on ICH presence were calculated, testing the null hypothesis $H_{0,v}:\beta_1(v)=0$--or in the case of the Wilcoxon rank-sum test: $H_{0,v}: Score\{ICH(v) = 1\} = Score\{ICH(v) = 0\}$ where $Score$ denotes the distribution of functional scores of patients that either did or did not have ICH at the given voxel $v$.  Figure 5 displays the pointwise p-values.  The p-value images displayed were not corrected as the goal is to see potential ``hot spots'' of ICH that relate to functional outcome.
+P-values of each voxel-wise regression model of the functional scores on ICH presence were calculated, testing the null hypothesis $H_{0,v}:\beta_1(v)=0$--or in the case of the Wilcoxon rank-sum test: $H_{0,v}: Score\{ICH(v) = 1\} = Score\{ICH(v) = 0\}$ where $Score$ denotes the distribution of functional scores of patients that either did or did not have ICH at the given voxel $v$.  Figures~\ref{f:mods} and~\ref{f:gcsmods} display the pointwise p-values.  The p-value images displayed were not corrected as the goal is to see potential ``hot spots'' of ICH that relate to functional outcome.
 
 We corrected the p-values, within each analysis of functional scores, using a Bonferroni correction with $\alpha = 0.05$.  Some of the voxels were identical for presence for ICH over the population, e.g. voxels 1 and 2 each had the same people having ICH and same people not having ICH at that location.  We excluded these from the correction, using only then number of unique tests ($N=\Sexpr{nuniq.rows}$).
 
-\subsubsection*{Region of Interest Generation and Analysis}
+\subsubsection{Region of Interest Generation and Analysis}
 
 <<>>=
 ### just getting the N and percent for each location
@@ -384,43 +384,57 @@ rm(list=xx)
 
 In order to create a patient-level covariate that summarizes ICH location information, we created a sequence of nested regions of interest (ROIs) by selecting voxels based on the smallest p-values obtained from the undadjusted linear model, i.e. from a model where only the voxel-level ICH indicator was used, but none of the other covariates.  
 % This covariate is one example of using the ICH mask to create quantitative predictors of functional score from CT images. 
-We thresholded the image based on a range of p-values ($0.05$, $0.01$, $0.001$) and by taking a fixed number of voxels, ranked lowest to highest on p-values ($1000$, $2000$, $3000$ voxels).  For each patient scan, we calculated the percentage of voxels of the ROI that were classified as hemorrhage.  Thus, if a patient's hemorrhage covered the entire ROI, the ROI coverage would be $100\%$.  We then put this patient-level ROI coverage into a linear regression model adjusted for the $3$ confounders above:
+We have obtained 6 different ROIs, 3 based on the smallest 1000, 2000, and 3000 lowest p-values and three based on all p-values below a particular threshold. We have used three thresholds equal to 0.05, 0.01, and 0.001, resulting in ROI with 2422, 19047, and 47736 voxels respectively.
+
+We thresholded the image based on a range of p-values ($0.05$, $0.01$, $0.001$) and by taking a fixed number of voxels, ranked lowest to highest on p-values ($1000$, $2000$, $3000$ voxels).  For each ROI, we have introduced a variable called ``coverage" that represents the percentage of the voxels that were classified as hemorrhage in the subject-specific image: 
+\begin{equation}
+\text{Coverage} = \frac{\text{\# Voxels classified ICH in ROI}}{\text{\# Voxels in ROI}}
+\end{equation}
+For example, if a patient's hemorrhage covers the entire ROI, the coverage is $100\%$, whereas if there is no overlap between the patient's scan and ROI then coverage is 0\%.  This subject-specific covariate is then used as a predictor of the severity score in an adjusted model as
+%We then put this patient-level ROI coverage into a linear regression model adjusted for the $3$ confounders above:
 $$
 {\rm Y}_i = \beta_0 + \beta_1 {\rm Coverage}_i + \gamma_1{\rm Age}_i  +\gamma_2{\rm Gender}_i +\gamma_3{\rm TICHVol}_i + \epsilon_{i}
 $$
-We computed another linear regression model replacing ROI coverage with a categorical indicator of the expert-specified ICH location classification, with categories: \Sexpr{out}.  In order to determine whether using voxel-level information improved prediction of functional score compared to standard hemorrhage classification we calculated a series of model-fit measures: $R^2$, adjusted $R^2$, Akaike information criterion (AIC) \citep{akaike_information_1973}, 
+We have further investigated whether the new variable coverage was an independent predictor of the severity score compared to accounting for the expert-specified ICH location classification. Specifically, we have used 
+%We computed another linear regression model replacing ROI coverage with 
+a categorical indicator of the expert-specified ICH location classification, with categories: \Sexpr{out}.  
+%In order to determine whether using voxel-level information improved prediction of functional score compared to standard hemorrhage classification we calculated 
+Prediction performance and model fit were assessed using a series of model-fit measures: $R^2$, adjusted $R^2$, Akaike information criterion (AIC) \citep{akaike_information_1973}, 
 % effective parsimony information criterion (EPIC) \citep{shinohara_information_2013}, 
 and root mean squared error (RMSE).  
 % We also compared the above model to one without any location measure and tested $H_0: \beta_1 = 0$ with a likelihood ratio test.
 
-\subsection*{ICH Localization and Engagement}
+\subsection{ICH Localization and Engagement}
 \label{sec:engage}
-As each patient's ICH mask are in MNI space, we can use previously segmented and labeled atlases of the brain to label spatial ICH engagement.  
+As each patient's ICH mask is in MNI space, we can use previously segmented and labeled brain atlases to label spatial ICH engagement.  
 % We used the MNI structural atlas \citep{mazziotta_probabilistic_2001, collins_automatic_1995} and the ``Eve" atlas \citep{oishi_human_2008} to provide labeled regions.
-We used the ``Eve" atlas \citep{oishi_human_2008} to provide labeled regions. The Eve atlas was chosen because it segments and labels both gray matter (GM) and white matter (WM) regions.  Ventricular regions are not explicitly segmented are categorized as background.  We therefore modified the labels and categorized any region within the brain mask labeled as background in the Eve atlas as regions of cerebrospinal fluid (CSF), though this may encompass a small number of voxels that are not CSF.  
+We used the ``Eve" atlas \citep{oishi_human_2008} because it segments and labels both gray matter (GM) and white matter (WM) regions.  Ventricular regions are not explicitly segmented and are categorized as background.  Thus, our labels are slightly modified by categorizing any region within the brain mask labeled as background in the Eve atlas as cerebrospinal fluid (CSF), though this may encompass a small number of voxels that are not CSF.  
 % ; we used these labels to calculate the percent of hemorrhage engagement for each region.  
 % The MNI structural atlas segments gray matter (GM) regions which can be aggregated into categories similar to those used by the readers' classifications.  This atlas does not label ventricular regions and white matter (WM) regions.  The Eve atlas segments GM regions at a finer scale than the MNI atlas and labels WM regions, but ventricular regions are categorized as background.  We therefore categorized any region within the brain mask labeled background in the Eve atlas as regions of cerebrospinal fluid (CSF), though this may encompass a small number of voxels that are not CSF.  
 
 % From these two atlases, w
-We calculated the percent overlap of each hemorrhage mask with each labeled region of the atlas.  That is, for each patient's ICH mask, we counted the number of voxels in each label of the Eve atlas, and then divided by the total number of voxels in the ICH mask to get the percent engagement for each region. These percentages represent a summary of region-level engagement for each patient's ICH at a finer scale to coarsely classifying ICH engagement to only one region as done by readers.  From these percentages, we can also calculate the region most engaged by the ICH for that patient similar to the categorization aforementioned done by experts.  We did not directly compare reader-classified regions and the most-engaged region on the template as the template did not directly segment into the same categories used by readers for comparison.
+Registration to a carefully labeled template allowed the detailed localization of the ICH at the subject level. In particular, for each subject we obtain and report: 1) the percent of the ICH engaged by each labeled region of the EVE atlas; 2) the percent of each labeled region of the EVE atlas engaged by the ICH, and 3) the total volume of each region engaged by the ICH. 
+%That is, for each patient's ICH mask, we counted the number of voxels in each label of the Eve atlas, and then divided by the total number of voxels in the ICH mask to get the percent engagement for each region. 
+These summaries of ICH engagement provide a much finer scale description than what can currently be done by expert human readers.  Once summaries are available, further simplifications are easy to obtain. Indeed, it is easy to provide the labeled region with the highest percentage of ICH engagement or the region containing the largest percentage of the ICH. We did not directly compare reader-classified regions and the most-engaged region, as the template did not directly segment into the same categories used by readers.
 % This most-engaged region is similar to the categorization aforementioned done by experts for clot engagement; we compared the automatic categories to those expert classifications.  
 
-Similar to the per-patient scans, we calculated the percentage of engagement for the 3D histogram image based on the population, weighted by the proportion of patients with ICH at that location.  
-Thus we can summarize a population of patients by a table of percentages of engagement with regions.  Moreover, we can use prior anatomical and neurofunctional information to generate test hypotheses based on regions of the brain labeled by the atlas.  We also calculated the percent engagement of regions for the best-performing ROIs for the NIHSS and GCS score analyses to characterize potential locations relating to these functional outcomes.  
+These results were further summarized at the population level by calculating the percentage of engagement of the 3D population histogram image, weighted by the proportion of patients with ICH at that location.  More precisely, for every voxel in a labeled region we have calculated the proportion of subjects who have an ICH at that voxel. These proportions were then summed over the entire labeled region and this sum was divided by the total sum of the 3D population histogram image.
+%%%!!!Moreover, we can use prior anatomical and neurofunctional information to generate test hypotheses based on regions of the brain labeled by the atlas.  
+We also calculated the percent engagement of regions for the best-performing ROIs for the NIHSS and GCS score analyses to characterize potential locations relating to these functional outcomes.  
 
 
 
-\section*{Results}
+\section{Results}
 
 
-\subsection*{Image Registration}
+\subsection{Image Registration}
 
-The registered images for $2$ patients are shown in Figure~\ref{f:reg} with overlays (in pink) of the manually segmented blood in native space (panels~\protect\subref*{reg:nat1} and \protect\subref*{reg:nat2}) the registered image and mask in template space (panels~\protect\subref*{reg:co1} and \protect\subref*{reg:co2}) and the overlaid mask onto the template (panels~\protect\subref*{reg:temp1} and \protect\subref*{reg:temp2}).  The slices are shown at the centroid (average location) of the hemorrhage mask.  We chose one patient with variable slice thickness with a large hemorrhage (Figure~\ref{f:reg}\protect\subref*{reg:nat1}, \protect\subref*{reg:co1}, and \protect\subref*{reg:temp1}) and one patient with a small hemorrhage (Figure~\ref{f:reg}\protect\subref*{reg:nat2}, \protect\subref*{reg:co2}, and \protect\subref*{reg:temp2}).  Images indicate that gross brain features remain relatively unchanged, but large deformations of tissue, mainly due to ICH, are preserved with registration.  Also, we see the size of the registered brain in the patient with variable slice thickness is the same as the template, which implies the non-linear registration accounts for variable slice thickness, by non-uniform scaling.
+To illustrate registration results, the registered images for $2$ patients are shown in Figure~\ref{f:reg} with overlays (in pink) of the manually segmented blood in native space (panels~\protect\subref*{reg:nat1} and \protect\subref*{reg:nat2}), the registered image and mask in template space (panels~\protect\subref*{reg:co1} and \protect\subref*{reg:co2}), and the overlaid mask onto the template (panels~\protect\subref*{reg:temp1} and \protect\subref*{reg:temp2}).  Slices are shown at the centroid (average location) of the hemorrhage mask.  We chose one patient with variable slice thickness with a large hemorrhage (Figure~\ref{f:reg}\protect\subref*{reg:nat1}, \protect\subref*{reg:co1}, and \protect\subref*{reg:temp1}) and one patient with a small hemorrhage (Figure~\ref{f:reg}\protect\subref*{reg:nat2}, \protect\subref*{reg:co2}, and \protect\subref*{reg:temp2}).  Images indicate that gross brain features remain relatively unchanged, but large deformations of tissue, mainly due to ICH, seem well preserved by registration.  Also, the registered brain in the patient with variable slice thickness (image looks distorted in native space) is the same as the template, which indicates that the non-linear registration seems to reasonably account for variable slice thickness, most likely by non-uniform scaling.
 
 [Figure~\ref{f:reg} here.]
 
 
-\subsection*{Histograms of ICH in the Brain}
+\subsection{Histograms of ICH in the Brain}
 
 
 <<>>=
@@ -438,25 +452,25 @@ n.md.prop = median(props) * N
 
 @
 
-The histogram of the prevalence of hemorrhages over voxels (Figure~\ref{fig:StrokeHist}\protect\subref*{prop:hist}) shows the majority of voxels have a low prevalence; the median proportion of ICH at a given voxel is \Sexpr{md.prop}\% ($N = \Sexpr{n.md.prop}$).  We do observe that some voxels ($V = \Sexpr{nvox40}$) have a high prevalence ($> 40\%$ of the sample), indicating similarities in areas of bleeding in this sample.  
+The histogram of the prevalence of hemorrhages over voxels (Figure~\ref{fig:StrokeHist}\protect\subref*{prop:hist}) shows the majority of voxels have a low prevalence; the median proportion of ICH at a given voxel is \Sexpr{md.prop}\% ($N = \Sexpr{n.md.prop}$), though some voxels ($V = \Sexpr{nvox40}$) have a high prevalence ($> 40\%$ of the sample).  
 
 
 The resulting 3D histogram of the density of hemorrhages is shown in Figure~\ref{fig:StrokeHist}\protect\subref*{prop:img}.
-In this image, voxels colored cooler (blue) correspond to a lower proportion of
-patients with hemorrhage at that voxel whereas those colored hotter (red to yellow) correspond to a higher proportion. This histogram indicates that lesions are
+In this image, voxels colored in shades of blue correspond to a lower proportion of
+patients with hemorrhage, whereas those colored in shades of red correspond to a higher proportion. This histogram indicates that in this cohort lesions are
 distributed medially in the brain in this cohort, with a lower concentration
-close to the cortical surface and higher in the left side of the brain.  We see that some bi-laterality exists such that prevalence of ICH on left and right sides of the brain seem similar.  Combining areas of engagement regardless of the side of the brain may be worthwhile, but combination of these areas is complicated by ICH that crosses the mid-sagittal plane.  
-We do not see a high prevalence in the extreme anterior or posterior areas of brain.  Nor do we see a high prevalence of bleeds in inferior areas of the brain, which is likely due to brain stems bleeds being excluded using the trial inclusion criteria.  
+close to the cortical surface and higher on the left side of the brain.  Combining areas of engagement regardless of the side of the brain may be worthwhile, though combination of these areas may not be straightforward for those by ICH that cross the mid-sagittal plane.  
+Figure~\ref{fig:StrokeHist}\protect\subref*{prop:img} indicates that the prevalence of strokes in the extreme anterior and posterior areas of the brain are very low.  The low prevalence of strokes in the inferior areas of the brain is likely due the exclusion of brain stems bleeds from the trial.  
 
-These observations of ICH being centralized in the middle portion of the brain may also be an artifact of the inclusion criteria and may not generalize to other populations, but we note that no spatial location was preferred for inclusion.  Regardless, creating these population images actually allows us to test if this location density does generalize to other populations given their density map.
+That ICH are centralized in the middle portion of the brain may be a direct result of the inclusion criteria and may not generalize to other populations, . However, the inclusion criteria \citep{mould_minimally_2013} did not specifically prefer some spatial locations over others. We consider that population maps provide a lot of information, that they allow researchers to sharpen their hypothesis, and that they also allow for such hypotheses to be tested. While the 3D histograms may not generalize to other populations, it will be crucial to obtain such maps for those studies and compare the degree of similarity to ours.
 
 
 [Figure \ref{fig:StrokeHist} here.]
 
 
-\subsection*{Prediction of Functional Score Based on Hemorrhage Location}
+\subsection{Prediction of Functional Score Based on Hemorrhage Location}
 
-We ran several versions of model~(\ref{eq:nihss_regression}) starting with the simplest case and then building the model by incorporating different choices of potential confounders to investigate their effects on the statistically significant association between ICH locations and functional score. More precisely, the five linear models are:
+To study the association between localization and stroke severity scores, we have fit model~(\ref{eq:nihss_regression}) using a sequence of  potential confounding adjustments. More precisely, the five linear models are:
 
 \vspace{0.1in}
 \begin{tabular}{rll}
@@ -468,15 +482,15 @@ $\mathcal{M}_5:$ &$  {\rm Y}_i = $ & \hspace{-0.18in} $ \beta_0+\beta_1(v) {\rm 
 \end{tabular}
 \vspace{0.1in}
 \newline
-where $\mathcal{M}$ denotes a model.  Also, we'll denote $\mathcal{M}_6$ as the voxel-wise Wilcoxon rank-sum test on functional score.  
+where $\mathcal{M}$ denotes a model and Y is either the NIHSS or GCS scores.  While the voxel-wise Wilcoxon rank-sum test is not a model, it does produce p-values for testing the difference between distributions. For consistency of notation we will refer to Wilcoxon rank-sum test as $\mathcal{M}_6$. 
 
-No voxels were significantly related to NIHSS score or GCS score in any model using the Bonferroni correction.  We present maps of p-values for the models with NIHSS score as the outcome to potential areas of interest, as the Bonferroni correction is conservative and information can be gained at looking at the location of high and low p-values. 
+No voxels were significantly related to NIHSS score or GCS score in any model after using the Bonferroni correction.  Figure~\ref{f:mods} displays the p-values maps for the models with NIHSS score as the outcome as the size of the effect of ICH localization can easily be visualized by comparing the relative location of high and low p-values. 
 
-The p-values for each model, with NIHSS score as the outcome, are presented in Figure~\ref{f:mods}, overlaid on a MRI T1 image for spatial localization of structures.  The p-values are colored with cooler (blue) colors representing higher p-values and hotter (red) colors representing lower p-values.  Colors correspond to p-values $.1-1$ (dark blue), $.1-.05$, (light blue), $.05-.01$ (green), $.01-.001$ (yellow),  $.001-.0001$ (orange) $< .0001$ (red).  We see that there may be some relationship to medial hemorrhages with NIHSS score seen in the unadjusted model $\mathcal{M}_1$ (Figure~\ref{f:mods}\protect\subref*{mods:m1}) and the Wilcoxon rank-sum test (Figure~\ref{f:mods}\protect\subref*{mods:m6}) and observe this when modeling the GCS score (Supplemental Figure~\ref{f:gcsmods}).  The p-values are higher in the models adjusted for age (Figure~\ref{f:mods}\protect\subref*{mods:m2}), baseline ICH volume (Figure~\ref{f:mods}\protect\subref*{mods:m4}), and both age and baseline ICH volume (Figure~\ref{f:mods}\protect\subref*{mods:m5}).  
+The p-values for each model, with NIHSS score as the outcome, are presented in Figure~\ref{f:mods}, overlaid on a MRI T1 image for spatial localization of structures.  The p-values are colored with cooler (blue) colors representing higher p-values and hotter (red) colors representing lower p-values.  Colors correspond to p-values $.1-1$ (dark blue), $.1-.05$, (light blue), $.05-.01$ (green), $.01-.001$ (yellow),  $.001-.0001$ (orange) $< .0001$ (red).  We see that there may be some relationship to medial hemorrhages with NIHSS score seen in the unadjusted model $\mathcal{M}_1$ (Figure~\ref{f:mods}\protect\subref*{mods:m1}) and the Wilcoxon rank-sum test (Figure~\ref{f:mods}\protect\subref*{mods:m6}) and observe this when modeling the GCS score (Supplemental Figure~\ref{f:gcsmods}).  The p-values are larger in the models adjusted for age (Figure~\ref{f:mods}\protect\subref*{mods:m2}), baseline ICH volume (Figure~\ref{f:mods}\protect\subref*{mods:m4}), and both age and baseline ICH volume (Figure~\ref{f:mods}\protect\subref*{mods:m5}).  
 
 [Figure \ref{f:mods} here.]
 
-\subsubsection*{Region of Interest Analysis}
+\subsubsection{Highest Predictive Region Analysis}
 
 
 <<>>=
@@ -487,9 +501,7 @@ res = data.frame(res)
 res$nkeep = sprintf("%.0f", res$nkeep)
 @
 
-Figures~\ref{f:roi}\protect\subref*{pvals:nihss} and~\ref{f:roi}\protect\subref*{pvals:gcs} illustrate the voxels (in red) that were selected as the ROI based on p-value or ranking of p-value for NIHSS and GCS score as the functional outcome, respectively.  We observe that the ROIs appears larger on the left side compared to the right and many are near the ventricles, which may indicate ICH at these regions is important to functional score.  We note that the ROI has spatial contiguity on either side of the brain, which is expected as the presence of ICH at a given voxel is highly correlated to that voxels neighbors.  
-The number of voxels ($V$) for each p-value threshold (not displayed) were: $.05$ ($V = \Sexpr{res$nkeep[res$pval == .05]}$), $.01$ ($V = \Sexpr{res$nkeep[res$pval == .01]}$), $.001$ ($V = \Sexpr{res$nkeep[res$pval == .001]}$), which can correspond to rather large regions  As the resolution of the template is $1$mm$^3$, this corresponds to the ROI for a $0.05$ p-value threshold measuring $\Sexpr{round(as.numeric(res$nkeep[res$pval == .05])/1000)}$ml. 
-
+Inspired by the inspection of Figure~\ref{f:mods}, we investigated whether we can define areas of the brain that can improve prediction of stroke scores. To investigate this, have obtained 6 different ROI, 3 based on the smallest $1000$, $2000$, and $3000$ lowest p-values and three based on all p-values below a particular threshold. We have used three thresholds equal to $0.05$, $0.01$, and $0.001$, resulting in ROIs with $\Sexpr{res$nkeep[res$pval == .05]}$, $\Sexpr{res$nkeep[res$pval == .01]}$, and $\Sexpr{res$nkeep[res$pval == .001]}$ voxels, respectively for NIHSS. 
 <<>>=
 load('Regress_ROI_GCS_Results.Rda')
 res = reses$adj.r.squared
@@ -497,10 +509,18 @@ res = res[, c("pval", "nkeep")]
 res = data.frame(res)
 res$nkeep = sprintf("%.0f", res$nkeep)
 @
+For GCS we have obtained ROIs with $\Sexpr{res$nkeep[res$pval == .05]}$, $\Sexpr{res$nkeep[res$pval == .01]}$, and $\Sexpr{res$nkeep[res$pval == .001]}$ voxels, respectively. For illustration, panel (\protect\subref*{pvals:nihss}) in Figure~\ref{f:roi} displays the region obtained by chosing all the p-values smaller than $0.01$ in the unadjusted NIHSS regression on voxel location. While we show three orthographic slices, the entire region containing $\Sexpr{res$nkeep[res$pval == .01]}$ voxels is available in MNI coordinates. Panel (\protect\subref*{pvals:gcs}) in Figure~\ref{f:roi}} displays the region obtained by retaining only the smallest $1000$ p-values for the unadjusted regression of GCS score on ICH location. We call of these regions ``highest predictive regions'' (HPR), because they combine the location of those voxels that are most predictive of the outcomes.
 
-The corresponding number of voxels for p-value thresholds, using GCS as the functional outcome are:  $.05$ ($V = \Sexpr{res$nkeep[res$pval == .05]}$), $.01$ ($V = \Sexpr{res$nkeep[res$pval == .01]}$), $.001$ ($V = \Sexpr{res$nkeep[res$pval == .001]}$), which again correspond to large ROIs for higher p-value thresholds.
 
-Panels~\protect\subref*{pvals:nihss} and~\protect\subref*{pvals:gcs} of figure~\ref{f:roi} show the unadjusted relationship of the percent ROI coverage with the functional score.  We observe that the relationships are as expected, the larger the ROI coverage the higher (more severe stroke) NIHSS score and the lower (deeper unconsciousness) the GCS score.
+%
+%Figures~\ref{f:roi}\protect\subref*{pvals:nihss} and~\ref{f:roi}\protect\subref*{pvals:gcs} illustrate the voxels (in red) that were selected as the ROI based on p-value or ranking of p-value for NIHSS and GCS score as the functional outcome, respectively.  We observe that the ROIs appears larger on the left side compared to the right and many are near the ventricles, which may indicate ICH at these regions is important to functional score.  We note that the ROI has spatial contiguity on either side of the brain, which is expected as the presence of ICH at a given voxel is highly correlated to that voxels neighbors.  
+%The number of voxels ($V$) for each p-value threshold (not displayed) were: $.05$ ($V = \Sexpr{res$nkeep[res$pval == .05]}$), $.01$ ($V = \Sexpr{res$nkeep[res$pval == .01]}$), $.001$ ($V = \Sexpr{res$nkeep[res$pval == .001]}$), which can correspond to rather large regions  As the resolution of the template is $1$mm$^3$, this corresponds to the ROI for a $0.05$ p-value threshold measuring $\Sexpr{round(as.numeric(res$nkeep[res$pval == .05])/1000)}$ml. 
+%
+%
+%
+%The corresponding number of voxels for p-value thresholds, using GCS as the functional outcome are:  $.05$ ($V = \Sexpr{res$nkeep[res$pval == .05]}$), $.01$ ($V = \Sexpr{res$nkeep[res$pval == .01]}$), $.001$ ($V = \Sexpr{res$nkeep[res$pval == .001]}$), which again correspond to large ROIs for higher p-value thresholds.
+
+While voxel-wise regressions identify areas that are potentially highly associated with the outcome, it is practical to reduce complex HPRs to a simple subject-specific covariate. Thus, for every HPR we define its coverage to be the proportion of the HPR covered by a particular subject's ICH.  Panels~\protect\subref*{pvals:nihss} and~\protect\subref*{pvals:gcs} of Figure~\ref{f:roi} show the unadjusted relationship of the percent ROI coverage with the functional score.  We observe that the relationships are as expected, the larger the ROI coverage the higher (more severe stroke) NIHSS score and the lower (deeper unconsciousness) the GCS score.
 
 [Figure \ref{f:roi} here.]
 
@@ -738,18 +758,18 @@ Similarly for GCS score, adjusting for other covariates, increasing 10\% coverag
 
 % [Figure \ref{fig:pvalc} here.]
 
-\subsubsection*{ICH Localization and Engagement}
+\subsubsection{ICH Localization and Engagement}
 
 Table~\ref{t:breakdown} represents the 10 most-engaged regions for the population 3D histogram as well as the ROIs for the GCS and NIHSS score ROI analyses.  
 
 [Table~\ref{t:breakdown} here]
 
 
-\section*{Discussion}
+\section{Discussion}
 
 % Many of the goals of this project are proofs of concepts. 
 
-\subsection*{Semi-Automated Localization of ICH}
+\subsection{Semi-Automated Localization of ICH}
 
 We have characterized the localization of ICH in a population of stroke patients within this processing pipeline.  We would like to stress that this is, as far as we know, the first 3D histogram of a population with ICH.  We found that more patients had ICH engagement on the left side of the brain compared to right and both left and right sided ICHs are located towards the middle of the brain.  
 % more finely and objectively describe locations of ICH within the brain.  
@@ -763,17 +783,17 @@ The pipeline described is semi-automated allowing for more reproducible and obje
 
 % Another important open question is what brain structures and features need to be preserved during registration of brains with ICH.  This problem extends to healthy brains as well, since atrophy and other morphological changes occur with ageing.  For example, large deformations may shift and compress ventricles resulting in misclassifying ICH within ventricles.
 
-\subsection*{Voxel-wise Analysis of Functional Scores}
+\subsection{Voxel-wise Analysis of Functional Scores}
 
 Voxel-wise hypothesis tests were calculated using linear models or Wilcoxon rank-sum tests for NIHSS and GCS scores.  The resulting p-values from these tests indicate that ICH at locations near the ventricles, particularly on the left side, may be related to functional scores.  Although the voxel-wise regressions did not have any statistically significant results, this result is likely due to the strict threshold imposed by the Bonferroni correction.  As each voxel is not independent of the other voxels as ICH is commonly a contiguous region of hemorrhage, this correction is inappropriate.  Other methods that attempt to account of the smoothness properties, such as random field theory, may be more powerful.  The voxel-wise analysis does provide a proof of concept and a screening procedure to generate a ROI for patient-level analysis.
 
-\subsection*{Region of Interest Analysis}
+\subsection{Region of Interest Analysis}
 
 The region of interest analysis provides some evidence that using imaging-based location measures can result in better performance when estimating functional scores.  Although some measures were still relatively low with respect to model fit in absolute terms, such as an $R^2$ of $0.24$, these measures showed demonstrable gains over using the reader-based categories commonly used in analysis.
 
 This analysis focused on NIHSS and GCS scores as these were available at enrollment, but the process may be applied to long-term functional scores.  As these populations had different interventions performed, we aimed to analyze outcomes that were prior to any separation of the groups induced by the trial.  
 
-\subsection*{Limitations}
+\subsection{Limitations}
 
 Although this set of patients represent a large proportion ($\Sexpr{round(N/141*100)}$\%) of the entire population ($N=141$) of the MISTIE and ICES trials, the sample size is relatively small.  This size was due to our selection process for scans and the number of patients available.  The framework does not impose a restriction on the number of patients to be processed; it is extendable to much larger (hundreds or thousands) populations.
 
@@ -781,7 +801,7 @@ The current description of hemorrhages and all subsequent analyses are reliant o
 
 The results from the ROI-based analysis are flawed in that the ROI has information based on the functional score by how they were generated.  Cross-validation can be used to split the data to a training group used to generate the ROI and a testing group to estimate model performance.  We plan to validate these ROIs on the subset of patients in the MISTIE and ICES trials not analyzed here.  
 
-\subsection*{Extensions of Analysis and Future Work }
+\subsection{Extensions of Analysis and Future Work }
 Although this analysis focused on patients from a single trial cohort, these tools can be applied to large-scale epidemiologic studies to better understand the ICH distribution in specific patient populations of interest and help predict patient outcomes.  Moreover, this framework allows for the direct comparison of population-level ICH incidence between two populations.  As each voxel represents a proportion, voxel-wise 2-sample proportion tests can be done.
 
 Future research will focus on different registration techniques approaches and the variability of results conditional on the registration technique chosen. 
@@ -809,14 +829,14 @@ Future research will focus on different registration techniques approaches and t
 
 
 
-\section*{Funding and Disclosures}
+\section{Funding and Disclosures}
 The project described was supported by the National Institutes of Health (NIH) grant RO1EB012547 from the National Institute of Biomedical Imaging And Bioengineering, training grant T32AG000247 from the National Institute on Aging, NIH grants RO1NS060910 and  RO1NS085211 from the National Institute of Neurological Disorders and Stroke (NINDS), and by NIH grant RO1MH095836 from the National Institute of Mental Health. 
 
 Dr. Daniel F. Hanley was awarded significant research support of grants number R01NS046309 and 5U01NS062851 from NINDS. Johns Hopkins University holds a use patent for intraventricular tissue plasminogen activator.
 
 
 
-% \section*{Acknowledgments}
+% \section{Acknowledgments}
 
 
 \newpage
@@ -829,7 +849,7 @@ Dr. Daniel F. Hanley was awarded significant research support of grants number R
 
 \thispagestyle{empty}
 \pagestyle{plain}
-\section*{Tables}
+\section{Tables}
 
 <<demog_tab>>=
 
@@ -1012,7 +1032,7 @@ print.xtable(xtab, file="breakdown.tex", include.rownames = FALSE)
 \input{breakdown.tex}
 
 \newpage
-\section*{Figure Legends}
+\section{Figure Legends}
 
 <<histdem>>=
 ##############################################
@@ -1323,7 +1343,7 @@ dev.off()
 % \end{figure}
 
 \newpage
-\section*{Supplemental Material}
+\section{Supplemental Material}
 
 
 \begin{figure}[H]

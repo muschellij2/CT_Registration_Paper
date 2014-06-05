@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.15)  28 MAY 2014 21:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.15)  5 JUN 2014 13:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -519,20 +519,20 @@ File: english.lbx 2013/11/25 v2.8a biblatex localization (PK/JW/AB)
 (./CT_Pipeline_Template.aux)
 \openout1 = `CT_Pipeline_Template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -572,14 +572,14 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'CT_Pipeline_Template.bbl' found.
 
 (./CT_Pipeline_Template.bbl)
-Package biblatex Info: Reference section=0 on input line 113.
-Package biblatex Info: Reference segment=0 on input line 113.
+Package biblatex Info: Reference section=0 on input line 112.
+Package biblatex Info: Reference segment=0 on input line 112.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 113.
+Package hyperref Info: Link coloring OFF on input line 112.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -589,20 +589,20 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count286
 )
-LaTeX Info: Redefining \ref on input line 113.
-LaTeX Info: Redefining \pageref on input line 113.
-LaTeX Info: Redefining \nameref on input line 113.
+LaTeX Info: Redefining \ref on input line 112.
+LaTeX Info: Redefining \pageref on input line 112.
+LaTeX Info: Redefining \nameref on input line 112.
 
 (./CT_Pipeline_Template.out) (./CT_Pipeline_Template.out)
 \@outlinefile=\write4
 \openout4 = `CT_Pipeline_Template.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 120.
+LaTeX Font Info:    Try loading font information for U+msa on input line 119.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 120.
+LaTeX Font Info:    Try loading font information for U+msb on input line 119.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -616,15 +616,12 @@ Missing character: There is no ¤ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no ‰ in font cmr10!
 Missing character: There is no ¤ in font cmr10!
- [3]
+ [3] [4]
 Missing character: There is no â in font cmr10!
 Missing character: There is no ‰ in font cmr10!
 Missing character: There is no ¥ in font cmr10!
- [4]
-Missing character: There is no Î in font cmr10!
-Missing character: There is no ³ in font cmr10!
  [5]
-[6] [7] [8] [9] [10]
+[6] [7] [8] [9] [10] [11]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
@@ -638,7 +635,7 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no ” in font cmr10!
 Missing character: There is no Â in font cmr10!
 Missing character: There is no   in font cmr10!
- [11]
+ [12]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
@@ -647,272 +644,268 @@ Missing character: There is no ¨ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [12]
+ [13]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [13] (./demographics.tex) (./nihss_measures.tex) (./gcs_measures.tex) [14] (./
-Beta_Table.tex
+ [14] (./demographics.tex)
+(./nihss_measures.tex) (./gcs_measures.tex) [15] (./Beta_Table.tex
 Overfull \hbox (42.28339pt too wide) in paragraph at lines 5--21
  [][] 
  []
 
-) (./breakdown.tex) [15] <histdem.pdf, id=302, 433.62pt x 325.215pt>
+) (./breakdown.tex) [16] <histdem.pdf, id=395, 433.62pt x 325.215pt>
 File: histdem.pdf Graphic file (type pdf)
 
 <use histdem.pdf>
-Package pdftex.def Info: histdem.pdf used on input line 574.
+Package pdftex.def Info: histdem.pdf used on input line 573.
 (pdftex.def)             Requested size: 433.61894pt x 325.2142pt.
-
-Overfull \vbox (264.60905pt too high) has occurred while \output is active []
-
-
-[16 <./histdem.pdf>]
-<100-318_20070723_0957_CT_3_CT_Head-_SS_Mask_0.01.png, id=313, 481.8pt x 481.8p
+ [17]
+<100-318_20070723_0957_CT_3_CT_Head-_SS_Mask_0.01.png, id=400, 481.8pt x 481.8p
 t>
 File: 100-318_20070723_0957_CT_3_CT_Head-_SS_Mask_0.01.png Graphic file (type p
 ng)
  <use 100-318_20070723_0957_CT_3_CT_Head-_SS_Mask_0.01.png>
 Package pdftex.def Info: 100-318_20070723_0957_CT_3_CT_Head-_SS_Mask_0.01.png u
-sed on input line 585.
+sed on input line 584.
 (pdftex.def)             Requested size: 218.51521pt x 218.51358pt.
 
-<100-318_20070723_0957_CT_3_CT_Head-_SS_0.01.png, id=314, 481.8pt x 481.8pt>
+<100-318_20070723_0957_CT_3_CT_Head-_SS_0.01.png, id=401, 481.8pt x 481.8pt>
 File: 100-318_20070723_0957_CT_3_CT_Head-_SS_0.01.png Graphic file (type png)
 
 <use 100-318_20070723_0957_CT_3_CT_Head-_SS_0.01.png>
 Package pdftex.def Info: 100-318_20070723_0957_CT_3_CT_Head-_SS_0.01.png used o
-n input line 590.
+n input line 589.
 (pdftex.def)             Requested size: 218.51521pt x 218.51358pt.
-
-<native_100-362_20100126_1926_CT_2_CT_ROUTINE.png, id=321, 481.8pt x 481.8pt>
+ [18 <./histdem.pdf>]
+<native_100-362_20100126_1926_CT_2_CT_ROUTINE.png, id=417, 481.8pt x 481.8pt>
 File: native_100-362_20100126_1926_CT_2_CT_ROUTINE.png Graphic file (type png)
 
 <use native_100-362_20100126_1926_CT_2_CT_ROUTINE.png>
 Package pdftex.def Info: native_100-362_20100126_1926_CT_2_CT_ROUTINE.png used 
-on input line 602.
+on input line 601.
 (pdftex.def)             Requested size: 141.12454pt x 141.12259pt.
 
-<raw_spm_100-362_20100126_1926_CT_2_CT_ROUTINE.png, id=322, 481.8pt x 481.8pt>
+<raw_spm_100-362_20100126_1926_CT_2_CT_ROUTINE.png, id=418, 481.8pt x 481.8pt>
 File: raw_spm_100-362_20100126_1926_CT_2_CT_ROUTINE.png Graphic file (type png)
 
 
 <use raw_spm_100-362_20100126_1926_CT_2_CT_ROUTINE.png>
 Package pdftex.def Info: raw_spm_100-362_20100126_1926_CT_2_CT_ROUTINE.png used
- on input line 607.
+ on input line 606.
 (pdftex.def)             Requested size: 141.12454pt x 141.12259pt.
 
-<roi_spm_100-362_20100126_1926_CT_2_CT_ROUTINE.png, id=325, 481.8pt x 481.8pt>
+<roi_spm_100-362_20100126_1926_CT_2_CT_ROUTINE.png, id=421, 481.8pt x 481.8pt>
 File: roi_spm_100-362_20100126_1926_CT_2_CT_ROUTINE.png Graphic file (type png)
 
 
 <use roi_spm_100-362_20100126_1926_CT_2_CT_ROUTINE.png>
 Package pdftex.def Info: roi_spm_100-362_20100126_1926_CT_2_CT_ROUTINE.png used
- on input line 612.
+ on input line 611.
 (pdftex.def)             Requested size: 141.12454pt x 141.12259pt.
 
-<native_191-301_20060201_1148_CT_2_CT_ROUTINE.png, id=326, 481.8pt x 481.8pt>
+<native_191-301_20060201_1148_CT_2_CT_ROUTINE.png, id=422, 481.8pt x 481.8pt>
 File: native_191-301_20060201_1148_CT_2_CT_ROUTINE.png Graphic file (type png)
 
 <use native_191-301_20060201_1148_CT_2_CT_ROUTINE.png>
 Package pdftex.def Info: native_191-301_20060201_1148_CT_2_CT_ROUTINE.png used 
-on input line 632.
+on input line 631.
 (pdftex.def)             Requested size: 141.12454pt x 141.12259pt.
 
-<raw_spm_191-301_20060201_1148_CT_2_CT_ROUTINE.png, id=327, 481.8pt x 481.8pt>
+<raw_spm_191-301_20060201_1148_CT_2_CT_ROUTINE.png, id=423, 481.8pt x 481.8pt>
 File: raw_spm_191-301_20060201_1148_CT_2_CT_ROUTINE.png Graphic file (type png)
 
 
 <use raw_spm_191-301_20060201_1148_CT_2_CT_ROUTINE.png>
 Package pdftex.def Info: raw_spm_191-301_20060201_1148_CT_2_CT_ROUTINE.png used
- on input line 637.
+ on input line 636.
 (pdftex.def)             Requested size: 141.12454pt x 141.12259pt.
 
-<roi_spm_191-301_20060201_1148_CT_2_CT_ROUTINE.png, id=330, 481.8pt x 481.8pt>
+<roi_spm_191-301_20060201_1148_CT_2_CT_ROUTINE.png, id=426, 481.8pt x 481.8pt>
 File: roi_spm_191-301_20060201_1148_CT_2_CT_ROUTINE.png Graphic file (type png)
 
 
 <use roi_spm_191-301_20060201_1148_CT_2_CT_ROUTINE.png>
 Package pdftex.def Info: roi_spm_191-301_20060201_1148_CT_2_CT_ROUTINE.png used
- on input line 642.
+ on input line 641.
 (pdftex.def)             Requested size: 141.12454pt x 141.12259pt.
- [17 <./100-318_20070723_0957_CT_3_CT_Head-_SS_Mask_0.01.png (PNG copy)> <./100
+ [19 <./100-318_20070723_0957_CT_3_CT_Head-_SS_Mask_0.01.png (PNG copy)> <./100
 -318_20070723_0957_CT_3_CT_Head-_SS_0.01.png (PNG copy)>]
-<reoriented_Binary_Sum_Image_histogram.pdf, id=357, 505.89pt x 505.89pt>
+<reoriented_Binary_Sum_Image_histogram.pdf, id=454, 505.89pt x 505.89pt>
 File: reoriented_Binary_Sum_Image_histogram.pdf Graphic file (type pdf)
 
 <use reoriented_Binary_Sum_Image_histogram.pdf>
 Package pdftex.def Info: reoriented_Binary_Sum_Image_histogram.pdf used on inpu
-t line 655.
+t line 654.
 (pdftex.def)             Requested size: 218.51521pt x 218.51651pt.
 
-<Figure4_Proportion.png, id=358, 505.89pt x 505.89pt>
+<Figure4_Proportion.png, id=455, 505.89pt x 505.89pt>
 File: Figure4_Proportion.png Graphic file (type png)
 
 <use Figure4_Proportion.png>
-Package pdftex.def Info: Figure4_Proportion.png used on input line 660.
+Package pdftex.def Info: Figure4_Proportion.png used on input line 659.
 (pdftex.def)             Requested size: 218.51521pt x 218.51651pt.
- [18 <./native_100-362_20100126_1926_CT_2_CT_ROUTINE.png (PNG copy)> <./raw_spm
+ [20 <./native_100-362_20100126_1926_CT_2_CT_ROUTINE.png (PNG copy)> <./raw_spm
 _100-362_20100126_1926_CT_2_CT_ROUTINE.png (PNG copy)> <./roi_spm_100-362_20100
 126_1926_CT_2_CT_ROUTINE.png (PNG copy)> <./native_191-301_20060201_1148_CT_2_C
 T_ROUTINE.png (PNG copy)> <./raw_spm_191-301_20060201_1148_CT_2_CT_ROUTINE.png 
 (PNG copy)> <./roi_spm_191-301_20060201_1148_CT_2_CT_ROUTINE.png (PNG copy)>]
-<Regression_Map_heatcol1_t1.png, id=369, 505.89pt x 505.89pt>
+<Regression_Map_heatcol1_t1.png, id=466, 505.89pt x 505.89pt>
 File: Regression_Map_heatcol1_t1.png Graphic file (type png)
 
 <use Regression_Map_heatcol1_t1.png>
-Package pdftex.def Info: Regression_Map_heatcol1_t1.png used on input line 753.
+Package pdftex.def Info: Regression_Map_heatcol1_t1.png used on input line 752.
 
 (pdftex.def)             Requested size: 141.12454pt x 141.12332pt.
 
-<Regression_Map_heatcol2_t1.png, id=370, 505.89pt x 505.89pt>
+<Regression_Map_heatcol2_t1.png, id=467, 505.89pt x 505.89pt>
 File: Regression_Map_heatcol2_t1.png Graphic file (type png)
 
 <use Regression_Map_heatcol2_t1.png>
-Package pdftex.def Info: Regression_Map_heatcol2_t1.png used on input line 758.
+Package pdftex.def Info: Regression_Map_heatcol2_t1.png used on input line 757.
 
 (pdftex.def)             Requested size: 141.12454pt x 141.12332pt.
 
-<Regression_Map_heatcol3_t1.png, id=371, 505.89pt x 505.89pt>
+<Regression_Map_heatcol3_t1.png, id=468, 505.89pt x 505.89pt>
 File: Regression_Map_heatcol3_t1.png Graphic file (type png)
 
 <use Regression_Map_heatcol3_t1.png>
-Package pdftex.def Info: Regression_Map_heatcol3_t1.png used on input line 763.
+Package pdftex.def Info: Regression_Map_heatcol3_t1.png used on input line 762.
 
 (pdftex.def)             Requested size: 141.12454pt x 141.12332pt.
 
-<Regression_Map_heatcol4_t1.png, id=372, 505.89pt x 505.89pt>
+<Regression_Map_heatcol4_t1.png, id=469, 505.89pt x 505.89pt>
 File: Regression_Map_heatcol4_t1.png Graphic file (type png)
 
 <use Regression_Map_heatcol4_t1.png>
-Package pdftex.def Info: Regression_Map_heatcol4_t1.png used on input line 768.
+Package pdftex.def Info: Regression_Map_heatcol4_t1.png used on input line 767.
 
 (pdftex.def)             Requested size: 141.12454pt x 141.12332pt.
 
-<Regression_Map_heatcol5_t1.png, id=373, 505.89pt x 505.89pt>
+<Regression_Map_heatcol5_t1.png, id=470, 505.89pt x 505.89pt>
 File: Regression_Map_heatcol5_t1.png Graphic file (type png)
 
 <use Regression_Map_heatcol5_t1.png>
-Package pdftex.def Info: Regression_Map_heatcol5_t1.png used on input line 773.
+Package pdftex.def Info: Regression_Map_heatcol5_t1.png used on input line 772.
 
 (pdftex.def)             Requested size: 141.12454pt x 141.12332pt.
 
-<Regression_Map_heatcol6_t1.png, id=374, 505.89pt x 505.89pt>
+<Regression_Map_heatcol6_t1.png, id=471, 505.89pt x 505.89pt>
 File: Regression_Map_heatcol6_t1.png Graphic file (type png)
 
 <use Regression_Map_heatcol6_t1.png>
-Package pdftex.def Info: Regression_Map_heatcol6_t1.png used on input line 778.
+Package pdftex.def Info: Regression_Map_heatcol6_t1.png used on input line 777.
 
 (pdftex.def)             Requested size: 141.12454pt x 141.12332pt.
- [19 <./reoriented_Binary_Sum_Image_histogram.pdf> <./Figure4_Proportion.png (P
+ [21 <./reoriented_Binary_Sum_Image_histogram.pdf> <./Figure4_Proportion.png (P
 NG copy)>]
-<Top_19047_pvalues.png, id=397, 481.8pt x 481.8pt>
+<Top_19047_pvalues.png, id=493, 481.8pt x 481.8pt>
 File: Top_19047_pvalues.png Graphic file (type png)
  <use Top_19047_pvalues.png>
-Package pdftex.def Info: Top_19047_pvalues.png used on input line 793.
+Package pdftex.def Info: Top_19047_pvalues.png used on input line 792.
 (pdftex.def)             Requested size: 218.51521pt x 218.51358pt.
 
-<GCS_Top_1000_pvalues.png, id=398, 481.8pt x 481.8pt>
+<GCS_Top_1000_pvalues.png, id=494, 481.8pt x 481.8pt>
 File: GCS_Top_1000_pvalues.png Graphic file (type png)
 
 <use GCS_Top_1000_pvalues.png>
-Package pdftex.def Info: GCS_Top_1000_pvalues.png used on input line 798.
+Package pdftex.def Info: GCS_Top_1000_pvalues.png used on input line 797.
 (pdftex.def)             Requested size: 218.51521pt x 218.51358pt.
 
-<Regress_ROI_NIHSS_Best_Model.png, id=399, 505.89pt x 505.89pt>
+<Regress_ROI_NIHSS_Best_Model.png, id=495, 505.89pt x 505.89pt>
 File: Regress_ROI_NIHSS_Best_Model.png Graphic file (type png)
 
 <use Regress_ROI_NIHSS_Best_Model.png>
 Package pdftex.def Info: Regress_ROI_NIHSS_Best_Model.png used on input line 80
-4.
+3.
 (pdftex.def)             Requested size: 218.51521pt x 218.51651pt.
 
-<Regress_ROI_GCS_Best_Model.png, id=402, 505.89pt x 505.89pt>
+<Regress_ROI_GCS_Best_Model.png, id=498, 505.89pt x 505.89pt>
 File: Regress_ROI_GCS_Best_Model.png Graphic file (type png)
 
 <use Regress_ROI_GCS_Best_Model.png>
-Package pdftex.def Info: Regress_ROI_GCS_Best_Model.png used on input line 809.
+Package pdftex.def Info: Regress_ROI_GCS_Best_Model.png used on input line 808.
 
 (pdftex.def)             Requested size: 218.51521pt x 218.51651pt.
- [20 <./Regression_Map_heatcol1_t1.png (PNG copy)> <./Regression_Map_heatcol2_t
+ [22 <./Regression_Map_heatcol1_t1.png (PNG copy)> <./Regression_Map_heatcol2_t
 1.png (PNG copy)> <./Regression_Map_heatcol3_t1.png (PNG copy)> <./Regression_M
 ap_heatcol4_t1.png (PNG copy)> <./Regression_Map_heatcol5_t1.png (PNG copy)> <.
 /Regression_Map_heatcol6_t1.png (PNG copy)>]
 Overfull \vbox (16.02219pt too high) has occurred while \output is active []
 
 
-[21 <./Top_19047_pvalues.png (PNG copy)> <./GCS_Top_1000_pvalues.png (PNG copy)
+[23 <./Top_19047_pvalues.png (PNG copy)> <./GCS_Top_1000_pvalues.png (PNG copy)
 > <./Regress_ROI_NIHSS_Best_Model.png> <./Regress_ROI_GCS_Best_Model.png>]
-<GCS_Regression_Map_heatcol1_t1.png, id=434, 505.89pt x 505.89pt>
+<GCS_Regression_Map_heatcol1_t1.png, id=529, 505.89pt x 505.89pt>
 File: GCS_Regression_Map_heatcol1_t1.png Graphic file (type png)
 
 <use GCS_Regression_Map_heatcol1_t1.png>
 Package pdftex.def Info: GCS_Regression_Map_heatcol1_t1.png used on input line 
-861.
+860.
 (pdftex.def)             Requested size: 141.12454pt x 141.12332pt.
 
-<GCS_Regression_Map_heatcol2_t1.png, id=435, 505.89pt x 505.89pt>
+<GCS_Regression_Map_heatcol2_t1.png, id=530, 505.89pt x 505.89pt>
 File: GCS_Regression_Map_heatcol2_t1.png Graphic file (type png)
 
 <use GCS_Regression_Map_heatcol2_t1.png>
 Package pdftex.def Info: GCS_Regression_Map_heatcol2_t1.png used on input line 
-866.
+865.
 (pdftex.def)             Requested size: 141.12454pt x 141.12332pt.
 
-<GCS_Regression_Map_heatcol3_t1.png, id=436, 505.89pt x 505.89pt>
+<GCS_Regression_Map_heatcol3_t1.png, id=531, 505.89pt x 505.89pt>
 File: GCS_Regression_Map_heatcol3_t1.png Graphic file (type png)
 
 <use GCS_Regression_Map_heatcol3_t1.png>
 Package pdftex.def Info: GCS_Regression_Map_heatcol3_t1.png used on input line 
-871.
+870.
 (pdftex.def)             Requested size: 141.12454pt x 141.12332pt.
 
-<GCS_Regression_Map_heatcol4_t1.png, id=437, 505.89pt x 505.89pt>
+<GCS_Regression_Map_heatcol4_t1.png, id=532, 505.89pt x 505.89pt>
 File: GCS_Regression_Map_heatcol4_t1.png Graphic file (type png)
 
 <use GCS_Regression_Map_heatcol4_t1.png>
 Package pdftex.def Info: GCS_Regression_Map_heatcol4_t1.png used on input line 
-876.
+875.
 (pdftex.def)             Requested size: 141.12454pt x 141.12332pt.
 
-<GCS_Regression_Map_heatcol5_t1.png, id=438, 505.89pt x 505.89pt>
+<GCS_Regression_Map_heatcol5_t1.png, id=533, 505.89pt x 505.89pt>
 File: GCS_Regression_Map_heatcol5_t1.png Graphic file (type png)
 
 <use GCS_Regression_Map_heatcol5_t1.png>
 Package pdftex.def Info: GCS_Regression_Map_heatcol5_t1.png used on input line 
-881.
+880.
 (pdftex.def)             Requested size: 141.12454pt x 141.12332pt.
 
-<GCS_Regression_Map_heatcol6_t1.png, id=439, 505.89pt x 505.89pt>
+<GCS_Regression_Map_heatcol6_t1.png, id=534, 505.89pt x 505.89pt>
 File: GCS_Regression_Map_heatcol6_t1.png Graphic file (type png)
 
 <use GCS_Regression_Map_heatcol6_t1.png>
 Package pdftex.def Info: GCS_Regression_Map_heatcol6_t1.png used on input line 
-886.
+885.
 (pdftex.def)             Requested size: 141.12454pt x 141.12332pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 893.
- [22 <./GCS_Regression_Map_heatcol1_t1.png (PNG copy)> <./GCS_Regression_Map_he
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 892.
+ [24 <./GCS_Regression_Map_heatcol1_t1.png (PNG copy)> <./GCS_Regression_Map_he
 atcol2_t1.png (PNG copy)> <./GCS_Regression_Map_heatcol3_t1.png (PNG copy)> <./
 GCS_Regression_Map_heatcol4_t1.png (PNG copy)> <./GCS_Regression_Map_heatcol5_t
 1.png (PNG copy)> <./GCS_Regression_Map_heatcol6_t1.png (PNG copy)>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 893.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 892.
  (./CT_Pipeline_Template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 893.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 893.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 892.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 892.
 Package rerunfilecheck Info: File `CT_Pipeline_Template.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 698E1B52B575E9DEE11C56B502E3E59A;2024.
 Package logreq Info: Writing requests to 'CT_Pipeline_Template.run.xml'.
 \openout1 = `CT_Pipeline_Template.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12721 strings out of 493308
- 207672 string characters out of 6137816
- 493415 words of memory out of 5000000
- 15854 multiletter control sequences out of 15000+600000
+ 12753 strings out of 493308
+ 208181 string characters out of 6137816
+ 493414 words of memory out of 5000000
+ 15883 multiletter control sequences out of 15000+600000
  11301 words of font info for 44 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  37i,11n,56p,1438b,1075s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -933,10 +926,10 @@ e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2013/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on CT_Pipeline_Template.pdf (22 pages, 4133275 bytes).
+Output written on CT_Pipeline_Template.pdf (24 pages, 4139351 bytes).
 PDF statistics:
- 548 PDF objects out of 1000 (max. 8388607)
- 434 compressed objects within 5 object streams
- 140 named destinations out of 1000 (max. 500000)
- 136 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 644 PDF objects out of 1000 (max. 8388607)
+ 527 compressed objects within 6 object streams
+ 143 named destinations out of 1000 (max. 500000)
+ 352 words of extra memory for PDF output out of 10000 (max. 10000000)
 
