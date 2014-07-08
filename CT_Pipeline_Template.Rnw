@@ -236,7 +236,7 @@ load('Voxel_Info.Rda')
 
 Intracranial hemorrhage (ICH) is a neurological condition that results from a blood vessel rupturing into tissues and possibly the ventricles of the brain.  Bleeding may cause distension of the brain structures and increase in potentially lethal intracranial pressure (ICP).  ICH is a serious condition; it accounts for approximately 10-15\% of all strokes, corresponding to an estimated 79,500 annual cases \citep{go_heart_2013} and approximately 30,000 deaths \citep{qureshi_spontaneous_2001} in the US and approximately 5 million cases worldwide \citep{krishnamurthi_global_2014}. In addition to the increased likelihood of death, ICH has debilitating health effects on survivors who do not have full functional recovery after stroke.
 
-The use of computed tomography (CT) scans allows clinicians and researchers to qualitatively and quantitatively describe the characteristics of a hemorrhage to guide interventions and treatments.  CT scanning is widely available and is the most commonly used diagnostic tool in patients with ICH \citep{sahni_management_2007}. While much can be understood from careful CT image inspection, detailed quantification of information at the patient and population level is an open problem. Indeed, it is hard, for example, to quantify from visual inspection alone the percent of a particular anatomic ROI engaged by the stroke, compare locations of strokes across patients, and study the association between specific locations and adverse health outcomes.
+The use of computed tomography (CT) scans allows clinicians and researchers to qualitatively and quantitatively describe the characteristics of a hemorrhage to guide interventions and treatments.  CT scanning is widely available and is the most commonly used diagnostic tool in patients with ICH \citep{sahni_management_2007}. While much can be understood from careful CT image inspection, detailed quantification of information at the patient and population level is an open problem. Indeed, it is hard, for example, to quantify from visual inspection alone the percent of a particular anatomic region of interest (ROI) engaged by the stroke, compare locations of strokes across patients, and study the association between specific locations and adverse health outcomes.
 
 To address these problems, we will 1) develop an analytic pipeline based on available neuroimaging tools to register patient CT scans to a CT template; 2) create a 3-dimensional (3D) density map of hemorrhages occurring in a population of patients who survived initial ICH and were enrolled in the MISTIE and ICES clinical trials; 3) provide a detailed quantification of hemorrhage engagement of individual neuroanatomic regions within the brain; 4) determine if differences in location relate to two common disability scores: the National Institutes of Health Stroke Scale (NIHSS) \citep{brott_measurements_1989} 
 and the modified Glasgow Coma Scale (GCS) \citep{teasdale_assessment_1974, teasdale_assessment_1976}; 
@@ -245,7 +245,7 @@ and 5) generate a stroke region of engagement that is likely to be associated wi
 It is a matter of debate whether the location of the ICH is relevant to functional outcome in patients who survived to make it to the hospital \citep{carhuapoma_intracerebral_2009}. For example, \citet{hemphill_ich_2001} found that infratentorial ICH location, intraventricular involvement, and ICH volume, which may represent a number of anatomic locations, all predict 30-day mortality. Conversely, \citet{chuang_risk_2009}, and \citet{diringer_hydrocephalus:_1998} found that the site of ICH was associated with 30-day mortality, but was not statistically associated after adjusting for other covariates.  Following the result that hydrocephalus was an independent predictor of 30-day mortality \citep{diringer_hydrocephalus:_1998}, \citet{phan_hydrocephalus_2000} found that hydrocephalus was an independent prognostic indicator only for the group with hemorrhages in the putamen and not for those with hemorrhages in the caudate or thalamus. In contrast, other studies have not observed location of the ICH predicting prognosis \citep{portenoy_intracerebral_1987, senant_[multi-factorial_1988, daverat_death_1991, broderick_volume_1993, lisk_early_1994, mase_immediate_1995, qureshi_predictors_1995, razzaq_determinants_1998, hallevy_spontaneous_2002, cheung_use_2003}.  
 
 Other trials have estimated the effects of surgery in a sub-population of ICH patients on health outcomes. % , but little continues to be known about the association between stroke localization and health outcomes among initial stroke survivors. 
-Phase I of the Surgical Trial in Intracerebral Haemorrhage (STICH I) found treatment effects of hemorrhage reduction through early surgery in a subset of patients who had bleeds in the proximity of the brain lobes ($≤$1 cm from the cortical surface of the brain) \citep{mendelow_early_2005}. However, when the effect was re-examined in the second phase of the trial (STICH II), which included only patients with superficial lobar hematomas, the treatment effect was not found to be statistically significant \citep{mendelow_early_2013}.  Although STICH II did not identify a statistically significant treatment effect, this may be due to sub-optimal definition of localization.  In the ``Guidelines for the Management of Spontaneous Intracerebral Hemorrhage'' \citet{morgenstern_guidelines_2010} noted that: ``other randomized trials have had too few patients to determine outcomes in subgroups by location, randomized only patients with deep ICH, or did not report these results''.  Moreover, the localization of ICH and its evolution before and after treatment administration may actually be a crucial baseline or longitudinal characteristic of the stroke that could predict whether treatments are effective, may be a confounding factor of treatment and outcomes, and may relate to ICH recurrence \citep{fitzmaurice_effect_2008}.  
+Phase I of the Surgical Trial in Intracerebral Haemorrhage (STICH I) found treatment effects of hemorrhage reduction through early surgery in a subset of patients who had bleeds in the proximity of the brain lobes ($\leq$1 cm from the cortical surface of the brain) \citep{mendelow_early_2005}. However, when the effect was re-examined in the second phase of the trial (STICH II), which included only patients with superficial lobar hematomas, the treatment effect was not found to be statistically significant \citep{mendelow_early_2013}.  Although STICH II did not identify a statistically significant treatment effect, this may be due to sub-optimal definition of localization.  In the ``Guidelines for the Management of Spontaneous Intracerebral Hemorrhage'', \citet{morgenstern_guidelines_2010} noted that: ``other randomized trials have had too few patients to determine outcomes in subgroups by location, randomized only patients with deep ICH, or did not report these results''.  Moreover, the localization of ICH and its evolution before and after treatment administration may actually be a crucial baseline or longitudinal characteristic of the stroke that could predict whether treatments are effective, may be a confounding factor of treatment and outcomes, and may relate to ICH recurrence \citep{fitzmaurice_effect_2008}.  
 
 However, even the coarse classification of hemorrhage location is complicated,  which may lead to labeling confusion even among the best trained neuroimage scientists. Indeed, a hemorrhage may extend into multiple brain areas, may affect different tissue classes, and may break through the ventricular wall causing the hemorrhage to spread to other areas of the brain.  Such problems would challenge even the best scientists, as it becomes time-onerous to do anything more than calling a single region as the primary affected anatomic region (e.g. caudate or putamen) or describing the edge of a hemorrhage by an average or minimum distance to a given landmark \citep{ziai_multicenter_2013}.  Also, increased long- or short-term disability that corresponds to a significant difference in hemorrhage volume may be modulated by hemorrhage location.  Alternatively, hemorrhage increases after a stabilization period may result in no changes in functional indices depending on the brain regions involved. Hence, there is a need for detailed information of brain hemorrhage location and its association with the stroke severity, while controlling for ICH volume.  Such detailed localization information can be obtained by registering scans to a common template and by using the detailed anatomical information in the template to provide refined anatomical localization information.  
 
@@ -264,7 +264,7 @@ We are not focusing on treatment effects; instead we are mapping stroke location
 
 \section{Materials and Methods}
 
-All statistical analysis was done in the \verb|R| statistical programming language (\url{http://cran.r-project.org/}).  We used the \verb|oro.nifti| package \citep{whitcher_working_2011} for reading and visualizing brain images and the \verb|ggplot2| package \citep{wickham_ggplot2:_2009} to visualize histograms.
+All statistical analysis was done in the \verb|R| statistical programming language (\url{http://cran.r-project.org/}).  We used the \verb|oro.nifti| package \citep{whitcher_working_2011} for reading and visualizing brain images and the \verb|ggplot2| package \citep{wickham_ggplot2:_2009} to visualize histograms and scatter plots.
 
 \subsection{Subjects and Demographics}
 The study consists of \Sexpr{N} patients from MISTIE ($N=\Sexpr{n.mistie}$) and ICES ($N = \Sexpr{n.ices}$) recruited from \Sexpr{n.ctr} centers.  Patients were eligible if: they were aged 18 to 80 years old with a spontaneous ICH of greater than $20$cc that did not require an extraventricular drain (EVD), were non-pregnant, had a historical Rankin Scale \citep{rankin_cerebral_1957, swieten_interobserver_1988} score of $≤ 1$ and a diagnosis that excluded other conditions such as ruptured aneurysms, arteriovenous malformations, or other neurovascular anomaly (for full criteria, see \citet{mould_minimally_2013}).  CT and clinical data were previously collected as part of the Johns Hopkins Medicine IRB-approved ICES and MISTIE research studies with written consent provided by participants.  Each site adhered to local ethical procedures and consented to participation in the study.  All clinical data were deidentified by using a unique patient identifier and anonymizing CT images by removing all patient-identifying information.  
@@ -294,30 +294,36 @@ The NIHSS and GCS scores were recorded at enrollment into the study; $\Sexpr{no.
 
 
 \subsection{Imaging Data}
-CT images were acquired for all patients, with site-specific scanning parameters.  Scans were acquired using \Sexpr{manu[1]} ($N=\Sexpr{man.tab[1]}$), \Sexpr{manu[2]} ($N=\Sexpr{man.tab[2]}$), \Sexpr{manu[3]} ($N=\Sexpr{man.tab[3]}$), and \Sexpr{manu[4]} ($N=\Sexpr{man.tab[4]}$) scanners. Gantry tilt was observed in \Sexpr{n.gant} scans.  Slice thickness of the image varied within the scan reconstruction for \Sexpr{n.var.slice} scans, which we will refer to  as variable slice thickness. For example, if a scan was reconstructed with 10 millimeter (mm) slices at the top and bottom of the brain, which are not of interest, but with 5mm slices in the middle where the hematoma is seen (see Figure~\ref{f:reg}\protect\subref*{reg:nat1}).  Therefore, the scans analyzed had different voxel dimensions and image resolution prior to registration to the template.  Different reconstructions of CT images are not available via the data-acquiring center, and represent how scans are presented for evaluation in many diagnostic cases.
+CT images were acquired for all patients, with site-specific scanning parameters.  Scans were acquired using \Sexpr{manu[1]} ($N=\Sexpr{man.tab[1]}$), \Sexpr{manu[2]} ($N=\Sexpr{man.tab[2]}$), \Sexpr{manu[3]} ($N=\Sexpr{man.tab[3]}$), and \Sexpr{manu[4]} ($N=\Sexpr{man.tab[4]}$) scanners. Gantry tilt was observed in \Sexpr{n.gant} scans.  Slice thickness of the image varied within the scan reconstruction for \Sexpr{n.var.slice} scans, which we will refer to as variable slice thickness. For example, variable slice thickness may occur when a scan was reconstructed with 10 millimeter (mm) slices at the top and bottom of the brain, where no hematoma is present, but with 5mm slices in the middle where the hematoma is seen (see Figure~\ref{f:reg}\protect\subref*{reg:nat1}).  Therefore, the scans analyzed had different voxel dimensions and image resolution prior to registration to the template.  Different reconstructions of CT images are not available via the data-acquiring center, and represent how scans are presented for evaluation in many diagnostic cases.
 
 
 \subsection{Hemorrhage Segmentation and Location Identification}
-To register the CT scan to the CT template, the hemorrhage was excluded from the algorithm, i.e. ``masked out'', using manual ICH segmentations.  ICH was manually segmented on CT scans using the OsiriX imaging software by expert readers (OsiriX v. 4.1, Pixmeo; Geneva, Switzerland).  Readers employed a semiautomated threshold-based approach using a Hounsfield unit (HU) range of $40$ to $80$ to select potential regions of ICH \citep{bergstrom_variation_1977, smith_imaging_2006}; these regions were then further quality controlled and refined by readers using direct inspection of images.  Binary image masks were created for the hemorrhage region of interest (ROI) by setting voxel intensity to $1$ if the voxel was classified as hemorrhage, and $0$ otherwise.  Readers also identified the region most engaged by the ICH before creating the binary image of the hemorrhage.
+To register the CT scan to the CT template, the hemorrhage was excluded from the algorithm, i.e. ``masked out'', using manual ICH segmentations.  ICH was manually segmented on CT scans using the OsiriX imaging software by expert readers (OsiriX v. 4.1, Pixmeo; Geneva, Switzerland).  Readers employed a semiautomated threshold-based approach using a Hounsfield unit (HU) range of $40$ to $80$ to select potential regions of ICH \citep{bergstrom_variation_1977, smith_imaging_2006}; these regions were then further quality controlled and refined by readers using direct inspection of images.  Binary image masks were created for the hemorrhage ROI by setting voxel intensity to $1$ if the voxel was classified as hemorrhage, and $0$ otherwise.  Readers also identified the region most engaged by the ICH before creating the binary image of the hemorrhage.
 %previous to this analysis as a standard hemorrhage characteristic.
 
 \subsection{Image Processing: Brain Extraction, Reorientation, Registration}
 CT brain images and the binary mask were exported from OsiriX to DICOM (Digital Imaging and Communications in Medicine) format.  Images with gantry tilt were corrected using a customized MATLAB (The Mathworks, Natick, Massachusetts, USA) user-written script ({\scriptsize \url{http://bit.ly/1ltIM8c}}). 
 %http://www.mathworks.com/matlabcentral/fileexchange/28141-gantry-detector-tilt-correction/content/gantry2.m
-Images were converted to the Neuroimaging Informatics Technology Initiative (NIfTI) data format using \verb|dcm2nii| (2009 version, provided with MRIcro \citep{rorden_stereotaxic_2000}).  Images were constrained to values $-1024$ and $3071$ HU to remove potential image rescaling errors and artifacts.  No interpolation was done for images with a variable slice thickness. Thickness was determined from the first slice converted and was assumed homogeneous throughout.  
+Images were converted to the Neuroimaging Informatics Technology Initiative (NIfTI) data format using \verb|dcm2nii| (2009 version, provided with MRIcro \citep{rorden_stereotaxic_2000}).  Images were constrained to values $-1024$ and $3071$ HU to remove potential image rescaling errors and artifacts.  No interpolation was done for images with a variable slice thickness. Thickness was determined from the first slice converted and was assumed homogeneous throughout the image.  
 
-Brains were extracted to remove skull, eyes, facial and nasal features, extracranial skin, and more importantly non-human elements of the image captured by the CT scanner, such as the gantry, pillows, or medical devices.  Using a variant of a previously published brain extraction protocol \citep{rorden_age-specific_2012}, removal of these elements was performed using the brain extraction tool (BET) \citep{smith_fast_2002}, a function of the FSL \citep{jenkinson_fsl_2012} neuroimaging software (v5.0.4).  Images were thresholded to a brain tissue range ($0$-$100$ HU) and BET was applied, using a fractional intensity threshold of $0.01$.  An image with its brain-extracted counterpart can be seen in Figure~\ref{fig:bet}.  
+Brains were extracted to remove skull, eyes, facial and nasal features, extracranial skin, and more importantly non-human elements of the image captured by the CT scanner, such as the gantry, pillows, or medical devices.  Using a variant of a previously published brain extraction protocol \citep{rorden_age-specific_2012}, removal of these elements was performed using the brain extraction tool (BET) \citep{smith_fast_2002}, a function of the FSL \citep{jenkinson_fsl_2012} neuroimaging software (v5.0.4).  Images were thresholded to a brain tissue range ($0$-$100$ HU) and BET was applied, using a fractional intensity threshold of $.01$.  An image with its brain-extracted counterpart can be seen in Figure~\ref{fig:bet}.  
 
 In order to use statistical parametric mapping (version 8, SPM8, Wellcome Trust Centre for Neuroimaging, London, United Kingdom) spatial registration algorithm, images must be centered at the line between anterior commissure (AC) and posterior commissure (PC).  The AC-PC line was automatically estimated from the brain-extracted image using a custom MATLAB script (\url{http://bit.ly/1gUqMDw}), which provides the transformation matrix. 
 %http://www.mccauslandcenter.sc.edu/CRNL/tools/spm8-scripts
 The non-brain-extracted image and binary mask were then re-centered using this transformation matrix.  The binary hemorrhage mask was smoothed using a Gaussian smoother with a full width at half maximum (FWHM) of $3$mm.  The brain image was masked by the inverse of the smoothed hemorrhage mask before registration. 
 
 
-The image was then spatially registered to the CT template using the Clinical toolbox \citep{rorden_age-specific_2012}, which employs SPM8's unified normalization-segmentation routine \citep{ashburner_unified_2005} in MATLAB.  The smoothed hemorrhage mask was transformed into the template space using the estimated registration transformation.  The registered smoothed hemorrhage mask was then thresholded using the following rule:
+The image was then spatially registered to the CT template using the Clinical toolbox \citep{rorden_age-specific_2012}, which employs SPM8's unified normalization-segmentation routine \citep{ashburner_unified_2005} in MATLAB.  The smoothed hemorrhage mask was transformed into the template space using the estimated registration transformation.  As interpolation is used in the transformation, the smoothed mask has values ranging from $0$ to $1$.  We thresholded the smoothed hemorrhage mask to create a binary hemorrhage mask in the template space.  
+We will describe the thresholding here: let $S_i$ be the smoothed image mask for person $i$, and $s_{ij}$ denotes voxel $j$ of that mask; let $v_{ij}$ represents voxel $j$ for person $i$ of the thresholded image.  The smoothed hemorrhage mask was thresholded using the following rule \citep{rorden_age-specific_2012}:
 $$
-v_{ij} ≥ \frac{\min(I_i) + \max(I_i)}{2}
+v_{ij} =
+\begin{cases}
+1  & \text{if } s_{ij} \geq \frac{\min(S_i) + \max(S_i)}{2}\\
+0  & \text{if } s_{ij} < \frac{\min(S_i) + \max(S_i)}{2}
+\end{cases}
 $$
-where $v_{ij}$ denotes voxel $j$ for smoothed mask for person $i$, denoted $I_i$.  This corresponds to voxels in the template space being classified as ICH if the transformed voxel on the transformed smoothed mask was larger than the midrange of the transformed smoothed mask.  
+These binary ICH masks were used in analysis.  
+%This corresponds to voxels in the template space being classified as ICH if the transformed voxel on the transformed smoothed mask was larger than the midrange of the transformed smoothed mask.  
 % This thresholded mask will be referred to as an ICH mask and was used to determine hemorrhage localization and engagement described in Section: ``ICH Localization and Engagement".
 % ~\ref{sec:engage}.
 
@@ -337,7 +343,7 @@ No scans were excluded due to inadequate registration.
 
 \subsection{Histograms of ICH in the Brain}
 
-To visualize and describe the localization of lesions, we first combined information from registered masks of \Sexpr{N} patients.  Using the registered ICH masks we obtained the $3$-dimensional (3D) histogram of the ICH localization for the study population. More precisely, for every voxel location in the template space, we calculated the proportion of patients who have an ICH at that particular voxel.  In addition to displaying results at pre-selected slices of the 3D volume, we used the \verb|R| package \verb|brainR| to create an 3D interactive map of the 3D histogram.  The interactive map is located at \url{http://muschellij2.github.io/CT_Pipeline/index.html}.  
+To visualize and describe the localization of lesions, we first combined information from registered masks of \Sexpr{N} patients.  Using the registered ICH masks we obtained the $3$-dimensional (3D) histogram of the ICH localization for the study population. More precisely, for every voxel location in the template space, we calculated the proportion of patients who have an ICH at that particular voxel.  In addition to displaying results at pre-selected slices of the 3D volume, we used the \verb|R| package \verb|brainR| to create an 3D interactive map of the 3D histogram \citep{brainr}.  The interactive map is located at \url{http://muschellij2.github.io/CT_Pipeline/index.html}.  
 % We also created a (non-spatial) histogram of proportion of patients with hemorrhage at a voxel.   
 
 % EXAMPLE by tomorrow
@@ -346,7 +352,7 @@ To visualize and describe the localization of lesions, we first combined informa
 
 
 %Although summaries of the population-level ICH engagement is useful, one area of interest is finding the relationship 
-There is large scientific interest in finding and quantifying the effect size of possible associations between ICH location and functional scores.  We evaluated the association between hemorrhage location and stroke severity as measured by the total NIHSS score and GCS score using a series of models that account for increasing levels of confounder adjustment.  In the population, patients had an ICH at a total of \Sexpr{all.nvox} voxels; a voxel in the template was counted if it was part of the ICH of any patient.  We limited our analysis to voxels in the template space where at least \Sexpr{ncut} patients exhibit lesions to reduce the problems with low prevalence regression in moderate sample sizes.
+There is large scientific interest in finding and quantifying the effect size of possible associations between ICH location and functional scores.  We evaluated the association between hemorrhage location and stroke severity as measured by the NIHSS score and GCS score using a series of models that account for increasing levels of confounder adjustment.  In the population, patients had an ICH at a total of \Sexpr{all.nvox} voxels; a voxel in the template was counted if it was part of the ICH of any patient.  We limited our analysis to voxels in the template space where at least \Sexpr{ncut} patients exhibit lesions to reduce the problems with low prevalence regression in moderate sample sizes.
 %to prevent voxel-level effects resulting from only few patients having ICH at those locations.  
 This reduced the number of voxels by roughly an order of magnitude to \Sexpr{nvox}. At each one of these voxels, we ran a linear regression model:
 \begin{equation}\label{eq:nihss_regression}
@@ -356,11 +362,13 @@ where ${\rm Y}_i$ was either the NIHSS or GCS score for patient $i=1,\ldots,\Sex
 %see if a non-parametric rank-based test resulted in a different relationship between ICH location and functional score. 
 
 
-P-values of each voxel-wise regression model of the functional scores on ICH presence were calculated, testing the null hypothesis $H_{0,v}:\beta_1(v)=0$--or in the case of the Wilcoxon rank-sum test: $H_{0,v}: Score\{ICH(v) = 1\} = Score\{ICH(v) = 0\}$ where $Score$ denotes the distribution of functional scores of patients that either did or did not have ICH at the given voxel $v$.  Figures~\ref{f:mods} and~\ref{f:gcsmods} display the pointwise p-values.  The p-value images displayed were not corrected as the goal is to see potential ``hot spots'' of ICH that relate to functional outcome.
+P-values of each voxel-wise regression model of the functional scores on ICH presence were calculated, testing the null hypothesis $H_{0,v}:\beta_1(v)=0$--or in the case of the Wilcoxon rank-sum test: $H_{0,v}: Score\{ICH(v) = 1\} = Score\{ICH(v) = 0\}$ where $Score$ denotes the distribution of functional scores of patients that either did or did not have ICH at the given voxel $v$.  Figures~\ref{f:mods} and~\ref{f:gcsmods} display the pointwise p-values.  The p-value images displayed were not corrected as the goal is to see potential areas of the brain where ICH engagement relates to functional outcome.
 
-We corrected the p-values, within each analysis of functional scores, using a Bonferroni correction with $\alpha = 0.05$.  Some of the voxels were identical for presence for ICH over the population, e.g. voxels 1 and 2 each had the same people having ICH and same people not having ICH at that location.  We excluded these from the correction, using only then number of unique tests ($N=\Sexpr{nuniq.rows}$).
+As a first step we investigated whether individual locations are predictive a high scores using a Bonferonni correction to account for multiplicity and maintain a family wise error rate below $\alpha=.05$. At this stringent level no location was  found to be significantly associated with the outcomes. However, some very interesting findings (low p-values) in a region adjacent to the ventricles raise important questions about the existence of regions of interest that may improve outcome prediction (see Figure~\ref{f:mods}).  In the next section we investigate the  problem of finding and quantifying a region that is predictive of functional scores.
 
-\subsubsection{Region of Interest Generation and Analysis}
+%We corrected the p-values, within each analysis of functional scores, using a Bonferroni correction with $\alpha = .05$.  Some of the voxels were identical for presence for ICH over the population, e.g. voxels 1 and 2 each had the same people having ICH and same people not having ICH at that location.  We excluded these from the correction, using only then number of unique tests ($N=\Sexpr{nuniq.rows}$).
+
+\subsubsection{Highest Predictive Region Generation and Analysis}
 
 <<>>=
 ### just getting the N and percent for each location
@@ -382,21 +390,19 @@ out = gsub(",$", "", out)
 rm(list=xx)
 @
 
-In order to create a patient-level covariate that summarizes ICH location information, we created a sequence of nested regions of interest (ROIs) by selecting voxels based on the smallest p-values obtained from the undadjusted linear model, i.e. from a model where only the voxel-level ICH indicator was used, but none of the other covariates.  
+In order to create a patient-level covariate that summarizes ICH location information, we created a sequence of nested regions of interest by selecting voxels based on the smallest p-values obtained from the undadjusted linear model, i.e. from a model where only the voxel-level ICH indicator was used, but none of the other covariates.  We We call of these regions ``highest predictive regions'' (HPR), because they combine the location of those voxels that are most predictive of the outcomes. 
 % This covariate is one example of using the ICH mask to create quantitative predictors of functional score from CT images. 
-We have obtained 6 different ROIs, 3 based on the smallest 1000, 2000, and 3000 lowest p-values and three based on all p-values below a particular threshold. We have used three thresholds equal to 0.05, 0.01, and 0.001, resulting in ROI with 2422, 19047, and 47736 voxels respectively.
-
-We thresholded the image based on a range of p-values ($0.05$, $0.01$, $0.001$) and by taking a fixed number of voxels, ranked lowest to highest on p-values ($1000$, $2000$, $3000$ voxels).  For each ROI, we have introduced a variable called ``coverage" that represents the percentage of the voxels that were classified as hemorrhage in the subject-specific image: 
+We obtained 6 different HPR, $3$ based on the smallest $1000$, $2000$, and $3000$ lowest p-values and three based on all p-values below a particular threshold. We have used three thresholds equal to $.05$, $.01$, and $.001$. For each HPR, we have introduced a variable called ``coverage" that represents the percentage of the voxels that were classified as hemorrhage in the subject-specific image: 
 \begin{equation}
-\text{Coverage} = \frac{\text{\# Voxels classified ICH in ROI}}{\text{\# Voxels in ROI}}
+\text{Coverage} = \frac{\text{\# Voxels classified ICH in HPR}}{\text{\# Voxels in HPR}}
 \end{equation}
-For example, if a patient's hemorrhage covers the entire ROI, the coverage is $100\%$, whereas if there is no overlap between the patient's scan and ROI then coverage is 0\%.  This subject-specific covariate is then used as a predictor of the severity score in an adjusted model as
-%We then put this patient-level ROI coverage into a linear regression model adjusted for the $3$ confounders above:
+For example, if a patient's hemorrhage covers the entire HPR, the coverage is $100\%$, whereas if there is no overlap between the patient's scan and HPR then coverage is 0\%.  This subject-specific covariate is then used as a predictor of the severity score in an adjusted model as
+%We then put this patient-level HPR coverage into a linear regression model adjusted for the $3$ confounders above:
 $$
 {\rm Y}_i = \beta_0 + \beta_1 {\rm Coverage}_i + \gamma_1{\rm Age}_i  +\gamma_2{\rm Gender}_i +\gamma_3{\rm TICHVol}_i + \epsilon_{i}
 $$
 We have further investigated whether the new variable coverage was an independent predictor of the severity score compared to accounting for the expert-specified ICH location classification. Specifically, we have used 
-%We computed another linear regression model replacing ROI coverage with 
+%We computed another linear regression model replacing HPR coverage with 
 a categorical indicator of the expert-specified ICH location classification, with categories: \Sexpr{out}.  
 %In order to determine whether using voxel-level information improved prediction of functional score compared to standard hemorrhage classification we calculated 
 Prediction performance and model fit were assessed using a series of model-fit measures: $R^2$, adjusted $R^2$, Akaike information criterion (AIC) \citep{akaike_information_1973}, 
@@ -420,7 +426,18 @@ These summaries of ICH engagement provide a much finer scale description than wh
 
 These results were further summarized at the population level by calculating the percentage of engagement of the 3D population histogram image, weighted by the proportion of patients with ICH at that location.  More precisely, for every voxel in a labeled region we have calculated the proportion of subjects who have an ICH at that voxel. These proportions were then summed over the entire labeled region and this sum was divided by the total sum of the 3D population histogram image.
 %%%!!!Moreover, we can use prior anatomical and neurofunctional information to generate test hypotheses based on regions of the brain labeled by the atlas.  
-We also calculated the percent engagement of regions for the best-performing ROIs for the NIHSS and GCS score analyses to characterize potential locations relating to these functional outcomes.  
+We also calculated the percent engagement of regions for the best-performing HPR for the NIHSS and GCS score analyses to characterize potential locations relating to these functional outcomes.  
+More explicitly, let $k$ denote the brain region (e.g. Putamen) and let $\sum_{k} v_{k}$ represent the sum of the voxels for an image (HPR or population ICH image) in that brian region. Then these percents ($p_{k}$) represent the how much that brain region engages the image compared to other regions (Table~\ref{t:breakdown}):
+$$
+	p_{k} = \frac{\sum_{k} v_{k}}{\text{Sum of Image}}
+$$
+We have also calculated how much a brain region is engaged with the population ICH or HPR images (Table~\ref{t:area_breakdown}):
+$$
+	r_{k} = \frac{\sum_{k} v_{k}}{\# \text{Number of Voxels in Region}}
+$$
+These percentages ($r_{k}$) are at a region level rather than the $p_k$, which are at an image level.
+
+
 
 
 
@@ -462,7 +479,7 @@ distributed medially in the brain in this cohort, with a lower concentration
 close to the cortical surface and higher on the left side of the brain.  Combining areas of engagement regardless of the side of the brain may be worthwhile, though combination of these areas may not be straightforward for those by ICH that cross the mid-sagittal plane.  
 Figure~\ref{fig:StrokeHist}\protect\subref*{prop:img} indicates that the prevalence of strokes in the extreme anterior and posterior areas of the brain are very low.  The low prevalence of strokes in the inferior areas of the brain is likely due the exclusion of brain stems bleeds from the trial.  
 
-That ICH are centralized in the middle portion of the brain may be a direct result of the inclusion criteria and may not generalize to other populations, . However, the inclusion criteria \citep{mould_minimally_2013} did not specifically prefer some spatial locations over others. We consider that population maps provide a lot of information, that they allow researchers to sharpen their hypothesis, and that they also allow for such hypotheses to be tested. While the 3D histograms may not generalize to other populations, it will be crucial to obtain such maps for those studies and compare the degree of similarity to ours.
+That ICH are centralized in the middle portion of the brain may be a direct result of the inclusion criteria and may not generalize to other populations. However, the inclusion criteria \citep{mould_minimally_2013} did not specifically prefer some spatial locations over others. We consider that population maps provide a lot of information, that they allow researchers to sharpen their hypothesis, and that they also allow for such hypotheses to be tested. While the 3D histograms may not generalize to other populations, it will be crucial to obtain such maps for those studies and compare the degree of similarity to ours.
 
 
 [Figure \ref{fig:StrokeHist} here.]
@@ -484,9 +501,9 @@ $\mathcal{M}_5:$ &$  {\rm Y}_i = $ & \hspace{-0.18in} $ \beta_0+\beta_1(v) {\rm 
 \newline
 where $\mathcal{M}$ denotes a model and Y is either the NIHSS or GCS scores.  While the voxel-wise Wilcoxon rank-sum test is not a model, it does produce p-values for testing the difference between distributions. For consistency of notation we will refer to Wilcoxon rank-sum test as $\mathcal{M}_6$. 
 
-No voxels were significantly related to NIHSS score or GCS score in any model after using the Bonferroni correction.  Figure~\ref{f:mods} displays the p-values maps for the models with NIHSS score as the outcome as the size of the effect of ICH localization can easily be visualized by comparing the relative location of high and low p-values. 
+No voxels were significantly related to NIHSS score or GCS score in any model after using the Bonferroni correction.  Figure~\ref{f:mods} displays the p-value maps for the models with NIHSS score as the outcome as the size of the effect of ICH localization can easily be visualized by comparing the relative location of high and low p-values. 
 
-The p-values for each model, with NIHSS score as the outcome, are presented in Figure~\ref{f:mods}, overlaid on a MRI T1 image for spatial localization of structures.  The p-values are colored with cooler (blue) colors representing higher p-values and hotter (red) colors representing lower p-values.  Colors correspond to p-values $.1-1$ (dark blue), $.1-.05$, (light blue), $.05-.01$ (green), $.01-.001$ (yellow),  $.001-.0001$ (orange) $< .0001$ (red).  We see that there may be some relationship to medial hemorrhages with NIHSS score seen in the unadjusted model $\mathcal{M}_1$ (Figure~\ref{f:mods}\protect\subref*{mods:m1}) and the Wilcoxon rank-sum test (Figure~\ref{f:mods}\protect\subref*{mods:m6}) and observe this when modeling the GCS score (Supplemental Figure~\ref{f:gcsmods}).  The p-values are larger in the models adjusted for age (Figure~\ref{f:mods}\protect\subref*{mods:m2}), baseline ICH volume (Figure~\ref{f:mods}\protect\subref*{mods:m4}), and both age and baseline ICH volume (Figure~\ref{f:mods}\protect\subref*{mods:m5}).  
+The p-values for each model, with NIHSS score as the outcome, are presented in Figure~\ref{f:mods}, overlaid on a MRI T1 image for spatial localization of structures.  Blue shades correspond to larger p-values and red shades correspond to smaller p-values.  For precision, we made the following color-to-p-values correspondence: p-values $.1-1$ (dark blue), $.1-.05$, (light blue), $.05-.01$ (green), $.01-.001$ (yellow),  $.001-.0001$ (orange), and $< .0001$ (red).  Figure~\ref{f:mods} indicates that the strongest associations are clustered together in the immediate vicinity of the medial plane both for the NIHSS and GCS score (Supplemental Figure~\ref{f:gcsmods}).  The p-values are larger in the models adjusted for age (Figure~\ref{f:mods}\protect\subref*{mods:m2}), baseline ICH volume (Figure~\ref{f:mods}\protect\subref*{mods:m4}), and both age and baseline ICH volume (Figure~\ref{f:mods}\protect\subref*{mods:m5}) compared to the unadjusted model $\mathcal{M}_1$.  
 
 [Figure \ref{f:mods} here.]
 
@@ -501,26 +518,28 @@ res = data.frame(res)
 res$nkeep = sprintf("%.0f", res$nkeep)
 @
 
-Inspired by the inspection of Figure~\ref{f:mods}, we investigated whether we can define areas of the brain that can improve prediction of stroke scores. To investigate this, have obtained 6 different ROI, 3 based on the smallest $1000$, $2000$, and $3000$ lowest p-values and three based on all p-values below a particular threshold. We have used three thresholds equal to $0.05$, $0.01$, and $0.001$, resulting in ROIs with $\Sexpr{res$nkeep[res$pval == .05]}$, $\Sexpr{res$nkeep[res$pval == .01]}$, and $\Sexpr{res$nkeep[res$pval == .001]}$ voxels, respectively for NIHSS. 
 <<>>=
 load('Regress_ROI_GCS_Results.Rda')
-res = reses$adj.r.squared
-res = res[, c("pval", "nkeep")]
-res = data.frame(res)
-res$nkeep = sprintf("%.0f", res$nkeep)
+gres = reses$adj.r.squared
+gres = gres[, c("pval", "nkeep")]
+gres = data.frame(gres)
+gres$nkeep = sprintf("%.0f", gres$nkeep)
 @
-For GCS we have obtained ROIs with $\Sexpr{res$nkeep[res$pval == .05]}$, $\Sexpr{res$nkeep[res$pval == .01]}$, and $\Sexpr{res$nkeep[res$pval == .001]}$ voxels, respectively. For illustration, panel (\protect\subref*{pvals:nihss}) in Figure~\ref{f:roi} displays the region obtained by chosing all the p-values smaller than $0.01$ in the unadjusted NIHSS regression on voxel location. While we show three orthographic slices, the entire region containing $\Sexpr{res$nkeep[res$pval == .01]}$ voxels is available in MNI coordinates. Panel (\protect\subref*{pvals:gcs}) in Figure~\ref{f:roi}} displays the region obtained by retaining only the smallest $1000$ p-values for the unadjusted regression of GCS score on ICH location. We call of these regions ``highest predictive regions'' (HPR), because they combine the location of those voxels that are most predictive of the outcomes.
+
+Inspired by the inspection of Figure~\ref{f:mods}, we investigated whether we can define areas of the brain that can improve prediction of stroke scores. To investigate this, have obtained 6 different HPR, 3 based on the smallest $1000$, $2000$, and $3000$ p-values and three based on all p-values below a particular threshold. We have used three thresholds equal to $.05$, $.01$, and $.001$, resulting in HPR with $\Sexpr{res$nkeep[res$pval == .05]}$, $\Sexpr{res$nkeep[res$pval == .01]}$, and $\Sexpr{res$nkeep[res$pval == .001]}$ voxels, respectively for NIHSS. 
+For GCS we have obtained HPR with $\Sexpr{gres$nkeep[gres$pval == .05]}$, $\Sexpr{gres$nkeep[gres$pval == .01]}$, and $\Sexpr{gres$nkeep[gres$pval == .001]}$ voxels, respectively. For illustration, panel (\protect\subref*{pvals:nihss}) in Figure~\ref{f:roi} displays the region obtained by choosing all the p-values smaller than $.01$ in the unadjusted NIHSS regression on voxel location.  While we show three orthographic slices, the entire region containing $\Sexpr{res$nkeep[res$pval == .01]}$ voxels is available in MNI coordinates. Panel (\protect\subref*{pvals:gcs}) in Figure~\ref{f:roi} displays the region obtained by retaining only the smallest $1000$ p-values for the unadjusted regression of GCS score on ICH location. 
 
 
 %
 %Figures~\ref{f:roi}\protect\subref*{pvals:nihss} and~\ref{f:roi}\protect\subref*{pvals:gcs} illustrate the voxels (in red) that were selected as the ROI based on p-value or ranking of p-value for NIHSS and GCS score as the functional outcome, respectively.  We observe that the ROIs appears larger on the left side compared to the right and many are near the ventricles, which may indicate ICH at these regions is important to functional score.  We note that the ROI has spatial contiguity on either side of the brain, which is expected as the presence of ICH at a given voxel is highly correlated to that voxels neighbors.  
-%The number of voxels ($V$) for each p-value threshold (not displayed) were: $.05$ ($V = \Sexpr{res$nkeep[res$pval == .05]}$), $.01$ ($V = \Sexpr{res$nkeep[res$pval == .01]}$), $.001$ ($V = \Sexpr{res$nkeep[res$pval == .001]}$), which can correspond to rather large regions  As the resolution of the template is $1$mm$^3$, this corresponds to the ROI for a $0.05$ p-value threshold measuring $\Sexpr{round(as.numeric(res$nkeep[res$pval == .05])/1000)}$ml. 
+%The number of voxels ($V$) for each p-value threshold (not displayed) were: $.05$ ($V = \Sexpr{res$nkeep[res$pval == .05]}$), $.01$ ($V = \Sexpr{res$nkeep[res$pval == .01]}$), $.001$ ($V = \Sexpr{res$nkeep[res$pval == .001]}$), which can correspond to rather large regions  As the resolution of the template is $1$mm$^3$, this corresponds to the ROI for a $.05$ p-value threshold measuring $\Sexpr{round(as.numeric(res$nkeep[res$pval == .05])/1000)}$ml. 
 %
 %
 %
 %The corresponding number of voxels for p-value thresholds, using GCS as the functional outcome are:  $.05$ ($V = \Sexpr{res$nkeep[res$pval == .05]}$), $.01$ ($V = \Sexpr{res$nkeep[res$pval == .01]}$), $.001$ ($V = \Sexpr{res$nkeep[res$pval == .001]}$), which again correspond to large ROIs for higher p-value thresholds.
 
-While voxel-wise regressions identify areas that are potentially highly associated with the outcome, it is practical to reduce complex HPRs to a simple subject-specific covariate. Thus, for every HPR we define its coverage to be the proportion of the HPR covered by a particular subject's ICH.  Panels~\protect\subref*{pvals:nihss} and~\protect\subref*{pvals:gcs} of Figure~\ref{f:roi} show the unadjusted relationship of the percent ROI coverage with the functional score.  We observe that the relationships are as expected, the larger the ROI coverage the higher (more severe stroke) NIHSS score and the lower (deeper unconsciousness) the GCS score.
+While voxel-wise regressions identify areas that are potentially highly associated with the outcome, it is practical to reduce complex HPR to a simple subject-specific covariate. Thus, for every HPR we define its coverage to be the proportion of the HPR covered by a particular subject's ICH.  Panel~\protect\subref*{pvals:regnihss} of Figure~\ref{f:roi} displays the NIHSS score on the y-axis as a function of the coverage of the HPR displayed in the Panel~\protect\subref*{pvals:nihss} of Figure~\ref{f:roi}. Similarly, Panel~\protect\subref*{pvals:reggcs} of Figure~\ref{f:roi} displays the GCS score as a function of the coverage of the HPR displayed in the Panel~\protect\subref*{pvals:gcs} of Figure~\ref{f:roi}.
+As expected, the larger the HPR coverage the higher (more severe stroke) the NIHSS score and the lower (deeper unconsciousness) the GCS score.
 
 [Figure \ref{f:roi} here.]
 
@@ -538,7 +557,8 @@ runres = function(){
         res = as.data.frame(res)
         res[, colname] = round(res[, colname], digits)
         if (yes) res[, colname] = sprintf(paste0("%0", digits+1, ".", digits, "f"), res[, colname])
-        res[, "P.value"] = sprintf(paste0("%0", 5, ".", 4, "f"), res[, "P.value"])
+        res[, "P.value"] = sprintf(paste0("%.", 4, "f"), res[, "P.value"])
+        res[, "P.value"] = gsub("^0", "", res[, "P.value"])
         res[, "N_Voxels"] = str_trim(sprintf("%8.0f", res[, "N_Voxels"]))
         res[1, c("N_Voxels", "P.value")] = NA
         return(res)
@@ -597,8 +617,12 @@ lres = get.best(results)
 nihss.best = lres$best.mod
 nihss.loc = lres$loc.mod
 nihss.bestr2 = nihss.best$"R$^2$"
+nihss.bestar2 = nihss.best$"Adjusted R$^2$"
 nihss.locr2 = as.numeric(nihss.loc$"R$^2$")
+nihss.locar2 = as.numeric(nihss.loc$"Adjusted R$^2$")
 nihss.rat = sprintf("%.0f", (nihss.bestr2 / nihss.locr2 - 1) * 100)
+nihss.arat = sprintf("%.0f", (nihss.bestar2 / nihss.locar2 - 1) * 100)
+
 @
 
 
@@ -611,21 +635,32 @@ lres = get.best(results)
 gcs.best = lres$best.mod
 gcs.loc = lres$loc.mod
 gcs.bestr2 = gcs.best$"R$^2$"
+gcs.bestar2 = gcs.best$"Adjusted R$^2$"
 gcs.locr2 = as.numeric(gcs.loc$"R$^2$")
+gcs.locar2 = as.numeric(gcs.loc$"Adjusted R$^2$")
 gcs.rat = sprintf("%.0f", (gcs.bestr2 / gcs.locr2 - 1) * 100)
+gcs.arat = sprintf("%.0f", (gcs.bestar2 / gcs.locar2 - 1) * 100)
+
 @
 
-We present how these regions perform against using a location classification of ICH determined by readers.  We summarized the model-fit measures for in models for the NIHSS score (Table~\ref{t:nihss}) and GCS score (Table~\ref{t:gcs}).  We have subtracted the AIC scores by the minimum value as these measures are unit-less; the model with a value of $0$ has the best (lowest) value for AIC.  
-
-We see that for NIHSS score, the ROI constructed using a p-value threshold of $\Sexpr{nihss.best$"P-value"}$ corresponded to the best model based on all our model-fit measures.  For the GCS score, the best model was one using an ROI using the voxels with lowest $\Sexpr{gcs.best$"Number of Voxels"}$ p-values.  With respect to comparing model-fit measures within models using the ROI coverage, all models due comparably well, defined as less than $5$ unit difference in AIC, except for the ROI coverage model for ROI based on a p-value threshold of $.05$ modeling GCS score.
-
-Though large differences in model-fit measures using the ROI coverage are not observed, there is significant gain compared to using the reader classification with respect to $R^2$.
-For the NIHSS models, the $R^2$ was $\Sexpr{nihss.locr2}$ for the reader-classified location model compared to $\Sexpr{nihss.bestr2}$ for the best ROI coverage model, corresponding to a $\Sexpr{nihss.rat}\%$ relative increase.  The result is similar when modeling GCS score: reader-classified location model $R^2 = \Sexpr{gcs.locr2}$ vs best ROI coverage model $R^2 = \Sexpr{gcs.bestr2}$, corresponding to a $\Sexpr{gcs.rat}\%$ relative increase.  Even though $R^2$ is relatively low for these models in absolute terms, the main goal of this ROI analysis was not prediction or model fit but rather comparison.  We see that if these are potential goals for researchers, then using a CT-based measure can be potentially more informative than a reader-based categorical location predictor. 
-
-We observe larger gains for the ROI coverage model using adjusted $R^2$, which penalizes the reader-classified locations more than the ROI coverage model due to the additional predictors.  Similarly, AIC would not choose the reader-classified location model over any model using ROI coverage.  Using the RMSE as a criteria for model selection, the ROI coverage model outperform the reader-classified location model.  
+We further investigated how these regions perform compared to an ICH location classification provided by expert readers.  Locations determined by expert readers were ``Lobar'', ``Globus Pallidus'', ``Putamen'', and ``Thalamus'' (Table~\ref{t:dem}). Table~\ref{t:nihss} compares prediction performance based on the expert readers location (labeled ``Location model'') and the same models using HPR coverage for NIHSS score. Prediction performance is measured primarily using the adjusted R$^2$ and RMSE, though we also report R$^2$, and AIC (as the location model has more parameters). Table~\ref{t:gcs} shows the same results for GCS.
 
 
-[Tables~\ref{t:nihss} and~\ref{t:gcs} here]
+%
+%We summarized the model-fit measures for in models for the NIHSS score (Table~\ref{t:nihss}) and GCS score (Table~\ref{t:gcs}).  We have subtracted the AIC scores by the minimum value as these measures are unit-less; the model with a value of $0$ has the best (lowest) value for AIC.  
+%
+%We see that for NIHSS score, the ROI constructed using a p-value threshold of $\Sexpr{nihss.best$"P-value"}$ corresponded to the best model based on all our model-fit measures.  For the GCS score, the best model was one using an ROI using the voxels with lowest $\Sexpr{gcs.best$"Number of Voxels"}$ p-values.  With respect to comparing model-fit measures within models using the ROI coverage, all models due comparably well, defined as less than $5$ unit difference in AIC, except for the ROI coverage model for ROI based on a p-value threshold of $.05$ modeling GCS score.
+
+%Though large differences in model-fit measures using the ROI coverage are not observed, there is significant gain compared to using the reader classification with respect to $R^2$.
+We conclude that all HPR coverage models strongly outperform reader-classified location models. Indeed, for NIHSS, the adjusted $R^2$ almost doubled from $\Sexpr{nihss.locar2}$  for  the reader-classified location model compared to $\Sexpr{nihss.bestar2}$ for the best HPR coverage model.  For GCS,
+the adjusted $R^2$ more than tripled from $\Sexpr{gcs.locar2}$ for the reader-classified location model to $\Sexpr{gcs.bestar2}$ for the HPR coverage model. The various HPR coverage models provide relatively similar prediction performance. This indicates that the choice of one HPR versus another may need to be based on other criteria, such as total HPR volume, ICH population prevalence, and prior biological information.
+%Even though $R^2$ is relatively low for these models in absolute terms, the main goal of this HPR analysis was not prediction or model fit but rather comparison.  
+We conclude that a CT-based measure can be potentially more informative than a reader-based categorical location predictor. 
+
+%We observe larger gains for the HPR coverage model using adjusted $R^2$, which penalizes the reader-classified locations more than the HPR coverage model due to the additional predictors.  Similarly, AIC would not choose the reader-classified location model over any model using HPR coverage.  Using the RMSE as a criteria for model selection, the HPR coverage model outperform the reader-classified location model.  
+
+
+[Tables~\ref{t:nihss} and~\ref{t:gcs} here.]
 
 <<>>=
 
@@ -637,7 +672,7 @@ get.stuff = function(score){
   co = mods$coefficients 
   co = rename(co, c("SexMale"="Sex: Male vs. Female", 
                "Base_ICH_10"="TICHVol per 10 cc",
-               "perc_ROI" = "ROI Coverage per 10%"))
+               "perc_ROI" = "HPR Coverage per 10%"))
   mods$coefficients = co
   
   co = keep.cmod$coefficients 
@@ -663,7 +698,7 @@ gcs.bres[[1]]$call = call("lm",
 gcs.bres[[2]]$call = call("lm", 
                     list(formula = Y ~ Age + Sex + Base_ICH_10 + LOC))
 
-cov.name = "ROI Coverage per 10%"
+cov.name = "HPR Coverage per 10%"
 make.coef = function(mod, cov.name){
   nihss.coef = abs(coef(mod)[cov.name])
   nihss.coef = sprintf("%02.1f", nihss.coef)
@@ -681,8 +716,8 @@ nihss= make.coef(nihss.bres[[2]], cov.name = "RRRRR;RRRRR;Putamen")
 put.nihss.coef = nihss$coef
 put.nihss.ci = nihss$ci
 
-cap = paste0("Regression Models for ROI-Based Analysis. The models for ",
-             "ROI coverage represent the best model based on the ",
+cap = paste0("Regression Models for HPR-Based Analysis. The models for ",
+             "HPR coverage represent the best model based on the ",
              "model-fit measures. ",
              "We see that after adjusting for age, sex, and ",
             "total baseline ICH volume, increasing 10\\%",
@@ -704,9 +739,7 @@ put.gcs.ci = gcs$ci
 cap2 = paste0("Adjusting for other covariates, increasing 10\\%",
              " coverage is expected to decrease GCS score by ",
              gcs.coef, " ", gcs.ci, " points. ",
-             " We see that all locations, compared to lobar hemorrhages",
-             " have lower estimated GCS scores, but none were ",
-            "statistically different.")
+             " None of the reader-classified locations were identified to be statistically significantly different from the Lobar location for GCS scores.")
 cap = paste(cap, cap2 )
 
 # rr = stargazer(nihss.res, gcs.res, type = "latex", 
@@ -722,7 +755,7 @@ cap = paste(cap, cap2 )
 #                omit.table.layout = "n",
 #                dep.var.labels = c("\\textbf{NIHSS Score}", 
 #                                   "\\textbf{GCS Score}"),
-#                column.labels = rep(c("\\textbf{ROI Coverage}", 
+#                column.labels = rep(c("\\textbf{HPR Coverage}", 
 #                                      "\\textbf{Reader-Location}"), 2),
 #                model.names = FALSE, model.numbers = FALSE, 
 #                digits = 1)
@@ -736,10 +769,10 @@ cap = paste(cap, cap2 )
 # writeLines(rr, con="Beta_Table.tex")
 # }
 @
-Table~\ref{f:beta} represents the beta coefficients from the models using reader-assessed location and the ROI coverage model with the best model-fit measures.  The models for ROI coverage represent the best model based on the model-fit measures. We see that after adjusting for age, sex, and total baseline ICH volume, increasing 10\% coverage is expected to increase NIHSS score by \Sexpr{nihss.coef} \Sexpr{nihss.ci} points.  We see that all locations, compared to lobar hemorrhages have higher estimated NIHSS scores, but putaminal hemorrhages were significantly higher by \Sexpr{put.nihss.coef} \Sexpr{put.nihss.ci} points. 
-Similarly for GCS score, adjusting for other covariates, increasing 10\% coverage is expected to decrease GCS score by \Sexpr{gcs.coef} \Sexpr{gcs.ci} points.  All locations compared to lobar hemorrhages have lower estimated GCS scores, but none were statistically lower.
+Table~\ref{f:beta} represents the beta coefficients from the models using reader-assessed location and the HPR coverage model.  The models for HPR coverage correspond to the best model according to the model-fit measures shown in Tables~\ref{t:nihss} and~\ref{t:gcs}, respectively. After adjusting for age, sex, and total baseline ICH volume, increasing the coverage of the HPR by 10\% is expected to increase NIHSS score by \Sexpr{nihss.coef} \Sexpr{nihss.ci} points.  The reader-classified location model used ``Lobar'' as the reference category. Results for this model indicate that putaminal hemorrhages had a statistically significantly higher NIHSS score by \Sexpr{put.nihss.coef} \Sexpr{put.nihss.ci} points, though the other regions were not found to be statistically different from ``Lobar''. 
+Similarly for GCS score, adjusting for other covariates, increasing 10\% coverage is expected to decrease GCS score by \Sexpr{gcs.coef} \Sexpr{gcs.ci} points.  None of the reader-classified locations were identified to be statistically significantly different from the Lobar location for GCS scores.
 
-[Table~\ref{f:beta} here]
+[Table~\ref{f:beta} here.]
 
 % The first model indicates that if a patient has ICH in a voxel ..., their disease
 % severity score may be higher than if they do not have a lesion.
@@ -753,16 +786,18 @@ Similarly for GCS score, adjusting for other covariates, increasing 10\% coverag
 % \end{enumerate}
 
 
-% The thresholded maps of the resulting p-values at the 0.05 level are
+% The thresholded maps of the resulting p-values at the .05 level are
 % shown in Figure \ref{fig:pvalc}. 
 
 % [Figure \ref{fig:pvalc} here.]
 
 \subsubsection{ICH Localization and Engagement}
 
-Table~\ref{t:breakdown} represents the 10 most-engaged regions for the population 3D histogram as well as the ROIs for the GCS and NIHSS score ROI analyses.  
+Table~\ref{t:breakdown} represents the 10 most-engaged regions for the population 3D histogram as well as the HPR for the GCS and NIHSS score  analyses.  The population ICH is engaged primarily in areas of the CSF, such as the ventricles, and the insular and putaminal regions. The HPR based on the NIHSS analysis engages primarily areas of the internal capsule and ventricular regions. The HPR based on the GCS analysis engages primarily the left thalamus and superior corona radiata.
 
-[Table~\ref{t:breakdown} here]
+[Table~\ref{t:breakdown} here.]
+
+Table~\ref{t:area_breakdown} represents the engagement of the thalamus, putamen and globus pallidus by the population 3D histogram and the HPR for the GCS and NIHSS score analyses.  The population engagement represents the mean proportion of engagement for that brain region over all patient ICH masks. The HPR columns represent the percent of voxels in that brain region that are in the HPR for NIHSS and GCS scores. On average, 23\% of the Putamen, 20\% of the Globus Pallidus, and 8\% of the Thalmus are engaged with ICH from patients in this study. The HPR from the NIHSS analysis engages 40\% of the Globus Pallidus, 6\% of the Putamen, and 9\% of the Thalamus. The HPR from the GCS analysis engages only 2\% of the Thalamus, but not the Putamen nor the Globus Pallidus; the GCS HPR is only 1000 voxels. All engagement is higher on the left side compared to the right. 
 
 
 \section{Discussion}
@@ -771,9 +806,9 @@ Table~\ref{t:breakdown} represents the 10 most-engaged regions for the populatio
 
 \subsection{Semi-Automated Localization of ICH}
 
-We have characterized the localization of ICH in a population of stroke patients within this processing pipeline.  We would like to stress that this is, as far as we know, the first 3D histogram of a population with ICH.  We found that more patients had ICH engagement on the left side of the brain compared to right and both left and right sided ICHs are located towards the middle of the brain.  
+We have characterized the localization of ICH in a population of stroke patients using a new processing pipeline.  Thus, we now provide the first 3D histogram of a population with ICH.  We found that more patients had ICH engagement on the left side of the brain and both left and right sided ICHs are located towards the middle of the brain.  
 % more finely and objectively describe locations of ICH within the brain.  
-The pipeline described is semi-automated allowing for more reproducible and objective analyses; the only non-automated steps in our pipeline are the ICH segmentation and export from OsiriX.  
+The pipeline described is semi-automated allowing for more reproducible and objective analyses; the only non-automated steps in our pipeline are the ICH segmentation and the export of ICH masks from OsiriX.  
 
 
 % and one atlas for determination of areas.  
@@ -785,21 +820,26 @@ The pipeline described is semi-automated allowing for more reproducible and obje
 
 \subsection{Voxel-wise Analysis of Functional Scores}
 
-Voxel-wise hypothesis tests were calculated using linear models or Wilcoxon rank-sum tests for NIHSS and GCS scores.  The resulting p-values from these tests indicate that ICH at locations near the ventricles, particularly on the left side, may be related to functional scores.  Although the voxel-wise regressions did not have any statistically significant results, this result is likely due to the strict threshold imposed by the Bonferroni correction.  As each voxel is not independent of the other voxels as ICH is commonly a contiguous region of hemorrhage, this correction is inappropriate.  Other methods that attempt to account of the smoothness properties, such as random field theory, may be more powerful.  The voxel-wise analysis does provide a proof of concept and a screening procedure to generate a ROI for patient-level analysis.
+Voxel-wise hypothesis tests were performed using linear models and Wilcoxon rank-sum tests for NIHSS and GCS scores.  The resulting p-values from these tests indicate that ICH at locations near the ventricles, particularly on the left side of the brain, may be related to functional scores.  
+%Although the voxel-wise regressions did not have any statistically significant results, this result is likely due to the strict threshold imposed by the Bonferroni correction.  As each voxel is not independent of the other voxels as ICH is commonly a contiguous region of hemorrhage, this correction is inappropriate.  Other methods that attempt to account of the smoothness properties, such as random field theory, may be more powerful.  
+None of the voxels passed the stringent  Bonferonni correction due to the large number of voxels being tested. The voxel-wise analysis does provide a proof of concept and a screening procedure to generate a HPR for patient-level analysis.
 
-\subsection{Region of Interest Analysis}
+\subsection{Highest Predictive Region Analysis}
 
-The region of interest analysis provides some evidence that using imaging-based location measures can result in better performance when estimating functional scores.  Although some measures were still relatively low with respect to model fit in absolute terms, such as an $R^2$ of $0.24$, these measures showed demonstrable gains over using the reader-based categories commonly used in analysis.
+The HPR analysis provides evidence that using imaging-based location measures can result in much better predictive performance of functional scores.  Although prediction performance was quite low even for the best models, prediction performance doubled or tripled, depending on the outcome.  These measures showed demonstrable gains over using the reader-based categories commonly used in analysis.
 
 This analysis focused on NIHSS and GCS scores as these were available at enrollment, but the process may be applied to long-term functional scores.  As these populations had different interventions performed, we aimed to analyze outcomes that were prior to any separation of the groups induced by the trial.  
 
 \subsection{Limitations}
 
-Although this set of patients represent a large proportion ($\Sexpr{round(N/141*100)}$\%) of the entire population ($N=141$) of the MISTIE and ICES trials, the sample size is relatively small.  This size was due to our selection process for scans and the number of patients available.  The framework does not impose a restriction on the number of patients to be processed; it is extendable to much larger (hundreds or thousands) populations.
+Although this set of patients represent a large proportion ($\Sexpr{round(N/141*100)}$\%) of the entire population ($N=141$) of the MISTIE and ICES trials, the sample size is relatively small.  This size was due to our selection process for scans and the number of patients available.  The framework does not impose a restriction on the number of patients to be processed; it is extendable to much larger populations with thousands of patients.
 
-The current description of hemorrhages and all subsequent analyses are reliant on one specific registration technique.  If the registration is insufficient or poor, each patient's voxels are not spatially in the same location and aggregating over scans would not be appropriate or valid.  However, at this time the current software is the sole CT-only registration software and CT template published and available.  Though we have seen results indicating sufficient registration to the CT template, the template was made from healthy adults.  Thus, brains with large deformations are registered to the template that was constructed from typical brains. In future studies, we may want to create a study-specific template for population-level analysis.  However, in that case, comparisons between analyses may be impossible as templates would change from study to study.  Also, assessments of registration by visual inspection may be subjective.
+The current description of hemorrhages and all subsequent analyses are reliant on one specific registration technique.  It is probably desirable \cite{eloyan_ms} to try multiple registration approaches and compare results across registrations.
+%If the registration is insufficient or poor, each patient's voxels are not spatially in the same location and aggregating over scans would not be appropriate or valid.  
+However, at this time the current software is the sole CT-only registration software and CT template published and available.  Visual inspection by expert readers indicated good registration to the CT template. However the template was constructed from data from healthy adults.  Thus, brains with large deformations are registered to the template that was constructed from typical brains, which may have implications when registering brains that are strongly deformed.  Thus, future studies need one or multiple study-specific templates.  One of the problems with study-specific templates is that they are not comparable between studies, which can affect generalizability of results.
+However, in that case, comparisons between analyses may be impossible as templates would change from study to study.  Also, assessments of registration by visual inspection may be subjective.
 
-The results from the ROI-based analysis are flawed in that the ROI has information based on the functional score by how they were generated.  Cross-validation can be used to split the data to a training group used to generate the ROI and a testing group to estimate model performance.  We plan to validate these ROIs on the subset of patients in the MISTIE and ICES trials not analyzed here.  
+One of the problems with the HPR is that they are obtained by using the data twice: once to find the voxels that are most associated with the outcome and the second time to obtain the region by selecting (screening) the voxels with the smallest p-values. Cross-validation can be used for internal validation and consists of splitting the data into a training group used to generate the HPR and a testing group to estimate model performance.  Another approach is to externally validate by studying the performance of the HPR on a subset of the MISTIE and ICES patients not analyzed here. We will investigate external validation in our future studies.  
 
 \subsection{Extensions of Analysis and Future Work }
 Although this analysis focused on patients from a single trial cohort, these tools can be applied to large-scale epidemiologic studies to better understand the ICH distribution in specific patient populations of interest and help predict patient outcomes.  Moreover, this framework allows for the direct comparison of population-level ICH incidence between two populations.  As each voxel represents a proportion, voxel-wise 2-sample proportion tests can be done.
@@ -865,7 +905,7 @@ names(race)[1] = "Race"
 vec = c(vec, race)
 demog$Clot = demog$Clot_Location_RC
 demog$Clot = gsub("Palidus", "Pallidus", demog$Clot)
-clot = n.pct(demog$Clot_Location_RC)
+clot = n.pct(demog$Clot)
 names(clot)[1] = "Reader-Classified ICH Location"
 vec = c(vec, clot)
 
@@ -928,7 +968,7 @@ print.xtable(xtab, file="demographics_short.tex", sanitize.rownames.function=sfu
 
 
 <<results='asis'>>=
-nihss.xres = xtable(nihss.res, caption= paste0("Table of model-fit measures for NIHSS score: reader-based location model vs. CT voxel-based ROI coverage models. We see that the model using a p-value threshold of ", nihss.best$"P-value", " corresponds to the best model on all model-fit measures: adjusted and unadjusted $R^2$ are the highest; AIC, and RMSE are the smallest.  The models using ROI coverage have comparable fit measures, but each ROI coverage model outperforms the reader-based location model, notably in the $R^2$ measures.  Thus, we infer that using CT-based regions of interest may help in prediction of NIHSS score."  ), align=c("crrcccc"), label="t:nihss" )
+nihss.xres = xtable(nihss.res, caption= paste0("Table of model-fit measures for NIHSS score: reader-based location model vs. CT voxel-based HPR coverage models. We see that the model using a p-value threshold of ", nihss.best$"P-value", " corresponds to the best model on all model-fit measures: adjusted and unadjusted $R^2$ are the highest; AIC, and RMSE are the smallest.  The models using HPR coverage have comparable fit measures, but each HPR coverage model outperforms the reader-based location model, notably in the $R^2$ measures.  Thus, we infer that using CT-based regions of interest may help in prediction of NIHSS score."  ), align=c("crr|cccc"), label="t:nihss" )
 print.xtable(nihss.xres, file="nihss_measures.tex", sanitize.colnames.function = b.sfunc,
 include.rownames = FALSE, table.placement= "H")
 @
@@ -940,15 +980,15 @@ nihss.best.tab = rbind(nihss.loc, nihss.best)
 cn = colnames(nihss.best.tab)
 cn[1] = "Model"
 colnames(nihss.best.tab) = cn
-nihss.best.tab$Model = c("Reader-Assessed ICH Location", "ROI Coverage")
-nihss.best.xres = xtable(nihss.best.tab, caption= paste0("Table of model-fit measures for NIHSS score model: reader-based location vs. CT voxel-based ROI coverage."  ), align=c("crrcccc"), label="t:nihss" )
+nihss.best.tab$Model = c("Reader-Assessed ICH Location", "HPR Coverage")
+nihss.best.xres = xtable(nihss.best.tab, caption= paste0("Table of model-fit measures for NIHSS score model: reader-based location vs. CT voxel-based HPR coverage."  ), align=c("crr|cccc"), label="t:nihss" )
 print.xtable(nihss.best.xres, file="nihss_best_measures.tex", sanitize.colnames.function = b.sfunc,
 include.rownames = FALSE, table.placement= "H")
 @
 
 
 <<results='asis'>>=
-gcs.xres = xtable(gcs.res, caption= paste0("Table of model-fit measures for GCS score: reader-based location model vs. CT voxel-based ROI coverage models. We see that the model using a using the voxels with lowest ",  gcs.best$"Number of Voxels", " p-values corresponds to the best model on all model-fit measures: adjusted and unadjusted $R^2$ are the highest; AIC, and RMSE are the smallest.  The models using ROI coverage have comparable fit measures, but each ROI coverage model outperforms the reader-based location model, notably in the $R^2$ measures.  Thus, we infer that using CT-based regions of interest may help in prediction of NIHSS score."  ), align=c("crrcccc"), label="t:gcs" )
+gcs.xres = xtable(gcs.res, caption= paste0("Table of model-fit measures for GCS score: reader-based location model vs. CT voxel-based HPR coverage models. We see that the model using a using the voxels with lowest ",  gcs.best$"Number of Voxels", " p-values corresponds to the best model on all model-fit measures: adjusted and unadjusted $R^2$ are the highest; AIC, and RMSE are the smallest.  The models using HPR coverage have comparable fit measures, but each HPR coverage model outperforms the reader-based location model, notably in the $R^2$ measures.  Thus, we infer that using CT-based regions of interest may help in prediction of NIHSS score."  ), align=c("crr|cccc"), label="t:gcs" )
 print.xtable(gcs.xres, file="gcs_measures.tex", sanitize.colnames.function = b.sfunc,
 include.rownames = FALSE, table.placement= "H")
 @
@@ -964,15 +1004,18 @@ load("Top_0.01_Pvalues_df.Rda")
 n = 10
 nihss.tab = head(pvalimg.tab[["EVE_1"]], n)
 nihss.tab$nvox = sprintf("%02.1f", nihss.tab$nvox)
-names(nihss.tab) = c("NIHSS ROI", "Area")
+nihss.tab = nihss.tab[, c("nvox", "area")]
+names(nihss.tab) = c("NIHSS HPR", "Area")
 
 load("GCS_Top_1000_Pvalues_df.Rda")
 gcs.tab = head(pvalimg.tab[["EVE_1"]], n)
+gcs.tab = gcs.tab[, c("nvox", "area")]
 gcs.tab$nvox = sprintf("%02.1f", gcs.tab$nvox)
-names(gcs.tab) = c("GCS ROI", "Area")
+names(gcs.tab) = c("GCS HPR", "Area")
 
-load("Population_Table_Engagement.Rda")
+load("Population_Table.Rda")
 pop.tab = head(xtabs[["EVE_1"]], n)
+pop.tab = pop.tab[, c("Area", "EVE_1")]
 pop.tab$EVE_1 = sprintf("%02.1f", pop.tab$EVE_1)
 
 names(pop.tab) = c("Area", "Population Prevalence")
@@ -992,8 +1035,8 @@ df$Area = proper(df$Area)
 df$Area = revalue(df$Area, c("Background" = "CSF"))
 df$Area = gsub("_", " ", df$Area)
 df = df[order(as.numeric(df$"Population Prevalence"), 
-              as.numeric(df[, "NIHSS ROI"]), 
-              as.numeric(df[, "GCS ROI"]), 
+              as.numeric(df[, "NIHSS HPR"]), 
+              as.numeric(df[, "GCS HPR"]), 
               decreasing=TRUE),]
 df[sapply(df, is.na)] = ""
 rownames(df) = NULL
@@ -1004,25 +1047,24 @@ xtab = xtable(df,
               caption= 
                 paste0("Distribution of the top 10 areas of engagement ",
                        "for population ",
-                       " 3D histogram, the NIHSS ROI was based on a p-value ",
-                       " threshold of 0.01, the GCS ROI was based on voxels ",
+                       " 3D histogram, the NIHSS HPR based on a p-value ",
+                       " threshold of .01, the GCS HPR based on voxels ",
                        "with 1000 smallest p-values.  Each value represents ", 
-                       "the percentage of the ROI engaged in this area.  ",
+                       "the percentage of the HPR engaged in this area.  ",
                        "The population-level areas are percentages ",
                        "weighted by proportion. Each distribution ",
                        " of areas is based on the Eve atlas.  ",
                        "We see that the population is engaged in ",
                        "areas of the CSF, such as the ventricles, and ",
                        " the insular and putaminal regions.",
-                       " The ROI based on the NIHSS analysis engages ",
+                       " The HPR based on the NIHSS analysis engages ",
                        "primarily areas of the internal capsule ",
                        "and ventricular regions. ",                       
-                       "The ROI based on the GCS analysis engages ",
+                       "The HPR based on the GCS analysis engages ",
                        "primarily the left thalamus and superior ",
-                       "corona radiata.",
-                       "The Eve", 
-                       "atlas can be used to calculate area engagement",
-                       "on a per-scan level as well."), 
+                       "corona radiata. ",
+                       "These percentages  ", 
+                       " can be calculated on a per-scan level as well."), 
               align=c("llccc"),
               label="t:breakdown")
 print.xtable(xtab, file="breakdown.tex", include.rownames = FALSE)
@@ -1031,7 +1073,122 @@ print.xtable(xtab, file="breakdown.tex", include.rownames = FALSE)
 
 \input{breakdown.tex}
 
+
+<<make_area_breakdown>>=
+proper = function(x){
+  substring(x, 1, 1) <- toupper(substring(x, 1, 1))
+  substring(x, 2) <- tolower(substring(x, 2))
+  x
+}
+
+
+make.area = function(x, cn){
+	x = data.frame(x)
+	x$Area = rownames(x)
+	x = x[, c("EVE_1", "Area"), drop=FALSE]	
+	x$EVE_1 = sprintf("%02.1f", x$EVE_1 * 100)
+	
+	colnames(x) = c(cn, "Area")
+	x
+}
+
+load("Top_0.01_Pvalues_df.Rda")
+nihss.tab = pvalimg.tab[["EVE_1"]]
+nihss.tab = nihss.tab[order(nihss.tab$roi_mean_pct, decreasing=TRUE),]
+nihss.tab = nihss.tab[, c("roi_mean_pct", "area")]
+nihss.tab$roi_mean_pct = sprintf("%02.1f", nihss.tab$roi_mean_pct)
+names(nihss.tab) = c("NIHSS HPR", "Area")
+nihss.ppct = make.area(ppcts, "NIHSS HPR")
+
+load("GCS_Top_1000_Pvalues_df.Rda")
+gcs.tab = pvalimg.tab[["EVE_1"]]
+gcs.tab = gcs.tab[order(gcs.tab$roi_mean_pct, decreasing=TRUE),]
+gcs.tab = gcs.tab[, c("roi_mean_pct", "area")]
+gcs.tab$roi_mean_pct = sprintf("%02.1f", gcs.tab$roi_mean_pct)
+names(gcs.tab) = c("GCS HPR", "Area")
+gcs.ppct = make.area(ppcts, "GCS HPR")
+
+load("Population_Table.Rda")
+pop.tab = dfs[["EVE_1"]]
+pop.tab = pop.tab[order(pop.tab$EVE_1_ROI_Pct, decreasing=TRUE),]
+pop.tab = pop.tab[, c("EVE_1_ROI_Pct", "Area")]
+pop.tab$EVE_1_ROI_Pct = sprintf("%02.1f", pop.tab$EVE_1_ROI_Pct)
+names(pop.tab) = c("Population Engagement", "Area")
+pop.pcts = make.area(pop.pcts, "Population Engagement")
+
+
+makedf = function(df){
+	df = df[
+	  grep("GLOBUS_PALLIDUS|THALAMUS|PUTAMEN", df$Area),]
+	
+	
+	df$Area = proper(df$Area)
+	df$Area = revalue(df$Area, c("Background" = "CSF"), 
+	                  warn_missing = FALSE)
+	df$Area = gsub("_", " ", df$Area)
+	df = df[order(df$Area),]
+	
+	df[sapply(df, is.na)] = ""
+	rownames(df) = NULL
+	df
+}
+
+
+df = merge(pop.tab, nihss.tab, sort=FALSE, all = TRUE)
+df = merge(df, gcs.tab, sort=FALSE, all = TRUE)
+df = makedf(df)
+
+
+col.df = merge(pop.pcts, nihss.ppct, sort=FALSE, all = TRUE)
+col.df = merge(col.df, gcs.ppct, sort=FALSE, all = TRUE)
+col.df = makedf(col.df)
+
+col.df$Area = paste0(col.df$Area, ": Total")
+df$Area = gsub(" left", ": Left", df$Area)
+df$Area = gsub(" right", ": Right", df$Area)
+
+m = merge(df, col.df, all=TRUE)
+m$Area = gsub("pallidus", "Pallidus", m$Area)
+m$A = sapply(strsplit(m$Area, ":"), `[`, 1)
+m$S = 3:1
+m = m[order(m$A, m$S),]
+
+# xtab = xtable(m)
+
+cn = colnames(m)
+cn = cn[ !(cn %in% c("A", "S"))]
+
+xtab = xtable(m[, cn], 
+              caption= 
+                paste0("Engagement of the Thalamus, Putamen and Globus Pallidus by the",
+                       " population ",
+                       " 3D histogram, the NIHSS HPR based on a p-value ",
+                       " threshold of $.01$, the GCS HPR based on voxels ",
+                       "with $1000$ smallest p-values.  Each distribution ",
+                       " is based on the Eve atlas.  The population engagement represents the ", 
+                       "mean proportion of engagement for that brain region over all patient ICH masks.  ",
+                       "The HPR columns represent the percent of voxels in that brain region that ",
+                       " are in the HPR for NIHSS and GCS scores.  ",
+	                  " On average, $23\\%$ of the Putamen, $20\\%$ of the Globus Pallidus, and $8\\%$ of the Thalmus are ",
+                       " engaged with ICH from patients in this study.  The HPR from the NIHSS analysis engages $40\\%$ of",
+                       " the Globus Pallidus, $6\\%$ of the Putamen, and $9\\%$ of the Thalamus.  The HPR from the GCS analysis",
+                       " engages only $2\\%$ of the Thalamus, but not the Putamen nor the Globus Pallidus; the GCS HPR is only",
+                       " $1000$ voxels.  All engagement is higher on the left side compared to the right. ",
+                       "The Eve", 
+                       "atlas can be used to calculate area engagement",
+                       " on a per-scan level as well to give, for example, putaminal engagement with ICH at a scan level. "), 
+              align=c("llccc"),
+              label="t:area_breakdown")
+print.xtable(xtab, file="area_breakdown.tex", include.rownames = FALSE)
+
+@
+
+\input{area_breakdown.tex}
+
+
+\clearpage
 \newpage
+
 \section{Figure Legends}
 
 <<histdem>>=
@@ -1066,7 +1223,7 @@ dev.off()
 \begin{center}
 \includegraphics[scale=1]{histdem.pdf}
 \end{center}
-\caption{Histograms of GCS, age (in years), baseline ICH volume (in cc), and NIHSS scores for the patients in the study. We observe that our population is predominantly over $40$ and that are on average \Sexpr{m.age} years of age.  The distribution of baseline ICH has a median of \Sexpr{med.ich}cc, with some patients having very large ICH volumes.  GCS scores indicate that a few patients ($N = \Sexpr{ sum( demog$Enrollment_GCS_Add == 3) }$) with a GCS of $3$ indicating a deep unconsciousness, yet the mean GCS score is $\Sexpr{m.gcs}$.  The distribution of NIHSS scores shows a simlar trend with a mean of $\Sexpr{m.nihss}$.   }\label{fig:histdem}
+\caption{Histograms of age (in years), baseline ICH volume (in cc), GCS and NIHSS scores for the patients in the study. We observe that our population is predominantly over $40$ and that are on average \Sexpr{m.age} years of age.  The distribution of baseline ICH has a median of \Sexpr{med.ich}cc, with some patients having very large ICH volumes.  GCS scores indicate that a few patients ($N = \Sexpr{ sum( demog$Enrollment_GCS_Add == 3, na.rm=TRUE) }$) with a GCS of $3$ indicating a deep unconsciousness, yet the mean GCS score is $\Sexpr{m.gcs}$.  The distribution of NIHSS scores shows a simlar trend with a mean of $\Sexpr{m.nihss}$.   }\label{fig:histdem}
 \end{figure}
 
 
@@ -1077,7 +1234,7 @@ dev.off()
  \includegraphics[width=.48\textwidth]{{100-318_20070723_0957_CT_3_CT_Head-_SS_Mask_0.01}.png}
  }
   \hfill
- \subfloat[\textbf{Brain-extracted image} used for re-centering to AC/PC line for SPM8 registration techniques.  ]{
+ \subfloat[\textbf{Brain-extracted image} used for re-centering to AC-PC line for SPM8 registration techniques.  ]{
  \label{bet:ss}
  \includegraphics[width=.48\textwidth]{{100-318_20070723_0957_CT_3_CT_Head-_SS_0.01}.png}
 }
@@ -1191,7 +1348,7 @@ dev.off()
 %  \includegraphics[width=.31\textwidth]{Regression_Map_FDR_red_6_centered.png}
 %  } 
   
-%   \caption{FDR-corrected significant p-values for the $6$ models.  Voxel-wise p-values were adjusted using an FDR of $0.05$, based on the $\Sexpr{nuniq.rows}$ unique comparisons.  We see that in the unadjusted linear model (figure~\protect\subref{mods:m1}) and after adjusting for gender (figure~\protect\subref{mods:m3}) there are significant voxels on the left and right of the brain, near the ventricles.  In models adjusting for age (figure~\protect\subref{mods:m2}), or total baseline ICH volume (figure~\protect\subref{mods:m4}), or both (figure~\protect\subref{mods:m5}), no voxels are found significantly related to NIHSS after adjustment and FDR-correction.  Also, we see a higher number of voxels deemed significant using the Wilcoxon rank-sum test (figure~\protect\subref{mods:m6}). Slices are presented at the centroid of the mask of the significant voxels. }
+%   \caption{FDR-corrected significant p-values for the $6$ models.  Voxel-wise p-values were adjusted using an FDR of $.05$, based on the $\Sexpr{nuniq.rows}$ unique comparisons.  We see that in the unadjusted linear model (figure~\protect\subref{mods:m1}) and after adjusting for gender (figure~\protect\subref{mods:m3}) there are significant voxels on the left and right of the brain, near the ventricles.  In models adjusting for age (figure~\protect\subref{mods:m2}), or total baseline ICH volume (figure~\protect\subref{mods:m4}), or both (figure~\protect\subref{mods:m5}), no voxels are found significantly related to NIHSS after adjustment and FDR-correction.  Also, we see a higher number of voxels deemed significant using the Wilcoxon rank-sum test (figure~\protect\subref{mods:m6}). Slices are presented at the centroid of the mask of the significant voxels. }
 %   \label{f:mods}
 % \end{figure}
 
@@ -1270,7 +1427,7 @@ dev.off()
  \includegraphics[width=.31\textwidth]{Regression_Map_heatcol6_t1.png}
  } 
   
-  \caption{P-value maps for the $6$ models, with NIHSS score as functional outcome. Colors correspond to p-values $.1-1$ (dark blue), $.1-.05$, (light blue), $.05-.01$ (green), $.01-.001$ (yellow),  $.001-.0001$ (orange) $< .0001$ (red).  We see that in the unadjusted linear model (panel~\protect\subref{mods:m1}) and after adjusting for gender (panel~\protect\subref{mods:m3}) there are voxels with the smallest p-values seem to be near the ventricles.  In models adjusting for age (panel~\protect\subref{mods:m2}), or total baseline ICH volume (panel~\protect\subref{mods:m4}), or both (panel~\protect\subref{mods:m5}), the p-value relating to NIHSS scores appear higher (more bluish).  Also, we see the Wilcoxon rank-sum test have lower p-values for the same area compared to the unadjusted linear model (panel~\protect\subref{mods:m6}). Slices are presented at the middle of the template.  }
+  \caption{P-value maps for the $6$ models, with NIHSS score as functional outcome. Colors correspond to p-values $.1-1$ (dark blue), $.1-.05$, (light blue), $.05-.01$ (green), $.01-.001$ (yellow),  $.001-.0001$ (orange), and $< .0001$ (red).  We see that in the unadjusted linear model (panel~\protect\subref{mods:m1}) and after adjusting for gender (panel~\protect\subref{mods:m3}) there are voxels with the smallest p-values seem to be near the ventricles.  In models adjusting for age (panel~\protect\subref{mods:m2}), or total baseline ICH volume (panel~\protect\subref{mods:m4}), or both (panel~\protect\subref{mods:m5}), the p-value relating to NIHSS scores appear higher (more bluish).  Also, we see the Wilcoxon rank-sum test have smaller p-values for the same area compared to the unadjusted linear model (panel~\protect\subref{mods:m6}). Slices are presented at the middle of the template.  }
   \label{f:mods}
 \end{figure}
 
@@ -1280,30 +1437,30 @@ dev.off()
 \begin{figure}[H]
 \centering
   \hfill
-  \subfloat[ROI for NIHSS score; voxels less than $\Sexpr{nihss.best$"P-value"}$ ]{
+  \subfloat[HPR for NIHSS score; voxels with p-values $< \Sexpr{nihss.best$"P-value"}$ ]{
  \label{pvals:nihss}
  \includegraphics[width=.48\textwidth]{Top_19047_pvalues.png}
  }
   \hfill
-  \subfloat[ROI for GCS score; voxels with the lowest $\Sexpr{gcs.best$"Number of Voxels"}$ p-values]{
+  \subfloat[HPR for GCS score; voxels with the lowest $\Sexpr{gcs.best$"Number of Voxels"}$ p-values]{
  \label{pvals:gcs}
  \includegraphics[width=.48\textwidth]{GCS_Top_1000_pvalues.png}
  } 
  \newline
   \hfill
-  \subfloat[Relationship of NIHSS score and ROI coverage for ROI in \protect\subref{pvals:nihss}]{
+  \subfloat[Relationship of NIHSS score and HPR coverage for HPR in \protect\subref{pvals:nihss}]{
  \label{pvals:regnihss}
  \includegraphics[width=.48\textwidth]{Regress_ROI_NIHSS_Best_Model.png}
  }
   \hfill
-  \subfloat[Relationship of GCS score and ROI coverage for ROI in \protect\subref{pvals:gcs}]{
+  \subfloat[Relationship of GCS score and HPR coverage for HPR in \protect\subref{pvals:gcs}]{
  \label{pvals:reggcs}
  \includegraphics[width=.48\textwidth]{Regress_ROI_GCS_Best_Model.png}
  } 
  \newline 
   
-  \caption{Region of Interest (ROI) Analysis.  Panels~\protect\subref{pvals:nihss} and~\protect\subref{pvals:gcs} correspond to the ROI for the top-performing model for NIHSS and GCS scores, respectively.  The ROI in panel~\protect\subref{pvals:nihss} represents a p-value threshold of $\Sexpr{nihss.best$"P-value"}$ for the voxel-wise ICH on NIHSS score regressions, which includes $\Sexpr{nihss.best$"Number of Voxels"}$ voxels. The ROI in panel~\protect\subref{pvals:gcs} represents $\Sexpr{gcs.best$"Number of Voxels"}$ with the lowest p-values for the voxel-wise ICH on GCS score regressions, corresponding to a p-value threshold of $\Sexpr{gcs.best$"P-value"}$.
-    Panels~\protect\subref{pvals:regnihss} and~\protect\subref{pvals:reggcs} display the relationship of the ROI coverage to the functional score.  The red line represents a linear fit (without adjustment of other covariates) of the ROI coverage and functional score and the blue line represents a LOESS fit.  We see that the larger the ROI coverage the higher (more severe stroke) NIHSS score and the lower (deeper unconsciousness) the GCS score.  
+  \caption{Highest Predictive Region (HPR) Analysis.  Panels~\protect\subref{pvals:nihss} and~\protect\subref{pvals:gcs} correspond to the HPR for the top-performing model for NIHSS and GCS scores, respectively.  The HPR in panel~\protect\subref{pvals:nihss} represents a p-value threshold of $\Sexpr{nihss.best$"P-value"}$ for the voxel-wise ICH on NIHSS score regressions, which includes $\Sexpr{nihss.best$"Number of Voxels"}$ voxels. The HPR in panel~\protect\subref{pvals:gcs} represents $\Sexpr{gcs.best$"Number of Voxels"}$ with the lowest p-values for the voxel-wise ICH on GCS score regressions, corresponding to a p-value threshold of $\Sexpr{gcs.best$"P-value"}$.
+    Panels~\protect\subref{pvals:regnihss} and~\protect\subref{pvals:reggcs} display the relationship of the HPR coverage to the functional score.  The red line represents a linear fit (without adjustment of other covariates) of the HPR coverage and functional score and the blue line represents a LOESS fit.  We see that the larger the HPR coverage the higher (more severe stroke) NIHSS score and the lower (deeper unconsciousness) the GCS score.  
 }
   \label{f:roi}
 \end{figure}
@@ -1378,7 +1535,7 @@ dev.off()
  \includegraphics[width=.31\textwidth]{GCS_Regression_Map_heatcol6_t1.png}
  } 
   
-  \caption{P-value maps for the $6$ models, with GCS score as functional outcome. Colors correspond to p-values $.1-1$ (dark blue), $.1-.05$, (light blue), $.05-.01$ (green), $.01-.001$ (yellow),  $.001-.0001$ (orange) $< .0001$ (red).  We see that in the unadjusted linear model (panel~\protect\subref{gcsmods:m1}) and after adjusting for gender (panel~\protect\subref{gcsmods:m3}) there are voxels with the smallest p-values seem to be near the ventricles.  In models adjusting for age (panel~\protect\subref{gcsmods:m2}), or total baseline ICH volume (panel~\protect\subref{gcsmods:m4}), or both (panel~\protect\subref{gcsmods:m5}), the p-value relating to GCS scores appear higher (more bluish).  Also, we see the Wilcoxon rank-sum test have lower p-values for the same area compared to the unadjusted linear model (panel~\protect\subref{gcsmods:m6}). Slices are presented at the middle of the template.  }
+  \caption{P-value maps for the $6$ models, with GCS score as functional outcome. Colors correspond to p-values $.1-1$ (dark blue), $.1-.05$, (light blue), $.05-.01$ (green), $.01-.001$ (yellow),  $.001-.0001$ (orange) $< .0001$ (red).  We see that in the unadjusted linear model (panel~\protect\subref{gcsmods:m1}) and after adjusting for gender (panel~\protect\subref{gcsmods:m3}) there are voxels with the smallest p-values seem to be near the ventricles.  In models adjusting for age (panel~\protect\subref{gcsmods:m2}), or total baseline ICH volume (panel~\protect\subref{gcsmods:m4}), or both (panel~\protect\subref{gcsmods:m5}), the p-value relating to GCS scores appear higher (more bluish).  Also, we see the Wilcoxon rank-sum test have smaller p-values for the same area compared to the unadjusted linear model (panel~\protect\subref{gcsmods:m6}). Slices are presented at the middle of the template.  }
   \label{f:gcsmods}
 \end{figure}
 
