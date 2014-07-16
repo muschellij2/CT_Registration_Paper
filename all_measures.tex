@@ -1,0 +1,29 @@
+% latex table generated in R 3.1.0 by xtable 1.7-3 package
+% Tue Jul 15 14:35:48 2014
+\begin{table}[H]
+\centering
+\begin{tabular}{rr|cccc}
+  \hline
+{\bf Number of Voxels} & {\bf P-value} & {\bf Adjusted R$^2$} & {\bf R$^2$} & {\bf AIC} & {\bf RMSE} \\ 
+  \hline \multicolumn{6}{c}{\bf NIHSS Score }\\ 
+ \hline
+\bf Location Model & \bf  & 0.129 & 0.178 & 18.60 & 8.116 \\ 
+  \bf 1000 & \bf .0005 & 0.236 & 0.265 & 2.47 & 7.598 \\ 
+  \bf 2000 & \bf .0009 & 0.234 & 0.263 & 2.81 & 7.610 \\ 
+  \bf 2422 & \bf .0010 & 0.247 & 0.275 & 0.98 & 7.545 \\ 
+  \bf 3000 & \bf .0013 & 0.244 & 0.272 & 1.46 & 7.562 \\ 
+  \bf 19047 & \bf .0100 & 0.254 & 0.282 & 0.00 & 7.511 \\ 
+  \bf 47736 & \bf .0500 & 0.248 & 0.276 & 0.77 & 7.538 \\ 
+    \hline\hline \multicolumn{6}{c}{\bf GCS Score }\\ 
+\hline \bf Location Model & \bf  & 0.069 & 0.120 & 20.51 & 2.914 \\ 
+  \bf 1000 & \bf .0002 & 0.214 & 0.243 & 0.00 & 2.677 \\ 
+  \bf 2000 & \bf .0004 & 0.213 & 0.242 & 0.09 & 2.678 \\ 
+  \bf 3000 & \bf .0006 & 0.212 & 0.241 & 0.25 & 2.680 \\ 
+  \bf 4669 & \bf .0010 & 0.212 & 0.241 & 0.23 & 2.680 \\ 
+  \bf 22858 & \bf .0100 & 0.191 & 0.221 & 3.17 & 2.716 \\ 
+  \bf 52368 & \bf .0500 & 0.166 & 0.197 & 6.44 & 2.757 \\ 
+   \hline
+\end{tabular}
+\caption{Table of model-fit measures for GCS and NIHSS score: reader-based location model vs. CT voxel-based HPR coverage models. We see that the model using a using the voxels using an HPR with a p-value threshold of .0100 for NIHSS and the HPR with the lowest 1000 p-values GCS corresponds to the best models on all model-fit measures: adjusted and unadjusted $R^2$ are the highest; AIC, and RMSE are the smallest.  The models using HPR coverage have comparable fit measures, but each HPR coverage model outperforms the reader-based location model, notably in the $R^2$ measures.  Thus, we infer that using CT-based regions of interest may help in prediction of NIHSS and GCS scores.} 
+\label{t:allres}
+\end{table}

@@ -16,6 +16,82 @@
   {}
 \endgroup
 
+\entry{antihypertensive_treatment_of_acute_cerebral_hemorrhage_atach_investigators_antihypertensive_2010}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Acute Cerebral Hemorrhage ({ATACH})~investigators}{A.~C. H. A.~i.}%
+     {Antihypertensive~Treatment}{A.~T.}%
+     {of}{o.}%
+     {}{}}%
+  }
+  \keyw{Clinical Medicine}
+  \strng{namehash}{ACHAiATo1}
+  \strng{fullhash}{ACHAiATo1}
+  \field{sortinit}{A}
+  \field{abstract}{%
+  Objective: To determine the feasibility and acute (i.e., within 72 hrs)
+  safety of three levels of systolic blood pressure reduction in subjects with
+  supratentorial intracerebral hemorrhage treated within 6 hrs after symptom
+  onset., Design: A traditional phase I, dose-escalation, multicenter
+  prospective study., Settings: Emergency departments and intensive care
+  units., Patients: Patients with intracerebral hemorrhage with elevated
+  systolic blood pressure {\textgreater}=170 mm Hg who present to the emergency
+  department within 6 hrs of symptom onset., Intervention: Intravenous
+  nicardipine to reduce systolic blood pressure to a target of: (1) 170 to 200
+  mm Hg in the first cohort of patients; (2) 140 to 170 mm Hg in the second
+  cohort; and (3) 110 to 140 mm Hg in the third cohort., Measurements and Main
+  Results: Primary outcomes of interest were: (1) treatment feasibility
+  (achieving and maintaining the systolic blood pressure goals for 18-24 hrs);
+  (2) neurologic deterioration within 24 hrs; and (3) serious adverse events
+  within 72 hrs. Safety stopping rules based on neurologic deterioration and
+  serious adverse events were prespecified and approved by an {NIH}-appointed
+  Data and Safety Monitoring Board, which provided oversight on subject safety.
+  Each subject was followed-up for 3 months to preliminarily assess mortality
+  and the clinical outcomes. A total of 18, 20, and 22 patients were enrolled
+  in the respective three tiers of systolic blood pressure treatment goals.
+  Overall, 9 of 60 patients had treatment failures (all in the last tier). A
+  total of seven subjects with neurologic deterioration were observed: one
+  (6\%), two (10\%), and four (18\%) in tier one, two, and three, respectively.
+  Serious adverse events were observed in one subject (5\%) in tier two and in
+  three subjects (14\%) in tier three. However, the safety stopping rule was
+  not activated in any of the tiers. Three (17\%), two (10\%), and five (23\%)
+  subjects in tiers one, two, and three, respectively, died within 3 months.,
+  Conclusions: The observed proportions of neurologic deterioration and serious
+  adverse events were below the prespecified safety thresholds, and the 3-month
+  mortality rate was lower than expected in all systolic blood pressure tiers.
+  The results form the basis of a larger randomized trial addressing the
+  efficacy of systolic blood pressure reduction in patients with intracerebral
+  hemorrhage., (C) 2010 by the Society of Critical Care Medicine and Lippincott
+  Williams \& Wilkins%
+  }
+  \verb{doi}
+  \verb 10.1097/CCM.0b013e3181b9e1a5
+  \endverb
+  \field{issn}{0090-3493}
+  \field{number}{2}
+  \field{pages}{637\bibrangedash 648}
+  \field{title}{Antihypertensive treatment of acute cerebral hemorrhage *.
+  [Miscellaneous Article]}
+  \verb{url}
+  \verb http://ovidsp.ovid.com/ovidweb.cgi?T=JS&CSC=Y&NEWS=N&PAGE=fulltext&D=ov
+  \verb ftk&AN=00003246-201002000-00038
+  \endverb
+  \field{volume}{38}
+  \verb{file}
+  \verb Antihypertensive Treatment of Acute Cerebral Hemorrhage (ATACH) investi
+  \verb gators - 2010 - Antihypertensive treatment of acute cerebral hemor.pdf:
+  \verb /Users/johnmuschelli/Library/Application Support/Zotero/Profiles/9yinbn
+  \verb 16.default/zotero/storage/JI89XNUQ/Antihypertensive Treatment of Acute
+  \verb Cerebral Hemorrhage (ATACH) investigators - 2010 - Antihypertensive tre
+  \verb atment of acute cerebral hemor.pdf:application/pdf
+  \endverb
+  \field{journaltitle}{Critical Care Medicine February 2010}
+  \field{year}{2010}
+  \field{urlday}{08}
+  \field{urlmonth}{07}
+  \field{urlyear}{2014}
+\endentry
+
 \entry{akaike_information_1973}{inproceedings}{}
   \name{author}{1}{}{%
     {{}%
@@ -31,7 +107,7 @@
   \strng{fullhash}{AH1}
   \field{sortinit}{A}
   \field{booktitle}{Second international symposium on information theory}
-  \field{pages}{267‚Äì281}
+  \field{pages}{267–281}
   \field{title}{Information theory and an extension of the maximum likelihood
   principle}
   \verb{url}
@@ -44,6 +120,94 @@
   \field{year}{1973}
   \field{urlday}{04}
   \field{urlmonth}{04}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{anderson_intensive_2008}{article}{}
+  \name{author}{11}{}{%
+    {{}%
+     {Anderson}{A.}%
+     {Craig~S.}{C.~S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Huang}{H.}%
+     {Yining}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wang}{W.}%
+     {Ji~Guang}{J.~G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Arima}{A.}%
+     {Hisatomi}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Neal}{N.}%
+     {Bruce}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Peng}{P.}%
+     {Bin}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Heeley}{H.}%
+     {Emma}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Skulina}{S.}%
+     {Christian}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Parsons}{P.}%
+     {Mark~W.}{M.~W.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kim}{K.}%
+     {Jong~Sung}{J.~S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{others}}{o.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{ACS+1}
+  \strng{fullhash}{ACSHYWJGAHNBPBHESCPMWKJSo1}
+  \field{sortinit}{A}
+  \field{number}{5}
+  \field{pages}{391–399}
+  \field{shorttitle}{Intensive blood pressure reduction in acute cerebral
+  haemorrhage trial ({INTERACT})}
+  \field{title}{Intensive blood pressure reduction in acute cerebral
+  haemorrhage trial ({INTERACT}): a randomised pilot trial}
+  \verb{url}
+  \verb http://www.sciencedirect.com/science/article/pii/S1474442208700693
+  \endverb
+  \field{volume}{7}
+  \verb{file}
+  \verb [HTML] from sciencedirect.com:/Users/johnmuschelli/Library/Application
+  \verb Support/Zotero/Profiles/9yinbn16.default/zotero/storage/2XR4BJ3Q/S14744
+  \verb 42208700693.html:text/html;ScienceDirect Full Text PDF:/Users/johnmusch
+  \verb elli/Library/Application Support/Zotero/Profiles/9yinbn16.default/zoter
+  \verb o/storage/BMAB59QI/Anderson et al. - 2008 - Intensive blood pressure re
+  \verb duction in acute cerebr.pdf:application/pdf;ScienceDirect Snapshot:/Use
+  \verb rs/johnmuschelli/Library/Application Support/Zotero/Profiles/9yinbn16.d
+  \verb efault/zotero/storage/AFHWZJPI/S1474442208700693.html:text/html
+  \endverb
+  \field{journaltitle}{The Lancet Neurology}
+  \field{year}{2008}
+  \field{urlday}{08}
+  \field{urlmonth}{07}
   \field{urlyear}{2014}
 \endentry
 
@@ -107,7 +271,7 @@
 \entry{bergstrom_variation_1977}{article}{}
   \name{author}{5}{}{%
     {{}%
-     {Bergstr√∂m}{B.}%
+     {Bergstrom}{B.}%
      {M}{M}%
      {}{}%
      {}{}}%
@@ -142,11 +306,10 @@
   Fourteen cases of subdural, epidural, and intracerebral hematoma, in which
   the time of the trauma or bleeding was known, were selected. Attenuation of
   samples taken at surgery showed good correlation with attenuation values
-  determined by computed tomography ({CT).} The decrease in the attenuation of
+  determined by computed tomography ({CT}). The decrease in the attenuation of
   the hematoma from the time of trauma or bleeding was studied.%
   }
   \field{issn}{0363-8715}
-  \field{note}{{PMID:} 615894}
   \field{number}{1}
   \field{pages}{57\bibrangedash 63}
   \field{shortjournal}{J Comput Assist Tomogr}
@@ -160,68 +323,6 @@
   \endverb
   \field{journaltitle}{Journal of computer assisted tomography}
   \field{year}{1977}
-\endentry
-
-\entry{bhattacharya_registration_2000}{article}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Bhattacharya}{B.}%
-     {M.}{M.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Majumder}{M.}%
-     {D.~D.}{D.~D.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{Affine and projective transformation, Mathematical theory of shape,
-  Registration of multimodal images}
-  \strng{namehash}{BMMDD1}
-  \strng{fullhash}{BMMDD1}
-  \field{sortinit}{B}
-  \field{abstract}{%
-  In this paper, we present briefly the generalised theory of shape as
-  developed by Majumder (Majumder, {D.D.}, 1995. A study on a mathematical
-  theory of shapes in relation to pattern recognition and computer vision.
-  Indian Journal of Theoretical Physics 43 (4), 19‚Äì30) and apply the same
-  to registration of multimodal medical images. We have conducted the
-  experiment of registration using {T1/T2} weighted {MR} and {CT} imaging
-  modalities of ventricular region (region of interest ({ROI)} in
-  Alzheimer‚Äôs disease ({AD))} of brain of an Alzheimer‚Äôs patient.
-  The control points on the concavities present in the contours are chosen to
-  re-project {ROI} from the respective modalities in a reference frame. The
-  best matching and registration are achieved by minimising an error factor.%
-  }
-  \verb{doi}
-  \verb 10.1016/S0167-8655(00)00017-9
-  \endverb
-  \field{issn}{0167-8655}
-  \field{number}{6}
-  \field{pages}{531\bibrangedash 548}
-  \field{shortjournal}{Pattern Recognition Letters}
-  \field{shorttitle}{Registration of {CT} and {MR} images of Alzheimer‚Äôs
-  patient}
-  \field{title}{Registration of {CT} and {MR} images of Alzheimer‚Äôs
-  patient: a shape theoretic approach}
-  \verb{url}
-  \verb http://www.sciencedirect.com/science/article/pii/S0167865500000179
-  \endverb
-  \field{volume}{21}
-  \verb{file}
-  \verb ScienceDirect Full Text PDF:/Users/johnmuschelli/Library/Application Su
-  \verb pport/Zotero/Profiles/9yinbn16.default/zotero/storage/5F9925Z9/Bhattach
-  \verb arya and Majumder - 2000 - Registration of CT and MR images of Alzheime
-  \verb r‚Äôs pa.pdf:application/pdf;ScienceDirect Snapshot:/Users/johnmusc
-  \verb helli/Library/Application Support/Zotero/Profiles/9yinbn16.default/zote
-  \verb ro/storage/AH48GPPZ/S0167865500000179.html:text/html
-  \endverb
-  \field{journaltitle}{Pattern Recognition Letters}
-  \field{month}{06}
-  \field{year}{2000}
-  \field{urlday}{10}
-  \field{urlmonth}{03}
-  \field{urlyear}{2014}
 \endentry
 
 \entry{broderick_volume_1993}{article}{}
@@ -285,7 +386,6 @@
   \verb 10.1161/01.STR.24.7.987
   \endverb
   \field{issn}{0039-2499, 1524-4628}
-  \field{note}{{PMID:} 8322400}
   \field{number}{7}
   \field{pages}{987\bibrangedash 993}
   \field{shortjournal}{Stroke}
@@ -390,7 +490,6 @@
   \verb 10.1161/01.STR.20.7.864
   \endverb
   \field{issn}{0039-2499, 1524-4628}
-  \field{note}{{PMID:} 2749846}
   \field{number}{7}
   \field{pages}{864\bibrangedash 870}
   \field{shortjournal}{Stroke}
@@ -419,56 +518,6 @@
   \field{urlyear}{2014}
 \endentry
 
-\entry{carhuapoma_intracerebral_2009}{book}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Carhuapoma}{C.}%
-     {J.~Ricardo}{J.~R.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Mayer}{M.}%
-     {Stephan~A.}{S.~A.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Hanley}{H.}%
-     {Daniel~F.}{D.~F.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Cambridge University Press}%
-  }
-  \keyw{Medical / Emergency Medicine, Medical / Neurology, Medical /
-  Neuroscience, Medical / Oncology}
-  \strng{namehash}{CJRMSAHDF1}
-  \strng{fullhash}{CJRMSAHDF1}
-  \field{sortinit}{C}
-  \field{abstract}{%
-  Intracerebral hemorrhage is a neurovascular emergency associated with high
-  mortality and morbidity. With in-depth reviews of the clinical and biological
-  aspects of the condition, this text provides an up-to-date coverage of this
-  form of stroke. The book covers epidemiology, causes, clinical presentation,
-  management and prognosis, and describes the ongoing research advances aimed
-  at improving our understanding of the condition. The book fills an existing
-  gap in the medical literature. The chapters discussing the clinical aspects
-  of intracerebral hemorrhage are aimed at the practitioner directing the care
-  of stroke victims. Chapters exploring the biology of pathophysiological
-  events triggered by this disease will provide readers with current data
-  directed to facilitate experimental research in this field of cerebrovascular
-  neurology. It will appeal to clinicians and those with a research interest in
-  cerebrovascular diseases.%
-  }
-  \field{isbn}{9780521873314}
-  \field{pagetotal}{277}
-  \field{title}{Intracerebral Hemorrhage}
-  \field{langid}{english}
-  \field{day}{12}
-  \field{month}{11}
-  \field{year}{2009}
-\endentry
-
 \entry{cheung_use_2003}{article}{}
   \name{author}{2}{}{%
     {{}%
@@ -488,36 +537,34 @@
   \strng{fullhash}{CRTFZLY1}
   \field{sortinit}{C}
   \field{abstract}{%
-  Background and Purpose‚Äî A simple clinical scale of intracerebral
-  hemorrhage ({ICH)}, comprising the Glasgow Coma Scale score, age,
-  infratentorial origin, {ICH} volume, and intraventricular hemorrhage, was
-  recently shown to predict 30-day mortality. We studied how well the original
-  {ICH} Score would predict morbidity and mortality and determined whether
-  modification would improve the predictions. Methods‚Äî Patients admitted
-  to a regional hospital with acute {ICH} in 1999 were reviewed. Independent
-  predictors of mortality or good outcome (modified Rankin score ‚â§2) at
-  30 days were identified by logistic regression to devise a new {ICH} Score
-  for comparison with the original Score. A modified Score was created by
-  substituting National Institutes of Health Stroke Scale ({NIHSS)} for the
-  Glasgow Coma Scale. Results‚Äî The mortality rate was 22\%, and 35\% had
-  good outcome. Independent factors for mortality were high {NIHSS} score,
-  intraventricular hemorrhage, subarachnoid extension, and narrow pulse
-  pressure. Independent factors for good outcome were low {NIHSS} score and low
-  admission temperature. For all {ICH} Scores, no patient had a maximum score
-  of 6. Cutoff values of ‚â•3 and {\textless}3 provided the best
-  Youden‚Äôs index of diagnostic test in all {ICH} Scores for mortality and
-  good outcome, respectively. The original and modified {ICH} Scores predict
-  mortality equally well. The new and modified {ICH} Scores are slightly better
-  for prediction of good outcome. Conclusions‚Äî All 3 {ICH} Scores are
-  simple clinical grading scales. As reliable predictors of good outcome and/or
-  mortality, they are useful in clinical research studies and standardization
-  of clinical protocols.%
+  Background and Purpose— A simple clinical scale of intracerebral hemorrhage
+  ({ICH}), comprising the Glasgow Coma Scale score, age, infratentorial origin,
+  {ICH} volume, and intraventricular hemorrhage, was recently shown to predict
+  30-day mortality. We studied how well the original {ICH} Score would predict
+  morbidity and mortality and determined whether modification would improve the
+  predictions. Methods— Patients admitted to a regional hospital with acute
+  {ICH} in 1999 were reviewed. Independent predictors of mortality or good
+  outcome (modified Rankin score ≤2) at 30 days were identified by logistic
+  regression to devise a new {ICH} Score for comparison with the original
+  Score. A modified Score was created by substituting National Institutes of
+  Health Stroke Scale ({NIHSS}) for the Glasgow Coma Scale. Results— The
+  mortality rate was 22\%, and 35\% had good outcome. Independent factors for
+  mortality were high {NIHSS} score, intraventricular hemorrhage, subarachnoid
+  extension, and narrow pulse pressure. Independent factors for good outcome
+  were low {NIHSS} score and low admission temperature. For all {ICH} Scores,
+  no patient had a maximum score of 6. Cutoff values of ≥3 and {\textless}3
+  provided the best Youden’s index of diagnostic test in all {ICH} Scores for
+  mortality and good outcome, respectively. The original and modified {ICH}
+  Scores predict mortality equally well. The new and modified {ICH} Scores are
+  slightly better for prediction of good outcome. Conclusions— All 3 {ICH}
+  Scores are simple clinical grading scales. As reliable predictors of good
+  outcome and/or mortality, they are useful in clinical research studies and
+  standardization of clinical protocols.%
   }
   \verb{doi}
   \verb 10.1161/01.STR.0000078657.22835.B9
   \endverb
   \field{issn}{0039-2499, 1524-4628}
-  \field{note}{{PMID:} 12805488}
   \field{number}{7}
   \field{pages}{1717\bibrangedash 1722}
   \field{shortjournal}{Stroke}
@@ -541,154 +588,6 @@
   \field{year}{2003}
   \field{urlday}{24}
   \field{urlmonth}{04}
-  \field{urlyear}{2014}
-\endentry
-
-\entry{chuang_risk_2009}{article}{}
-  \name{author}{4}{}{%
-    {{}%
-     {Chuang}{C.}%
-     {Ya-Ching}{Y.-C.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Chen}{C.}%
-     {Yung-Ming}{Y.-M.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Peng}{P.}%
-     {Shih-Kuei}{S.-K.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Peng}{P.}%
-     {Shih-Yen}{S.-Y.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{intracerebral hemorrhage, mortality, patient outcome, sich score}
-  \strng{namehash}{CYC+1}
-  \strng{fullhash}{CYCCYMPSKPSY1}
-  \field{sortinit}{C}
-  \field{abstract}{%
-  Objective The aim of this study was to develop a grading scale for predicting
-  the 30-day mortality of spontaneous intracerebral hemorrhage ({ICH)} using
-  initial evaluation data. Design Univariate and multivariate logistic
-  regression models were used to identify independent risk factors and to
-  construct a grading scale for predicting the outcome of {ICH.} Setting The
-  Taichung Veterans General Hospital in Taichung, Taiwan. Participants Two
-  hundred and ninety-three patients were diagnosed with spontaneous {ICH}
-  between 1 January 2006 and 31 December 2007. Intervention Development of the
-  simplified {ICH} score ({sICH} score) for predicting the 30-day mortality of
-  {ICH.} Main Outcome Measures The discrimination of the prediction model was
-  determined by measuring the accuracy, sensitivity, specificity and the area
-  under the receiver operating characteristic curves ({AUC).} Results The
-  accuracy of the {sICH} score was 80.5\%, the sensitivity was 82.5\% and the
-  specificity was 80.2\%. The {AUCs} are as follows: {sICH} score, 0.89
-  (0.84‚Äì0.94); {ICH} score, 0.74 (0.65‚Äì0.83) and {ICH-GS}, 0.74
-  (0.65‚Äì0.83). Conclusions The {sICH} score showed best discrimination
-  among tested models. Also, it was easier for physicians without special
-  training in neurology or radiology to use this scale. With statistical power
-  and ease of use, the {sICH} score is a very suitable model for risk
-  stratification of spontaneous {ICH.}%
-  }
-  \verb{doi}
-  \verb 10.1093/intqhc/mzp041
-  \endverb
-  \field{issn}{1353-4505, 1464-3677}
-  \field{note}{{PMID:} 19828550}
-  \field{number}{6}
-  \field{pages}{441\bibrangedash 447}
-  \field{shortjournal}{Int J Qual Health Care}
-  \field{title}{Risk stratification for predicting 30-day mortality of
-  intracerebral hemorrhage}
-  \verb{url}
-  \verb http://intqhc.oxfordjournals.org/content/21/6/441
-  \endverb
-  \field{volume}{21}
-  \field{langid}{english}
-  \verb{file}
-  \verb Full Text PDF:/Users/johnmuschelli/Library/Application Support/Zotero/P
-  \verb rofiles/9yinbn16.default/zotero/storage/ZGCJWWC6/Chuang et al. - 2009 -
-  \verb  Risk stratification for predicting 30-day mortalit.pdf:application/pdf
-  \verb ;Snapshot:/Users/johnmuschelli/Library/Application Support/Zotero/Profi
-  \verb les/9yinbn16.default/zotero/storage/RMJVHU9J/441.html:text/html
-  \endverb
-  \field{journaltitle}{International Journal for Quality in Health Care}
-  \field{day}{01}
-  \field{month}{12}
-  \field{year}{2009}
-  \field{urlday}{23}
-  \field{urlmonth}{04}
-  \field{urlyear}{2014}
-\endentry
-
-\entry{das_affine-based_2011}{article}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Das}{D.}%
-     {Arpita}{A.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Bhattacharya}{B.}%
-     {Mahua}{M.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{Affine transformation, correlation function, Genetic algorithm,
-  Multiresolution registration, Particle swarm optimization, Simulation and
-  Modeling}
-  \strng{namehash}{DABM1}
-  \strng{fullhash}{DABM1}
-  \field{sortinit}{D}
-  \field{abstract}{%
-  We present a non-linear 2-D/2-D affine registration technique for {MR} and
-  {CT} modality images of section of human brain. Automatic registration is
-  achieved by maximization of a similarity metric, which is the correlation
-  function of two images. The proposed method has been implemented by choosing
-  a realistic, practical transformation and optimization techniques.
-  Correlation-based similarity metric should be maximal when two images are
-  perfectly aligned. Since similarity metric is a non-convex function and
-  contains many local optima, choice of search strategy for optimization is
-  important in registration problem. Many optimization schemes are existing,
-  most of which are local and require a starting point. In present study we
-  have implemented genetic algorithm and particle swarm optimization technique
-  to overcome this problem. A comparative study shows the superiority and
-  robustness of swarm methodology over genetic approach.%
-  }
-  \verb{doi}
-  \verb 10.1007/s00521-010-0374-8
-  \endverb
-  \field{issn}{0941-0643, 1433-3058}
-  \field{number}{2}
-  \field{pages}{223\bibrangedash 237}
-  \field{shortjournal}{Neural Comput \& Applic}
-  \field{shorttitle}{Affine-based registration of {CT} and {MR} modality images
-  of human brain using multiresolution approaches}
-  \field{title}{Affine-based registration of {CT} and {MR} modality images of
-  human brain using multiresolution approaches: comparative study on genetic
-  algorithm and particle swarm optimization}
-  \verb{url}
-  \verb http://link.springer.com/article/10.1007/s00521-010-0374-8
-  \endverb
-  \field{volume}{20}
-  \field{langid}{english}
-  \verb{file}
-  \verb Full Text PDF:/Users/johnmuschelli/Library/Application Support/Zotero/P
-  \verb rofiles/9yinbn16.default/zotero/storage/MB9DHIII/Das and Bhattacharya -
-  \verb  2011 - Affine-based registration of CT and MR modality im.pdf:applicat
-  \verb ion/pdf;Snapshot:/Users/johnmuschelli/Library/Application Support/Zoter
-  \verb o/Profiles/9yinbn16.default/zotero/storage/AQZ45EII/s00521-010-0374-8.h
-  \verb tml:text/html
-  \endverb
-  \field{journaltitle}{Neural Computing and Applications}
-  \field{day}{01}
-  \field{month}{03}
-  \field{year}{2011}
-  \field{urlday}{10}
-  \field{urlmonth}{03}
   \field{urlyear}{2014}
 \endentry
 
@@ -736,7 +635,6 @@
   \verb 10.1161/01.STR.22.1.1
   \endverb
   \field{issn}{0039-2499, 1524-4628}
-  \field{note}{{PMID:} 1987664}
   \field{number}{1}
   \field{pages}{1\bibrangedash 6}
   \field{shortjournal}{Stroke}
@@ -785,42 +683,41 @@
   \strng{fullhash}{DMNEDFZAR1}
   \field{sortinit}{D}
   \field{abstract}{%
-  Background and {Purpose‚ÄîAlthough} several factors have been identified
-  that predict outcome after intracerebral hemorrhage ({ICH)}, no previous
-  study has investigated the impact of hydrocephalus. The purpose of this study
-  was to determine whether the presence of hydrocephalus after {ICH} would
-  predict mortality and functional outcome. {Methods‚ÄîPatients} with
-  spontaneous supratentorial {ICH} were identified in our prospectively
-  collected database to determine the following: age, sex, race, past medical
-  history; Glasgow Coma Scale ({GCS)} score and blood pressure on admission;
-  use of mechanical ventilation, mannitol, and ventriculostomy; and medical
-  complications. {CT} scans performed within 24 hours of hemorrhage were
-  retrospectively analyzed to determine lesion size and location, pineal shift,
-  cisternal effacement, intraventricular hemorrhage ({IVH)}, and hydrocephalus.
-  Outcome was determined with use of hospital disposition (dead, nursing home,
+  Background and Purpose—Although several factors have been identified that
+  predict outcome after intracerebral hemorrhage ({ICH}), no previous study has
+  investigated the impact of hydrocephalus. The purpose of this study was to
+  determine whether the presence of hydrocephalus after {ICH} would predict
+  mortality and functional outcome. Methods—Patients with spontaneous
+  supratentorial {ICH} were identified in our prospectively collected database
+  to determine the following: age, sex, race, past medical history; Glasgow
+  Coma Scale ({GCS}) score and blood pressure on admission; use of mechanical
+  ventilation, mannitol, and ventriculostomy; and medical complications. {CT}
+  scans performed within 24 hours of hemorrhage were retrospectively analyzed
+  to determine lesion size and location, pineal shift, cisternal effacement,
+  intraventricular hemorrhage ({IVH}), and hydrocephalus. Outcome was
+  determined with use of hospital disposition (dead, nursing home,
   rehabilitation, home) and functional outcome (Functional Independence Measure
-  [{FIM])} at 3 months. Patients with and without hydrocephalus were compared
+  [{FIM}]) at 3 months. Patients with and without hydrocephalus were compared
   and univariate and multivariate analyses performed to determine whether
   hydrocephalus was an independent predictor of mortality. Data are presented
-  as {mean¬±SD.} {Results‚ÄîOf} the 81 patients studied, 40 had
-  hydrocephalus. Those with hydrocephalus were younger (57¬±15 versus
-  67¬±15 years), had lower {GCS} scores (8.2¬±4.2 versus 11¬±2.9), were
-  more likely to have ganglionic or thalamic hemorrhages, and were intubated
-  more frequently (70\% versus 27\%). Hospital mortality was higher in patients
-  with hydrocephalus (51\% versus 2\%), and fewer patients went home (21\%
-  versus 35\%). Those who died had higher hydrocephalus scores (9.67¬±7.1
-  versus 5.75¬±4.5). Outcome was no different if a ventriculostomy was
-  placed. The final logistic regression model included hydrocephalus score,
-  gender, {GCS}, and pineal shift, and it correctly predicted 85\% of patients
-  as dead or alive. Multivariate analyses indicated that hydrocephalus is an
-  independent predictor of mortality. {Conclusions‚ÄîWe} conclude that
-  hydrocephalus is an independent predictor of mortality after {ICH.}%
+  as mean±{SD}. Results—Of the 81 patients studied, 40 had hydrocephalus.
+  Those with hydrocephalus were younger (57±15 versus 67±15 years), had lower
+  {GCS} scores (8.2±4.2 versus 11±2.9), were more likely to have ganglionic
+  or thalamic hemorrhages, and were intubated more frequently (70\% versus
+  27\%). Hospital mortality was higher in patients with hydrocephalus (51\%
+  versus 2\%), and fewer patients went home (21\% versus 35\%). Those who died
+  had higher hydrocephalus scores (9.67±7.1 versus 5.75±4.5). Outcome was no
+  different if a ventriculostomy was placed. The final logistic regression
+  model included hydrocephalus score, gender, {GCS}, and pineal shift, and it
+  correctly predicted 85\% of patients as dead or alive. Multivariate analyses
+  indicated that hydrocephalus is an independent predictor of mortality.
+  Conclusions—We conclude that hydrocephalus is an independent predictor of
+  mortality after {ICH}.%
   }
   \verb{doi}
   \verb 10.1161/01.STR.29.7.1352
   \endverb
   \field{issn}{0039-2499, 1524-4628}
-  \field{note}{{PMID:} 9660386}
   \field{number}{7}
   \field{pages}{1352\bibrangedash 1357}
   \field{shortjournal}{Stroke}
@@ -904,240 +801,6 @@
   Spatial registration and confounding adjustment.}
 \endentry
 
-\entry{fitzmaurice_effect_2008}{article}{}
-  \name{author}{12}{}{%
-    {{}%
-     {{FitzMaurice}}{F.}%
-     {Emilie}{E.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Wendell}{W.}%
-     {Lauren}{L.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Snider}{S.}%
-     {Ryan}{R.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Schwab}{S.}%
-     {Kristin}{K.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Chanderraj}{C.}%
-     {Rishi}{R.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Kinnecom}{K.}%
-     {Cathrine}{C.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Nandigam}{N.}%
-     {Kaveer}{K.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Rost}{R.}%
-     {Natalia~S.}{N.~S.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Viswanathan}{V.}%
-     {Anand}{A.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Rosand}{R.}%
-     {Jonathan}{J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Greenberg}{G.}%
-     {Steven~M.}{S.~M.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Smith}{S.}%
-     {Eric~E.}{E.~E.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{intracerebral hemorrhage, Outcome, statins}
-  \strng{namehash}{FE+1}
-  \strng{fullhash}{FEWLSRSKCRKCNKRNSVARJGSMSEE1}
-  \field{sortinit}{F}
-  \field{abstract}{%
-  Background and Purpose‚Äî 3-hydroxy-3-methylglutaryl coenzyme A
-  ({HMG-CoA)} reductase inhibitors, or statins, have been associated with
-  improved outcome after ischemic stroke and subarachnoid hemorrhage but an
-  increased risk of incident intracerebral hemorrhage ({ICH).} We investigated
-  (1) whether statin use before {ICH} was associated with functional
-  independence at 90 days, and (2) whether survivors exposed to statins after
-  {ICH} had an increased risk of recurrence. Methods‚Äî We analyzed 629
-  consecutive {ICH} patients with 90-day outcome data enrolled in a prospective
-  cohort study between 1998 to 2005. Statin use was determined by patient
-  interview at the time of {ICH} and supplemented by medical record review.
-  Independent status was defined as Glasgow Outcome Scale 4 or 5. {ICH}
-  survivors were followed by telephone interview every 6 months. Results‚Äî
-  Statins were used by 149/629 (24\%) before {ICH.} There was no effect of
-  pre-{ICH} statin use on the rates of functional independence (28\% versus
-  29\%, P=0.84) or mortality (46\% versus 45\%, P=0.93). Medical comorbidities
-  and warfarin use were more common in statin users. Hematoma volumes were
-  similar (median 28 cm3 in pre-{ICH} statin users compared to 22 cm3 in
-  nonusers, P=0.18). The multivariable-adjusted odds ratio for independent
-  status in pre-{ICH} statin users was 1.16 (95\% {CI} 0.65 to 2.10, P=0.62).
-  {ICH} survivors treated with statins after discharge did not have a higher
-  risk of recurrence (adjusted {HR} 0.82, 95\% {CI} 0.34 to 1.99, P=0.66).
-  Conclusions‚Äî Pre-{ICH} statin use is not associated with improved {ICH}
-  functional outcome or mortality. Post-{ICH} statin use is not associated with
-  an increased risk of {ICH} recurrence.%
-  }
-  \verb{doi}
-  \verb 10.1161/STROKEAHA.107.508861
-  \endverb
-  \field{issn}{0039-2499, 1524-4628}
-  \field{note}{{PMID:} 18436876}
-  \field{number}{7}
-  \field{pages}{2151\bibrangedash 2154}
-  \field{shortjournal}{Stroke}
-  \field{title}{Effect of Statins on Intracerebral Hemorrhage Outcome and
-  Recurrence}
-  \verb{url}
-  \verb http://stroke.ahajournals.org/content/39/7/2151
-  \endverb
-  \field{volume}{39}
-  \field{langid}{english}
-  \verb{file}
-  \verb Full Text PDF:/Users/johnmuschelli/Library/Application Support/Zotero/P
-  \verb rofiles/9yinbn16.default/zotero/storage/MBB89WTM/FitzMaurice et al. - 2
-  \verb 008 - Effect of Statins on Intracerebral Hemorrhage Outc.pdf:applicatio
-  \verb n/pdf;Snapshot:/Users/johnmuschelli/Library/Application Support/Zotero/
-  \verb Profiles/9yinbn16.default/zotero/storage/V69SGQFU/2151.html:text/html
-  \endverb
-  \field{journaltitle}{Stroke}
-  \field{day}{01}
-  \field{month}{07}
-  \field{year}{2008}
-  \field{urlday}{25}
-  \field{urlmonth}{03}
-  \field{urlyear}{2014}
-\endentry
-
-\entry{fitzpatrick_visual_1998}{article}{}
-  \name{author}{6}{}{%
-    {{}%
-     {Fitzpatrick}{F.}%
-     {{J.M.}}{J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Hill}{H.}%
-     {D.~L~G}{D.~L.~G.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Shyr}{S.}%
-     {Y.}{Y.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {West}{W.}%
-     {J.}{J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Studholme}{S.}%
-     {C.}{C.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Maurer}{M.}%
-     {{C.R.}}{C.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{Algorithms, biomedical {MRI}, Brain, Calibration, Computed tomography,
-  computerised tomography, {CT} brain images, experienced blinded observers,
-  fiducial marker system, Gold, Head, human observer, Humans, Image
-  registration, Magnetic resonance, Magnetic Resonance Imaging, Measurement
-  standards, medical diagnostic imaging, medical image processing,
-  misregistration errors, {MR} brain images, {MRI}, Observer Variation,
-  patient's skull, Registers, retrospective registration accuracy, {ROC} Curve,
-  skull, Statistical analysis, Tomography, X-Ray Computed, visual assessment}
-  \strng{namehash}{FJ+1}
-  \strng{fullhash}{FJHDLGSYWJSCMC1}
-  \field{sortinit}{F}
-  \field{abstract}{%
-  In a previous study ({J.B.} West et al., J. Comput. Assist. Tomogr., vol. 21,
-  p. 554-66, 1997) the authors demonstrated that automatic retrospective
-  registration algorithms can frequently register magnetic resonance ({MR)} and
-  computed tomography ({CT)} images of the brain with an accuracy of better
-  than 2 mm, but in that same study the authors found that such algorithms
-  sometimes fail, leading to errors of 6 mm or more. Before these algorithms
-  can be used routinely in the clinic, methods must be provided for
-  distinguishing between registration solutions that are clinically
-  satisfactory and those that are not. One approach is to rely on a human
-  observer to inspect the registration results and reject images that have been
-  registered with insufficient accuracy. In this paper, the authors present a
-  methodology for evaluating the efficacy of the visual assessment of
-  registration accuracy. Since the clinical requirements for level of
-  registration accuracy are likely to be application dependent, the authors
-  have evaluated the accuracy of the observer's estimate relative to 6
-  thresholds: 1-6 mm. The performance of the observers was evaluated relative
-  to the registration solution obtained using external fiducial markers that
-  are screwed into the patient's skull and that are visible in both {MR} and
-  {CT} images. This fiducial marker system provides the gold standard for the
-  authors' study. Its accuracy is shown to be approximately 0.5 mm. Two
-  experienced, blinded observers viewed 5 pairs of clinical {MR} and {CT} brain
-  images, each of which had each been misregistered with respect to the gold
-  standard solution. Fourteen misregistrations were assessed for each image
-  pair with misregistration errors distributed between 0 and 10 mm with
-  approximate uniformity. For each misregistered image pair each observer
-  estimated the registration error (in millimeters) at each of 5 locations
-  distributed around the head using each of 3 assessment methods. These
-  estimated errors were compared with the e- - rrors as measured by the gold
-  standard to determine agreement relative to each of the 6 thresholds, where
-  agreement means that the 2 errors lie on the same side of the threshold. The
-  effect of error in the gold standard itself is taken into account in the
-  analysis of the assessment methods. The results were analyzed by means of the
-  Kappa statistic, the agreement rate, and the area of
-  receiver-operating-characteristic ({ROC)} curves. No assessment performed
-  well at 1 mm, but all methods performed well at 2 mm and higher. For these 5
-  thresholds, 2 methods agreed with the standard at least 80\% of the time and
-  exhibited mean {ROC} areas greater than 0.84. One of these same methods
-  exhibited Kappa statistics that indicated good agreement relative to chance
-  (Kappa{\textgreater}0.6) between the pooled observers and the standard for
-  these same 5 thresholds. Further analysis demonstrates that the results
-  depend strongly on the choice of the distribution of misregistration errors
-  presented to the observers.%
-  }
-  \verb{doi}
-  \verb 10.1109/42.730402
-  \endverb
-  \field{issn}{0278-0062}
-  \field{number}{4}
-  \field{pages}{571\bibrangedash 585}
-  \field{title}{Visual assessment of the accuracy of retrospective registration
-  of {MR} and {CT} images of the brain}
-  \field{volume}{17}
-  \verb{file}
-  \verb IEEE Xplore Abstract Record:/Users/johnmuschelli/Library/Application Su
-  \verb pport/Zotero/Profiles/9yinbn16.default/zotero/storage/27R7EIWN/abs_all.
-  \verb html:text/html;IEEE Xplore Full Text PDF:/Users/johnmuschelli/Library/A
-  \verb pplication Support/Zotero/Profiles/9yinbn16.default/zotero/storage/DIPK
-  \verb KN2Q/Fitzpatrick et al. - 1998 - Visual assessment of the accuracy of r
-  \verb etrospective.pdf:application/pdf
-  \endverb
-  \field{journaltitle}{{IEEE} Transactions on Medical Imaging}
-  \field{month}{08}
-  \field{year}{1998}
-\endentry
-
 \entry{go_heart_2013}{article}{}
   \name{author}{40}{}{%
     {{}%
@@ -1152,7 +815,7 @@
      {}{}}%
     {{}%
      {Roger}{R.}%
-     {V√©ronique~L.}{V.~L.}%
+     {Véronique~L.}{V.~L.}%
      {}{}%
      {}{}}%
     {{}%
@@ -1350,12 +1013,11 @@
   \verb 10.1161/CIR.0b013e31828124ad
   \endverb
   \field{issn}{0009-7322, 1524-4539}
-  \field{note}{{PMID:} 23239837}
   \field{number}{1}
   \field{pages}{e6\bibrangedash e245}
   \field{shortjournal}{Circulation}
-  \field{title}{Heart Disease and Stroke Statistics‚Äî2013 Update A Report
-  From the American Heart Association}
+  \field{title}{Heart Disease and Stroke Statistics—2013 Update A Report From
+  the American Heart Association}
   \verb{url}
   \verb http://circ.ahajournals.org/content/127/1/e6
   \endverb
@@ -1364,9 +1026,9 @@
   \verb{file}
   \verb Full Text PDF:/Users/johnmuschelli/Library/Application Support/Zotero/P
   \verb rofiles/9yinbn16.default/zotero/storage/CXD7FVMI/Go et al. - 2013 - Hea
-  \verb rt Disease and Stroke Statistics‚Äî2013 Update A .pdf:application/p
-  \verb df;Snapshot:/Users/johnmuschelli/Library/Application Support/Zotero/Pro
-  \verb files/9yinbn16.default/zotero/storage/57T8UKP8/e6.html:text/html
+  \verb rt Disease and Stroke Statistics—2013 Update A .pdf:application/pdf;S
+  \verb napshot:/Users/johnmuschelli/Library/Application Support/Zotero/Profile
+  \verb s/9yinbn16.default/zotero/storage/57T8UKP8/e6.html:text/html
   \endverb
   \field{journaltitle}{Circulation}
   \field{year}{2013}
@@ -1409,8 +1071,8 @@
   \field{number}{12}
   \field{pages}{1704\bibrangedash 1709}
   \field{shorttitle}{Spontaneous supratentorial intracerebral hemorrhage}
-  \field{title}{Spontaneous supratentorial intracerebral
-  hemorrhage:¬†Criteria for short-term functional outcome prediction}
+  \field{title}{Spontaneous supratentorial intracerebral hemorrhage: Criteria
+  for short-term functional outcome prediction}
   \verb{url}
   \verb http://search.proquest.com.proxy1.library.jhu.edu/docview/218149357/abs
   \verb tract?accountid=11752
@@ -1466,37 +1128,35 @@
   \strng{fullhash}{HJCBDCBLMGTJSC1}
   \field{sortinit}{H}
   \field{abstract}{%
-  Background and {Purpose‚ÄîIntracerebral} hemorrhage ({ICH)} constitutes
-  10\% to 15\% of all strokes and remains without a treatment of proven
-  benefit. Despite several existing outcome prediction models for {ICH}, there
-  is no standard clinical grading scale for {ICH} analogous to those for
-  traumatic brain injury, subarachnoid hemorrhage, or ischemic stroke.
-  {Methods‚ÄîRecords} of all patients with acute {ICH} presenting to the
-  University of California, San Francisco during 1997‚Äì1998 were reviewed.
-  Independent predictors of 30-day mortality were identified by logistic
-  regression. A risk stratification scale (the {ICH} Score) was developed with
-  weighting of independent predictors based on strength of association.
-  {Results‚ÄîFactors} independently associated with 30-day mortality were
-  Glasgow Coma Scale score (P{\textless}0.001), age ‚â•80 years (P=0.001),
-  infratentorial origin of {ICH} (P=0.03), {ICH} volume (P=0.047), and presence
-  of intraventricular hemorrhage (P=0.052). The {ICH} Score was the sum of
-  individual points assigned as follows: {GCS} score 3 to 4 (=2 points), 5 to
-  12 (=1), 13 to 15 (=0); age ‚â•80 years yes (=1), no (=0);
-  infratentorial origin yes (=1), no (=0); {ICH} volume ‚â•30 cm3 (=1),
-  {\textless}30 cm3 (=0); and intraventricular hemorrhage yes (=1), no (=0).
-  All 26 patients with an {ICH} Score of 0 survived, and all 6 patients with an
-  {ICH} Score of 5 died. Thirty-day mortality increased steadily with {ICH}
-  Score (P{\textless}0.005). {Conclusions‚ÄîThe} {ICH} Score is a simple
-  clinical grading scale that allows risk stratification on presentation with
-  {ICH.} The use of a scale such as the {ICH} Score could improve
-  standardization of clinical treatment protocols and clinical research studies
-  in {ICH.}%
+  Background and Purpose—Intracerebral hemorrhage ({ICH}) constitutes 10\% to
+  15\% of all strokes and remains without a treatment of proven benefit.
+  Despite several existing outcome prediction models for {ICH}, there is no
+  standard clinical grading scale for {ICH} analogous to those for traumatic
+  brain injury, subarachnoid hemorrhage, or ischemic stroke. Methods—Records
+  of all patients with acute {ICH} presenting to the University of California,
+  San Francisco during 1997–1998 were reviewed. Independent predictors of
+  30-day mortality were identified by logistic regression. A risk
+  stratification scale (the {ICH} Score) was developed with weighting of
+  independent predictors based on strength of association. Results—Factors
+  independently associated with 30-day mortality were Glasgow Coma Scale score
+  (P{\textless}0.001), age ≥80 years (P=0.001), infratentorial origin of
+  {ICH} (P=0.03), {ICH} volume (P=0.047), and presence of intraventricular
+  hemorrhage (P=0.052). The {ICH} Score was the sum of individual points
+  assigned as follows: {GCS} score 3 to 4 (=2 points), 5 to 12 (=1), 13 to 15
+  (=0); age ≥80 years yes (=1), no (=0); infratentorial origin yes (=1), no
+  (=0); {ICH} volume ≥30 cm3 (=1), {\textless}30 cm3 (=0); and
+  intraventricular hemorrhage yes (=1), no (=0). All 26 patients with an {ICH}
+  Score of 0 survived, and all 6 patients with an {ICH} Score of 5 died.
+  Thirty-day mortality increased steadily with {ICH} Score (P{\textless}0.005).
+  Conclusions—The {ICH} Score is a simple clinical grading scale that allows
+  risk stratification on presentation with {ICH}. The use of a scale such as
+  the {ICH} Score could improve standardization of clinical treatment protocols
+  and clinical research studies in {ICH}.%
   }
   \verb{doi}
   \verb 10.1161/01.STR.32.4.891
   \endverb
   \field{issn}{0039-2499, 1524-4628}
-  \field{note}{{PMID:} 11283388}
   \field{number}{4}
   \field{pages}{891\bibrangedash 897}
   \field{shortjournal}{Stroke}
@@ -1559,11 +1219,11 @@
   {FSL} (the {FMRIB} Software Library) is a comprehensive library of analysis
   tools for functional, structural and diffusion {MRI} brain imaging data,
   written mainly by members of the Analysis Group, {FMRIB}, Oxford. For this
-  {NeuroImage} special issue on ‚Äú20 years of {fMRI‚Äù} we have been
-  asked to write about the history, developments and current status of {FSL.}
-  We also include some descriptions of parts of {FSL} that are not well covered
-  in the existing literature. We hope that some of this content might be of
-  interest to users of {FSL}, and also maybe to new research groups considering
+  {NeuroImage} special issue on “20 years of {fMRI}” we have been asked to
+  write about the history, developments and current status of {FSL}. We also
+  include some descriptions of parts of {FSL} that are not well covered in the
+  existing literature. We hope that some of this content might be of interest
+  to users of {FSL}, and also maybe to new research groups considering
   creating, releasing and supporting new software packages for brain image
   analysis.%
   }
@@ -1593,79 +1253,6 @@
   \field{day}{15}
   \field{month}{08}
   \field{year}{2012}
-  \field{urlyear}{2014}
-\endentry
-
-\entry{jongen_construction_2004}{article}{}
-  \name{author}{5}{}{%
-    {{}%
-     {Jongen}{J.}%
-     {Cynthia}{C.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Pluim}{P.}%
-     {Josien P.~W.}{J.~P.~W.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Nederkoorn}{N.}%
-     {Paul~J.}{P.~J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Viergever}{V.}%
-     {Max~A.}{M.~A.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Niessen}{N.}%
-     {Wiro~J.}{W.~J.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{Brain atlas, {CT} images, Evaluation, Inter-subject registration,
-  Mutual information}
-  \strng{namehash}{JC+1}
-  \strng{fullhash}{JCPJPWNPJVMANWJ1}
-  \field{sortinit}{J}
-  \field{abstract}{%
-  An average {CT} brain image is constructed to serve as reference frame for
-  inter-subject registration. A set of 96 clinical {CT} images is used.
-  Registration includes translation, rotation, and anisotropic scaling. A
-  temporary average based on a subset of 32 images is constructed. This image
-  is used as reference for the iterative construction of the average {CT}
-  image. This approach is computationally efficient and results in a consistent
-  registration of the 96 images. Registration of new images to the average {CT}
-  is more consistent than registration to a single {CT} image. The use of the
-  average {CT} image is illustrated.%
-  }
-  \verb{doi}
-  \verb 10.1016/j.compbiomed.2003.10.003
-  \endverb
-  \field{issn}{0010-4825}
-  \field{number}{8}
-  \field{pages}{647\bibrangedash 662}
-  \field{shortjournal}{Computers in Biology and Medicine}
-  \field{title}{Construction and evaluation of an average {CT} brain image for
-  inter-subject registration}
-  \verb{url}
-  \verb http://www.sciencedirect.com/science/article/pii/S001048250300101X
-  \endverb
-  \field{volume}{34}
-  \verb{file}
-  \verb ScienceDirect Full Text PDF:/Users/johnmuschelli/Library/Application Su
-  \verb pport/Zotero/Profiles/9yinbn16.default/zotero/storage/UZG93VEC/Jongen e
-  \verb t al. - 2004 - Construction and evaluation of an average CT brain.pdf:a
-  \verb pplication/pdf;ScienceDirect Snapshot:/Users/johnmuschelli/Library/Appl
-  \verb ication Support/Zotero/Profiles/9yinbn16.default/zotero/storage/XQC3QET
-  \verb 8/S001048250300101X.html:text/html
-  \endverb
-  \field{journaltitle}{Computers in Biology and Medicine}
-  \field{month}{12}
-  \field{year}{2004}
-  \field{urlday}{06}
-  \field{urlmonth}{03}
   \field{urlyear}{2014}
 \endentry
 
@@ -1747,45 +1334,45 @@
   \field{sortinit}{K}
   \field{abstract}{%
   This report summarizes the findings of the {GBD} 2010 (Global Burden of
-  Diseases, Injuries, and Risk Factors) study for hemorrhagic stroke ({HS).}
+  Diseases, Injuries, and Risk Factors) study for hemorrhagic stroke ({HS}).
   Multiple databases were searched for relevant studies published between 1990
   and 2010. The {GBD} 2010 study provided standardized estimates of the
-  incidence, mortality, mortality-to-incidence ratios ({MIR)}, and
-  disability-adjusted life years ({DALY)} lost for {HS} (including
+  incidence, mortality, mortality-to-incidence ratios ({MIR}), and
+  disability-adjusted life years ({DALY}) lost for {HS} (including
   intracerebral hemorrhage and subarachnoid hemorrhage) by age, sex, and income
-  level (high-income countries [{HIC];} low- and middle-income countries
-  [{LMIC])} for 21 {GBD} 2010 regions in 1990, 2005, and 2010. In 2010, there
-  were 5.3 million cases of {HS} and over 3.0 million deaths due to {HS.} There
+  level (high-income countries [{HIC}]; low- and middle-income countries
+  [{LMIC}]) for 21 {GBD} 2010 regions in 1990, 2005, and 2010. In 2010, there
+  were 5.3 million cases of {HS} and over 3.0 million deaths due to {HS}. There
   was a 47\% increase worldwide in the absolute number of {HS} cases. The
   largest proportion of {HS} incident cases (80\%) and deaths (63\%) occurred
-  in {LMIC} countries. There were 62.8 million {DALY} lost (86\% in {LMIC)} due
-  to {HS.} The overall age-standardized incidence rate of {HS} per 100,000
-  person-years in 2010 was 48.41 (95\% confidence interval [{CI]:} 45.44 to
-  52.13) in {HIC} and 99.43 (95\% {CI:} 85.37 to 116.28) in {LMIC}, and 81.52
-  (95\% {CI:} 72.27 to 92.82) globally. The age-standardized incidence of {HS}
+  in {LMIC} countries. There were 62.8 million {DALY} lost (86\% in {LMIC}) due
+  to {HS}. The overall age-standardized incidence rate of {HS} per 100,000
+  person-years in 2010 was 48.41 (95\% confidence interval [{CI}]: 45.44 to
+  52.13) in {HIC} and 99.43 (95\% {CI}: 85.37 to 116.28) in {LMIC}, and 81.52
+  (95\% {CI}: 72.27 to 92.82) globally. The age-standardized incidence of {HS}
   increased by 18.5\% worldwide between 1990 and 2010. In {HIC}, there was a
-  reduction in incidence of {HS} by 8\% (95\% {CI:} 1\% to 15\%), mortality by
-  38\% (95\% {CI:} 32\% to 43\%), {DALY} by 39\% (95\% {CI:} 32\% to 44\%), and
-  {MIR} by 27\% (95\% {CI:} 19\% to 35\%) in the last 2 decades. In {LMIC}
+  reduction in incidence of {HS} by 8\% (95\% {CI}: 1\% to 15\%), mortality by
+  38\% (95\% {CI}: 32\% to 43\%), {DALY} by 39\% (95\% {CI}: 32\% to 44\%), and
+  {MIR} by 27\% (95\% {CI}: 19\% to 35\%) in the last 2 decades. In {LMIC}
   countries, there was a significant increase in the incidence of {HS} by 22\%
-  (95\% {CI:} 5\% to 30\%), whereas there was a significant reduction in
-  mortality rates of 23\% (95\% {CI:} -3\% to 36\%), {DALY} lost of 25\% (95\%
-  {CI:} 7\% to 38\%), and {MIR} by 36\% (95\% {CI:} 16\% to 49\%). There were
+  (95\% {CI}: 5\% to 30\%), whereas there was a significant reduction in
+  mortality rates of 23\% (95\% {CI}: -3\% to 36\%), {DALY} lost of 25\% (95\%
+  {CI}: 7\% to 38\%), and {MIR} by 36\% (95\% {CI}: 16\% to 49\%). There were
   significant regional differences in incidence rates of {HS}, with the highest
   rates in {LMIC} regions such as sub-Saharan Africa and East Asia, and lowest
   rates in High Income North America and Western Europe. The worldwide burden
   of {HS} has increased over the last 2 decades in terms of absolute numbers of
-  {HS} incident events. The majority of the burden of {HS} is borne by {LMIC.}
+  {HS} incident events. The majority of the burden of {HS} is borne by {LMIC}.
   Rates for {HS} incidence, mortality, and {DALY} lost, as well as {MIR}
   decreased in the past 2 decades in {HIC}, but increased significantly in
-  {LMIC} countries, particularly in those patients ‚â§75 years. {HS}
-  affected people at a younger age in {LMIC} than in {HIC.} The lowest
-  incidence and mortality rates in 2010 were in High Income North America,
-  Australasia, and Western Europe, whereas the highest rates were in Central
-  Asia, Southeast Asia, and sub-Saharan Africa. These results suggest that
-  reducing the burden of {HS} is a priority particularly in {LMIC.} The {GBD}
-  2010 findings may be a useful resource for planning strategies to reduce the
-  global burden of {HS.}%
+  {LMIC} countries, particularly in those patients ≤75 years. {HS} affected
+  people at a younger age in {LMIC} than in {HIC}. The lowest incidence and
+  mortality rates in 2010 were in High Income North America, Australasia, and
+  Western Europe, whereas the highest rates were in Central Asia, Southeast
+  Asia, and sub-Saharan Africa. These results suggest that reducing the burden
+  of {HS} is a priority particularly in {LMIC}. The {GBD} 2010 findings may be
+  a useful resource for planning strategies to reduce the global burden of
+  {HS}.%
   }
   \verb{doi}
   \verb 10.1016/j.gheart.2014.01.003
@@ -1852,9 +1439,9 @@
   \strng{namehash}{LY+1}
   \strng{fullhash}{LYWJCZJFHQ1}
   \field{sortinit}{L}
-  \field{booktitle}{Biomedical Engineering and Informatics ({BMEI)}, 2010 3rd
+  \field{booktitle}{Biomedical Engineering and Informatics ({BMEI}), 2010 3rd
   International Conference on}
-  \field{pages}{498‚Äì502}
+  \field{pages}{498–502}
   \field{title}{Registration of head {CT} images with subarachnoid hemorrhage}
   \verb{url}
   \verb http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5639971
@@ -1907,7 +1494,7 @@
   \field{sortinit}{L}
   \field{abstract}{%
   Criteria for selecting patients for possible surgery in the management of
-  intracerebral hemorrhage ({ICH)} are needed to plan a prospective therapeutic
+  intracerebral hemorrhage ({ICH}) are needed to plan a prospective therapeutic
   evaluation of surgical intervention. This study specifically addressed
   patients seen in the emergency room within a few hours of the ictus, many of
   whom were still awake, to identify and subsequently exclude from surgical
@@ -1918,7 +1505,7 @@
   discharge. Eighty percent of our patients presented within 6 hours of symptom
   onset. These patients were younger and had more severe lesions than did those
   presenting later, yet most were still awake (mean admission Glasgow Coma
-  Scale [{GCS]} score = 11.0). Using multivariate regression, we created two
+  Scale [{GCS}] score = 11.0). Using multivariate regression, we created two
   models. The first model predicts independent outcome, i.e, Rankin 0 to 2, of
   all patients with a {GCS} score greater than 9 on admission who do not
   undergo surgery. The significant factors in this model were hemorrhage
@@ -1934,8 +1521,7 @@
   \verb{doi}
   \verb 10.1212/WNL.44.1.133
   \endverb
-  \field{issn}{0028-3878, 1526-{632X}}
-  \field{note}{{PMID:} 8290048}
+  \field{issn}{0028-3878, 1526-632X}
   \field{number}{1}
   \field{pages}{133\bibrangedash 133}
   \field{shortjournal}{Neurology}
@@ -1964,7 +1550,7 @@
 \entry{mase_immediate_1995}{article}{}
   \name{author}{6}{}{%
     {{}%
-     {Mas√®}{M.}%
+     {Masè}{M.}%
      {G.}{G.}%
      {}{}%
      {}{}}%
@@ -2003,8 +1589,8 @@
   for spontaneous supratentorial hemorrhage and conservatively treated.
   Seventeen clinico-anamnestic variables and five {CT} desumed findings were
   collected. Using univariate analysis we found eight significant predictors of
-  30-day mortality: intraventricular spread ({IVS)} of blood, volume of the
-  hemorrhage, Glasgow Coma Scale ({GCS)} score, midline shift, hyperglycemia,
+  30-day mortality: intraventricular spread ({IVS}) of blood, volume of the
+  hemorrhage, Glasgow Coma Scale ({GCS}) score, midline shift, hyperglycemia,
   pupillary abnormalities, limb paresis and gaze deviation. With multivariate
   logistic regression analysis we found three independent predictors of 30-day
   mortality: {IVS} of blood, volume of the hemorrhage and {GCS} score. Using
@@ -2027,13 +1613,13 @@
   \field{volume}{91}
   \field{langid}{english}
   \verb{file}
-  \verb Mas√® et al. - 1995 - Immediate prognosis of primary intracerebral h
-  \verb emor.pdf:/Users/johnmuschelli/Library/Application Support/Zotero/Profil
-  \verb es/9yinbn16.default/zotero/storage/F37CDAK8/Mas√® et al. - 1995 - Im
-  \verb mediate prognosis of primary intracerebral hemor.pdf:application/pdf;Sn
-  \verb apshot:/Users/johnmuschelli/Library/Application Support/Zotero/Profiles
-  \verb /9yinbn16.default/zotero/storage/J68W9IB7/abstract;jsessionid=C8671A7F1
-  \verb 21CFA6B49BDFFBE393707B2.html:text/html
+  \verb Masè et al. - 1995 - Immediate prognosis of primary intracerebral hemo
+  \verb r.pdf:/Users/johnmuschelli/Library/Application Support/Zotero/Profiles/
+  \verb 9yinbn16.default/zotero/storage/F37CDAK8/Masè et al. - 1995 - Immediat
+  \verb e prognosis of primary intracerebral hemor.pdf:application/pdf;Snapshot
+  \verb :/Users/johnmuschelli/Library/Application Support/Zotero/Profiles/9yinb
+  \verb n16.default/zotero/storage/J68W9IB7/abstract\;jsessionid=C8671A7F121CFA
+  \verb 6B49BDFFBE393707B2.html:text/html
   \endverb
   \field{journaltitle}{Acta Neurologica Scandinavica}
   \field{day}{01}
@@ -2116,12 +1702,12 @@
   conservative treatment (530). At 6 months, 51 patients were lost to
   follow-up, and 17 were alive with unknown status. Of 468 patients randomised
   to early surgery, 122 (26\%) had a favourable outcome compared with 118
-  (24\%) of 496 randomised to initial conservative treatment (odds ratio
-  0¬∑89 [95\% {CI} 0¬∑66‚Äì1¬∑19], p=0¬∑414); absolute benefit
-  2¬∑3\% (‚Äì3¬∑2 to 7¬∑7), relative benefit 10\% (‚Äì13 to
-  33). Patients with spontaneous supratentorial intracerebral haemorrhage in
-  neurosurgical units show no overall benefit from early surgery when compared
-  with initial conservative treatment.%
+  (24\%) of 496 randomised to initial conservative treatment (odds ratio 0·89
+  [95\% {CI} 0·66–1·19], p=0·414); absolute benefit 2·3\% (–3·2 to
+  7·7), relative benefit 10\% (–13 to 33). Patients with spontaneous
+  supratentorial intracerebral haemorrhage in neurosurgical units show no
+  overall benefit from early surgery when compared with initial conservative
+  treatment.%
   }
   \verb{doi}
   \verb 10.1016/S0140-6736(05)17826-X
@@ -2132,10 +1718,10 @@
   \field{shortjournal}{The Lancet}
   \field{shorttitle}{Early surgery versus initial conservative treatment in
   patients with spontaneous supratentorial intracerebral haematomas in the
-  International Surgical Trial in Intracerebral Haemorrhage ({STICH)}}
+  International Surgical Trial in Intracerebral Haemorrhage ({STICH})}
   \field{title}{Early surgery versus initial conservative treatment in patients
   with spontaneous supratentorial intracerebral haematomas in the International
-  Surgical Trial in Intracerebral Haemorrhage ({STICH):} a randomised trial}
+  Surgical Trial in Intracerebral Haemorrhage ({STICH}): a randomised trial}
   \verb{url}
   \verb http://www.sciencedirect.com/science/article/pii/S014067360517826X
   \endverb
@@ -2194,7 +1780,7 @@
   \field{abstract}{%
   The balance of risk and benefit from early neurosurgical intervention for
   conscious patients with superficial lobar intracerebral haemorrhage of
-  10‚Äì100 {mL} and no intraventricular haemorrhage admitted within 48 h of
+  10–100 {mL} and no intraventricular haemorrhage admitted within 48 h of
   ictus is unclear. We therefore tested the hypothesis that early surgery
   compared with initial conservative treatment could improve outcome in these
   patients. In this international, parallel-group trial undertaken in 78
@@ -2205,20 +1791,20 @@
   assign patients to surgery and initial conservative treatment in a 1:1 ratio.
   The trial was not masked. The primary outcome was a prognosis-based
   dichotomised (favourable or unfavourable) outcome of the 8 point Extended
-  Glasgow Outcome Scale ({GOSE)} obtained by questionnaires posted to patients
+  Glasgow Outcome Scale ({GOSE}) obtained by questionnaires posted to patients
   at 6 months. Analysis was by intention to treat. This trial is registered,
-  number {ISRCTN22153967.} 307 of 601 patients were randomly assigned to early
+  number {ISRCTN}22153967. 307 of 601 patients were randomly assigned to early
   surgery and 294 to initial conservative treatment; 298 and 291 were followed
   up at 6 months, respectively; and 297 and 286 were included in the analysis,
   respectively. 174 (59\%) of 297 patients in the early surgery group had an
   unfavourable outcome versus 178 (62\%) of 286 patients in the initial
-  conservative treatment group (absolute difference 3¬∑7\% [95\% {CI}
-  ‚àí4¬∑3 to 11¬∑6], odds ratio 0¬∑86 [0¬∑62 to 1¬∑20];
-  p=0¬∑367). The {STICH} {II} results confirm that early surgery does not
-  increase the rate of death or disability at 6 months and might have a small
-  but clinically relevant survival advantage for patients with spontaneous
-  superficial intracerebral haemorrhage without intraventricular haemorrhage.
-  {UK} Medical Research Council.%
+  conservative treatment group (absolute difference 3·7\% [95\% {CI} −4·3
+  to 11·6], odds ratio 0·86 [0·62 to 1·20]; p=0·367). The {STICH} {II}
+  results confirm that early surgery does not increase the rate of death or
+  disability at 6 months and might have a small but clinically relevant
+  survival advantage for patients with spontaneous superficial intracerebral
+  haemorrhage without intraventricular haemorrhage. {UK} Medical Research
+  Council.%
   }
   \verb{doi}
   \verb 10.1016/S0140-6736(13)60986-1
@@ -2229,10 +1815,10 @@
   \field{shortjournal}{The Lancet}
   \field{shorttitle}{Early surgery versus initial conservative treatment in
   patients with spontaneous supratentorial lobar intracerebral haematomas
-  ({STICH} {II)}}
+  ({STICH} {II})}
   \field{title}{Early surgery versus initial conservative treatment in patients
   with spontaneous supratentorial lobar intracerebral haematomas ({STICH}
-  {II):} a randomised trial}
+  {II}): a randomised trial}
   \verb{url}
   \verb http://www.sciencedirect.com/science/article/pii/S0140673613609861
   \endverb
@@ -2251,133 +1837,6 @@
   \field{year}{2013}
   \field{urlday}{26}
   \field{urlmonth}{02}
-  \field{urlyear}{2014}
-\endentry
-
-\entry{morgenstern_guidelines_2010}{article}{}
-  \name{author}{13}{}{%
-    {{}%
-     {Morgenstern}{M.}%
-     {Lewis~B.}{L.~B.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Hemphill}{H.}%
-     {J.~Claude}{J.~C.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Anderson}{A.}%
-     {Craig}{C.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Becker}{B.}%
-     {Kyra}{K.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Broderick}{B.}%
-     {Joseph~P.}{J.~P.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Connolly}{C.}%
-     {E.~Sander}{E.~S.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Greenberg}{G.}%
-     {Steven~M.}{S.~M.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Huang}{H.}%
-     {James~N.}{J.~N.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Macdonald}{M.}%
-     {R.~Loch}{R.~L.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Mess√©}{M.}%
-     {Steven~R.}{S.~R.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Mitchell}{M.}%
-     {Pamela~H.}{P.~H.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Selim}{S.}%
-     {Magdy}{M.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Tamargo}{T.}%
-     {Rafael~J.}{R.~J.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{{AHA} Scientific Statements, diagnosis, hydrocephalus, intracerebral
-  hemorrhage, intracranial pressure, surgery, treatment}
-  \strng{namehash}{MLB+1}
-  \strng{fullhash}{MLBHJCACBKBJPCESGSMHJNMRLMSRMPHSMTRJ1}
-  \field{sortinit}{M}
-  \field{abstract}{%
-  {Purpose‚ÄîThe} aim of this guideline is to present current and
-  comprehensive recommendations for the diagnosis and treatment of acute
-  spontaneous intracerebral hemorrhage. {Methods‚ÄîA} formal literature
-  search of {MEDLINE} was performed. Data were synthesized with the use of
-  evidence tables. Writing committee members met by teleconference to discuss
-  data-derived recommendations. The American Heart Association Stroke
-  Council‚Äôs Levels of Evidence grading algorithm was used to grade each
-  recommendation. Prerelease review of the draft guideline was performed by 6
-  expert peer reviewers and by the members of the Stroke Council Scientific
-  Statements Oversight Committee and Stroke Council Leadership Committee. It is
-  intended that this guideline be fully updated in 3 years‚Äô time.
-  {Results‚ÄîEvidence-based} guidelines are presented for the care of
-  patients presenting with intracerebral hemorrhage. The focus was subdivided
-  into diagnosis, hemostasis, blood pressure management, inpatient and nursing
-  management, preventing medical comorbidities, surgical treatment, outcome
-  prediction, rehabilitation, prevention of recurrence, and future
-  considerations. {Conclusions‚ÄîIntracerebral} hemorrhage is a serious
-  medical condition for which outcome can be impacted by early, aggressive
-  care. The guidelines offer a framework for goal-directed treatment of the
-  patient with intracerebral hemorrhage.%
-  }
-  \verb{doi}
-  \verb 10.1161/STR.0b013e3181ec611b
-  \endverb
-  \field{issn}{0039-2499, 1524-4628}
-  \field{note}{{PMID:} 20651276}
-  \field{number}{9}
-  \field{pages}{2108\bibrangedash 2129}
-  \field{shortjournal}{Stroke}
-  \field{title}{Guidelines for the Management of Spontaneous Intracerebral
-  Hemorrhage A Guideline for Healthcare Professionals From the American Heart
-  {Association/American} Stroke Association}
-  \verb{url}
-  \verb http://stroke.ahajournals.org/content/41/9/2108
-  \endverb
-  \field{volume}{41}
-  \field{langid}{english}
-  \verb{file}
-  \verb Full Text PDF:/Users/johnmuschelli/Library/Application Support/Zotero/P
-  \verb rofiles/9yinbn16.default/zotero/storage/EEVWMWA8/Morgenstern et al. - 2
-  \verb 010 - Guidelines for the Management of Spontaneous Intra.pdf:applicatio
-  \verb n/pdf;Snapshot:/Users/johnmuschelli/Library/Application Support/Zotero/
-  \verb Profiles/9yinbn16.default/zotero/storage/WZ6TSP6U/2108.html:text/html
-  \endverb
-  \field{journaltitle}{Stroke}
-  \field{day}{01}
-  \field{month}{09}
-  \field{year}{2010}
-  \field{urlday}{05}
-  \field{urlmonth}{03}
   \field{urlyear}{2014}
 \endentry
 
@@ -2455,42 +1914,40 @@
   \strng{fullhash}{MWACJRMJLKMTCMNABHAJUNLVPMNAAIZMHDF1}
   \field{sortinit}{M}
   \field{abstract}{%
-  Background and {Purpose‚ÄîPerihematomal} edema ({PHE)} can worsen
-  outcomes after intracerebral hemorrhage ({ICH).} Reports suggest that blood
-  degradation products lead to {PHE.} We hypothesized that hematoma evacuation
+  Background and Purpose—Perihematomal edema ({PHE}) can worsen outcomes
+  after intracerebral hemorrhage ({ICH}). Reports suggest that blood
+  degradation products lead to {PHE}. We hypothesized that hematoma evacuation
   will reduce {PHE} volume and that treatment with recombinant tissue-type
-  plasminogen activator (rt-{PA)} will not exacerbate it.
-  {Methods‚ÄîMinimally} invasive surgery and rt-{PA} in {ICH} evacuation
-  ({MISTIE)} phase {II} tested safety and efficacy of hematoma evacuation after
-  {ICH.} We conducted a semiautomated, computerized volumetric analysis on
-  computed tomography to assess impact of hematoma removal on {PHE} and effects
-  of rt-{PA} on {PHE.} Volumetric analyses were performed on baseline stability
-  and end of treatment scans. {Results‚ÄîSeventy-nine} surgical and 39
-  medical patients from minimally invasive surgery and rt-{PA} in {ICH}
-  evacuation phase {II} ({MISTIE} {II)} were analyzed. Mean hematoma volume at
-  end of treatment was 19.6¬±14.5 cm3 for the surgical cohort and
-  40.7¬±13.9 cm3 for the medical cohort (P{\textless}0.001). Edema volume at
-  end of treatment was lower for the surgical cohort: 27.7¬±13.3 cm3 than
-  medical cohort: 41.7¬±14.6 cm3 (P{\textless}0.001). Graded effect of clot
-  removal on {PHE} was observed when patients with {\textgreater}65\%, 20\% to
-  65\%, and {\textless}20\% {ICH} removed were analyzed (P{\textless}0.001).
-  Positive correlation between {PHE} reduction and percent of {ICH} removed was
-  identified (œÅ=0.658; P{\textless}0.001). In the surgical cohort, 69
-  patients underwent surgical aspiration and rt-{PA}, whereas 10 underwent
-  surgical aspiration only. Both cohorts achieved similar clot reduction:
-  surgical aspiration and rt-{PA}, 18.9¬±14.5 cm3; and surgical aspiration
-  only, 24.5¬±14.0 cm3 (P=0.26). Edema at end of treatment in surgical
-  aspiration and rt-{PA} was 28.1¬±13.8 cm3 and 24.4¬±8.6 cm3 in surgical
-  aspiration only (P=0.41). {Conclusions‚ÄîHematoma} evacuation is
-  associated with significant reduction in {PHE.} Furthermore, {PHE} does not
-  seem to be exacerbated by rt-{PA}, making such neurotoxic effects unlikely
-  when the drug is delivered to intracranial clot.%
+  plasminogen activator (rt-{PA}) will not exacerbate it. Methods—Minimally
+  invasive surgery and rt-{PA} in {ICH} evacuation ({MISTIE}) phase {II} tested
+  safety and efficacy of hematoma evacuation after {ICH}. We conducted a
+  semiautomated, computerized volumetric analysis on computed tomography to
+  assess impact of hematoma removal on {PHE} and effects of rt-{PA} on {PHE}.
+  Volumetric analyses were performed on baseline stability and end of treatment
+  scans. Results—Seventy-nine surgical and 39 medical patients from minimally
+  invasive surgery and rt-{PA} in {ICH} evacuation phase {II} ({MISTIE} {II})
+  were analyzed. Mean hematoma volume at end of treatment was 19.6±14.5 cm3
+  for the surgical cohort and 40.7±13.9 cm3 for the medical cohort
+  (P{\textless}0.001). Edema volume at end of treatment was lower for the
+  surgical cohort: 27.7±13.3 cm3 than medical cohort: 41.7±14.6 cm3
+  (P{\textless}0.001). Graded effect of clot removal on {PHE} was observed when
+  patients with {\textgreater}65\%, 20\% to 65\%, and {\textless}20\% {ICH}
+  removed were analyzed (P{\textless}0.001). Positive correlation between {PHE}
+  reduction and percent of {ICH} removed was identified (ρ=0.658;
+  P{\textless}0.001). In the surgical cohort, 69 patients underwent surgical
+  aspiration and rt-{PA}, whereas 10 underwent surgical aspiration only. Both
+  cohorts achieved similar clot reduction: surgical aspiration and rt-{PA},
+  18.9±14.5 cm3; and surgical aspiration only, 24.5±14.0 cm3 (P=0.26). Edema
+  at end of treatment in surgical aspiration and rt-{PA} was 28.1±13.8 cm3 and
+  24.4±8.6 cm3 in surgical aspiration only (P=0.41). Conclusions—Hematoma
+  evacuation is associated with significant reduction in {PHE}. Furthermore,
+  {PHE} does not seem to be exacerbated by rt-{PA}, making such neurotoxic
+  effects unlikely when the drug is delivered to intracranial clot.%
   }
   \verb{doi}
   \verb 10.1161/STROKEAHA.111.000411
   \endverb
   \field{issn}{0039-2499, 1524-4628}
-  \field{note}{{PMID:} 23391763}
   \field{number}{3}
   \field{pages}{627\bibrangedash 634}
   \field{shortjournal}{Stroke}
@@ -2519,30 +1976,21 @@
 \endentry
 
 \entry{brainr}{article}{}
-  \name{author}{3}{}{%
+  \name{author}{1}{}{%
     {{}%
-     {Muschelli}{M.}%
-     {J.}{J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Sweeney}{S.}%
-     {E.}{E.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Crainiceanu}{C.}%
-     {C.}{C.}%
+     {Muschelli~III}{M.~I.}%
+     {John}{J.}%
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{MJSECC1}
-  \strng{fullhash}{MJSECC1}
+  \strng{namehash}{MIJ1}
+  \strng{fullhash}{MIJ1}
   \field{sortinit}{M}
-  \field{title}{brainR: Interactive 3 and 4D Images of High Resolution
+  \field{number}{1}
+  \field{title}{brainR: Interactive 3 and 4d Images of High Resolution
   Neuroimage Data}
-  \field{volume}{in press}
-  \field{journaltitle}{The R Journal}
+  \field{volume}{6}
+  \field{journaltitle}{R Journal}
   \field{year}{2014}
 \endentry
 
@@ -2656,7 +2104,7 @@
   matter). However, the most peripheral white matter areas, which are
   interleaved between the cortex and the deep white matter, have lacked clear
   anatomical definitions and parcellations. We used axonal fiber alignment
-  information from diffusion tensor imaging ({DTI)} to delineate the peripheral
+  information from diffusion tensor imaging ({DTI}) to delineate the peripheral
   white matter, and investigated its relationship with the cortex and the deep
   white matter. Using {DTI} data from 81 healthy subjects, we identified nine
   common, blade-like anatomical regions, which were further parcellated into 21
@@ -2693,157 +2141,6 @@
   \field{year}{2008}
   \field{urlday}{19}
   \field{urlmonth}{03}
-  \field{urlyear}{2014}
-\endentry
-
-\entry{pelizzari_accurate_1989}{article}{}
-  \name{author}{5}{}{%
-    {{}%
-     {Pelizzari}{P.}%
-     {C~A}{C.~A.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Chen}{C.}%
-     {G~T}{G.~T.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Spelbring}{S.}%
-     {D~R}{D.~R.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Weichselbaum}{W.}%
-     {R~R}{R.~R.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Chen}{C.}%
-     {C~T}{C.~T.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{Brain, Child, Diagnostic Imaging, Epilepsies, Partial, Humans, Image
-  Processing, Computer-Assisted, Magnetic Resonance Imaging, Models,
-  Structural, Tomography, Emission-Computed, Tomography, X-Ray Computed}
-  \strng{namehash}{PCA+1}
-  \strng{fullhash}{PCACGTSDRWRRCCT1}
-  \field{sortinit}{P}
-  \field{abstract}{%
-  A surface matching technique has been developed to register multiple imaging
-  scans of the brain in three dimensions, with accuracy on the order of the
-  image pixel sizes. Anatomic information visualized in X-ray {CT} and magnetic
-  resonance images may be integrated with each other and with functional
-  information from positron emission tomography. Anatomical structures and
-  other volumes of interest may be mapped from one scan to another, and
-  corresponding sections through multiple scans may be directly compared. This
-  capability provides a novel quantitative method to address the fundamental
-  problem of relating structure to function in the brain. Applications include
-  basic and clinical problems in the neurosciences and delivery and assessment
-  of brain tumor therapy.%
-  }
-  \field{issn}{0363-8715}
-  \field{note}{{PMID:} 2492038}
-  \field{number}{1}
-  \field{pages}{20\bibrangedash 26}
-  \field{shortjournal}{J Comput Assist Tomogr}
-  \field{title}{Accurate three-dimensional registration of {CT}, {PET}, and/or
-  {MR} images of the brain}
-  \field{volume}{13}
-  \verb{file}
-  \verb 00004728-198901000-00004.pdf:/Users/johnmuschelli/Library/Application S
-  \verb upport/Zotero/Profiles/9yinbn16.default/zotero/storage/IR483B8S/0000472
-  \verb 8-198901000-00004.pdf:application/pdf
-  \endverb
-  \field{journaltitle}{Journal of computer assisted tomography}
-  \field{month}{02}
-  \field{year}{1989}
-\endentry
-
-\entry{phan_hydrocephalus_2000}{article}{}
-  \name{author}{4}{}{%
-    {{}%
-     {Phan}{P.}%
-     {Thanh~G.}{T.~G.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Koh}{K.}%
-     {Merian}{M.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Vierkant}{V.}%
-     {Robert~A.}{R.~A.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Wijdicks}{W.}%
-     {Eelco F.~M.}{E.~F.~M.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{Cerebral Hemorrhage, hydrocephalus, mortality, prognosis}
-  \strng{namehash}{PTG+1}
-  \strng{fullhash}{PTGKMVRAWEFM1}
-  \field{sortinit}{P}
-  \field{abstract}{%
-  Background and {Purpose‚ÄîPrevious} studies have shown that the volume of
-  intracerebral hemorrhage and Glasgow Coma Score ({GCS)} on admission are
-  powerful predictors of 30-day mortality. However, the significance of
-  hydrocephalus associated with deep cerebral hemorrhage has not been studied
-  extensively. The purpose of this study was to determine the prognostic
-  indicators of 30-day mortality in patients with deep cerebral hemorrhage.
-  {Methods‚ÄîWe} studied 100 consecutive patients with deep cerebral
-  hemorrhage between 1994 and 1998. Deep cerebral hemorrhage was divided into 2
-  groups: putaminal hemorrhage (lateral group) and thalamic and caudate
-  hemorrhage (medial group). Univariate and multivariate logistic regression
-  analyses were performed to determine independent prognostic indicators of
-  30-day mortality. {Results‚ÄîHydrocephalus} was present in 40 of the 100
-  patients. The 30-day mortality was 29\%, and hydrocephalus was present in
-  76\% of those who died. Multivariate analyses showed 2 independent prognostic
-  indicators of 30-day mortality for putaminal hemorrhage: {GCS} ‚â§8
-  (P=0.002, odds ratio [{OR]} 37.7, {CI} 3.6 to 396.9) and hydrocephalus
-  (P=0.005, {OR} 27.4, {CI} 2.7 to 282.6). However, only {GCS} ‚â§8
-  (P=0.0002, {OR} 16.5, {CI} 3.7 to 73.4) was predictive of 30-day mortality
-  for thalamic and caudate hemorrhage. This model ({GCS} ‚â§8 and
-  hydrocephalus) has a sensitivity of 57\% and a specificity of 91\% for
-  predicting 30-day mortality for putaminal hemorrhage. When both attributes
-  were present in putaminal hemorrhage ({GCS} ‚â§8 and hydrocephalus), 1
-  (11\%) of 9 patients survived, and when both attributes were missing 28
-  (100\%) of 28 patients survived. {Conclusions‚ÄîObstructive}
-  hydrocephalus on admission in a comatose patient with a putaminal hemorrhage
-  predicts 30-day mortality.%
-  }
-  \verb{doi}
-  \verb 10.1161/01.STR.31.9.2157
-  \endverb
-  \field{issn}{0039-2499, 1524-4628}
-  \field{note}{{PMID:} 10978045}
-  \field{number}{9}
-  \field{pages}{2157\bibrangedash 2162}
-  \field{shortjournal}{Stroke}
-  \field{title}{Hydrocephalus Is a Determinant of Early Mortality in Putaminal
-  Hemorrhage}
-  \verb{url}
-  \verb http://stroke.ahajournals.org/content/31/9/2157
-  \endverb
-  \field{volume}{31}
-  \field{langid}{english}
-  \verb{file}
-  \verb Full Text PDF:/Users/johnmuschelli/Library/Application Support/Zotero/P
-  \verb rofiles/9yinbn16.default/zotero/storage/NDSG9KKT/Phan et al. - 2000 - H
-  \verb ydrocephalus Is a Determinant of Early Mortality .pdf:application/pdf;S
-  \verb napshot:/Users/johnmuschelli/Library/Application Support/Zotero/Profile
-  \verb s/9yinbn16.default/zotero/storage/AAXA9QIM/2157.html:text/html
-  \endverb
-  \field{journaltitle}{Stroke}
-  \field{day}{01}
-  \field{month}{09}
-  \field{year}{2000}
-  \field{urlday}{23}
-  \field{urlmonth}{04}
   \field{urlyear}{2014}
 \endentry
 
@@ -2895,8 +2192,7 @@
   \verb{doi}
   \verb 10.1136/jnnp.50.8.976
   \endverb
-  \field{issn}{, 1468-{330X}}
-  \field{note}{{PMID:} 3655832}
+  \field{issn}{, 1468-330X}
   \field{number}{8}
   \field{pages}{976\bibrangedash 979}
   \field{shortjournal}{J Neurol Neurosurg Psychiatry}
@@ -2966,39 +2262,38 @@
   \strng{fullhash}{PJPWDLFOSBAOSGKS1}
   \field{sortinit}{P}
   \field{abstract}{%
-  Depth intracranial electrodes ({IEs)} placement is one of the most used
-  procedures to identify the epileptogenic zone ({EZ)} in surgical treatment of
-  drug resistant epilepsy patients, about 20‚Äì30\% of this population.
-  {IEs} localization is therefore a critical issue defining the {EZ} and its
-  relation with eloquent functional areas. That information is then used to
-  target the resective surgery and has great potential to affect outcome. We
-  designed a methodological procedure intended to avoid the need for highly
-  specialized medical resources and reduce time to identify the anatomical
-  location of {IEs}, during the first instances of intracranial {EEG}
-  recordings. This workflow is based on established open source software; {3D}
-  Slicer and Freesurfer that uses {MRI} and Post-implant {CT} fusion for the
-  localization of {IEs} and its relation with automatic labeled surrounding
-  cortex. To test this hypothesis we assessed the time elapsed between the
-  surgical implantation process and the final anatomical localization of {IEs}
-  by means of our proposed method compared against traditional visual analysis
-  of raw post-implant imaging in two groups of patients. All {IEs} were
-  identified in the first 24 H (6‚Äì24 H) of implantation using our method
-  in 4 patients of the first group. For the control group; all {IEs} were
-  identified by experts with an overall time range of 36 h to 3 days using
-  traditional visual analysis. It included (7 patients), 3 patients implanted
-  with {IEs} and the same 4 patients from the first group. Time to localization
-  was restrained in this group by the specialized personnel and the image
-  quality available. To validate our method; we trained two inexperienced
-  operators to assess the position of {IEs} contacts on four patients (5 {IEs)}
-  using the proposed method. We quantified the discrepancies between operators
-  and we also assessed the efficiency of our method to define the {EZ}
-  comparing the findings against the results of traditional analysis.%
+  Depth intracranial electrodes ({IEs}) placement is one of the most used
+  procedures to identify the epileptogenic zone ({EZ}) in surgical treatment of
+  drug resistant epilepsy patients, about 20–30\% of this population. {IEs}
+  localization is therefore a critical issue defining the {EZ} and its relation
+  with eloquent functional areas. That information is then used to target the
+  resective surgery and has great potential to affect outcome. We designed a
+  methodological procedure intended to avoid the need for highly specialized
+  medical resources and reduce time to identify the anatomical location of
+  {IEs}, during the first instances of intracranial {EEG} recordings. This
+  workflow is based on established open source software; 3D Slicer and
+  Freesurfer that uses {MRI} and Post-implant {CT} fusion for the localization
+  of {IEs} and its relation with automatic labeled surrounding cortex. To test
+  this hypothesis we assessed the time elapsed between the surgical
+  implantation process and the final anatomical localization of {IEs} by means
+  of our proposed method compared against traditional visual analysis of raw
+  post-implant imaging in two groups of patients. All {IEs} were identified in
+  the first 24 H (6–24 H) of implantation using our method in 4 patients of
+  the first group. For the control group; all {IEs} were identified by experts
+  with an overall time range of 36 h to 3 days using traditional visual
+  analysis. It included (7 patients), 3 patients implanted with {IEs} and the
+  same 4 patients from the first group. Time to localization was restrained in
+  this group by the specialized personnel and the image quality available. To
+  validate our method; we trained two inexperienced operators to assess the
+  position of {IEs} contacts on four patients (5 {IEs}) using the proposed
+  method. We quantified the discrepancies between operators and we also
+  assessed the efficiency of our method to define the {EZ} comparing the
+  findings against the results of traditional analysis.%
   }
   \verb{doi}
   \verb 10.3389/fnins.2013.00260
   \endverb
   \field{issn}{1662-4548}
-  \field{note}{{PMID:} 24427112 {PMCID:} {PMC3876273}}
   \field{shortjournal}{Front Neurosci}
   \field{title}{Rapid and efficient localization of depth electrodes and
   cortical labeling using free and open source medical software in epilepsy
@@ -3072,33 +2367,31 @@
   \field{sortinit}{Q}
   \field{abstract}{%
   Background and Purpose Black Americans with spontaneous intracerebral
-  hemorrhage ({SICH)} may have unique clinical characteristics that affect
+  hemorrhage ({SICH}) may have unique clinical characteristics that affect
   outcome. The aim of this study was to determine the prognostic value of
   clinical characteristics and initial {CT} scan for outcome in black Americans
-  with {SICH.} Methods Clinical and demographic data were extracted from the
+  with {SICH}. Methods Clinical and demographic data were extracted from the
   charts of 182 consecutive black Americans admitted for {SICH} diagnosed by
   clinical criteria and initial {CT} scan. Hemorrhage volumes were calculated
   from admission {CT} scans by a computerized method. Univariate and multiple
   logistic regression analyses were performed to determine independent
   predictors of early deterioration (defined as a decrease from an initial
-  Glasgow Coma Scale score {\textgreater}12 by ‚â•4 points within 24 hours
-  from presentation) and mortality. Results Both hemorrhage volume and
-  ventricular extension were significant, independent predictors of early
-  deterioration (odds ratio [{OR]}, 6.78; 95\% confidence interval [{CI]}, 1.89
-  to 24.35 and {OR}, 4.67; 95\% {CI}, 1.30 to 16.72, respectively) and
-  mortality ({OR}, 6.66; 95\% {CI}, 2.85 to 15.58 and {OR}, 4.23; 95\% {CI},
-  1.82 to 9.82, respectively). A Glasgow Coma Scale score ‚â§12 also
-  predicted mortality ({OR}, 3.23; 95\% {CI}, 1.46 to 7.14). Initial mean
-  arterial pressure was not an independent predictor of early deterioration or
-  mortality. Conclusions Hemorrhage volume and ventricular extension are the
-  best predictors of early deterioration and mortality in black Americans with
-  {SICH.}%
+  Glasgow Coma Scale score {\textgreater}12 by ≥4 points within 24 hours from
+  presentation) and mortality. Results Both hemorrhage volume and ventricular
+  extension were significant, independent predictors of early deterioration
+  (odds ratio [{OR}], 6.78; 95\% confidence interval [{CI}], 1.89 to 24.35 and
+  {OR}, 4.67; 95\% {CI}, 1.30 to 16.72, respectively) and mortality ({OR},
+  6.66; 95\% {CI}, 2.85 to 15.58 and {OR}, 4.23; 95\% {CI}, 1.82 to 9.82,
+  respectively). A Glasgow Coma Scale score ≤12 also predicted mortality
+  ({OR}, 3.23; 95\% {CI}, 1.46 to 7.14). Initial mean arterial pressure was not
+  an independent predictor of early deterioration or mortality. Conclusions
+  Hemorrhage volume and ventricular extension are the best predictors of early
+  deterioration and mortality in black Americans with {SICH}.%
   }
   \verb{doi}
   \verb 10.1161/01.STR.26.10.1764
   \endverb
   \field{issn}{0039-2499, 1524-4628}
-  \field{note}{{PMID:} 7570722}
   \field{number}{10}
   \field{pages}{1764\bibrangedash 1767}
   \field{shortjournal}{Stroke}
@@ -3173,7 +2466,6 @@
   \verb 10.1056/NEJM200105103441907
   \endverb
   \field{issn}{0028-4793}
-  \field{note}{{PMID:} 11346811}
   \field{number}{19}
   \field{pages}{1450\bibrangedash 1460}
   \field{title}{Spontaneous Intracerebral Hemorrhage}
@@ -3193,37 +2485,6 @@
   \field{year}{2001}
   \field{urlday}{04}
   \field{urlmonth}{04}
-  \field{urlyear}{2014}
-\endentry
-
-\entry{rankin_cerebral_1957}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Rankin}{R.}%
-     {John}{J.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{RJ1}
-  \strng{fullhash}{RJ1}
-  \field{sortinit}{R}
-  \field{number}{5}
-  \field{pages}{200‚Äì215}
-  \field{title}{Cerebral vascular accidents in patients over the age of 60.
-  {II.} Prognosis.}
-  \verb{url}
-  \verb http://europepmc.org/abstract/MED/13432835
-  \endverb
-  \field{volume}{2}
-  \verb{file}
-  \verb Snapshot:/Users/johnmuschelli/Library/Application Support/Zotero/Profil
-  \verb es/9yinbn16.default/zotero/storage/UTVVJGCN/reload=2;jsessionid=bFtTQwo
-  \verb qVPCBLWzsFKNc.html:text/html
-  \endverb
-  \field{journaltitle}{Scottish medical journal}
-  \field{year}{1957}
-  \field{urlday}{07}
-  \field{urlmonth}{03}
   \field{urlyear}{2014}
 \endentry
 
@@ -3247,7 +2508,7 @@
   \field{sortinit}{R}
   \field{abstract}{%
   {BACKGROUND} The present study was undertaken to evaluate the determinants of
-  acute (30-day) mortality after spontaneous intracerebral hemorrhage ({ICH)}
+  acute (30-day) mortality after spontaneous intracerebral hemorrhage ({ICH})
   in a developing country setting, and to compare these findings with those
   available from studies conducted in the West. {METHODS} Medical records of
   146 patients admitted to a major tertiary hospital in Karachi, Pakistan
@@ -3255,14 +2516,14 @@
   The level and intensity of care provided to these patients was similar to
   that available at modern neurosurgical centers. The salient prognostic
   indicators that were studied included hypertension, pulse pressure, {GCS}
-  score, neurologic deficits, and {CT-scan} predictors including site, size,
+  score, neurologic deficits, and {CT}-scan predictors including site, size,
   and intraventricular spread of hemorrhage. These data were used to determine
   independent predictors of 30-day mortality by univariate and multivariate
   analysis. Additionally, 30-day survival probabilities for these outcome
   predictors were also computed. {RESULTS} The 30-day mortality after
   spontaneous {ICH} was 39.7\%. Two-thirds of the patients had a history of
   hypertension. The important clinical predictors at the multivariate level
-  included {GCS} score ‚â§8 and progressive increase in pulse pressure. The
+  included {GCS} score ≤8 and progressive increase in pulse pressure. The
   {CT} scan predictors included intraventricular spread of hemorrhage,
   ventricular enlargement, and size of the bleed. Location of the lesion did
   not appear to significantly influence mortality. Survival analysis showed a
@@ -3330,7 +2591,7 @@
   This article describes freely available software for presenting
   stereotaxically aligned patient scans. This article focuses on {MRI} scans,
   but many of these tools are also applicable to other modalities (e.g. {CT},
-  {PET} and {SPECT).} We suggest that this technique of presenting lesions in
+  {PET} and {SPECT}). We suggest that this technique of presenting lesions in
   terms of images normalized to standard stereotaxic space should become the
   standard for neuropsychological studies.%
   }
@@ -3460,7 +2721,7 @@
   \strng{fullhash}{SRWJ1}
   \field{sortinit}{S}
   \field{abstract}{%
-  Currently, intracerebral hemorrhage ({ICH)} has the highest mortality rate of
+  Currently, intracerebral hemorrhage ({ICH}) has the highest mortality rate of
   all stroke subtypes (; ). Hematoma growth is a principal cause of early
   neurological deterioration. Prospective and retrospective studies indicate
   that up to 38\% hematoma expansion is noted within three hours of {ICH} onset
@@ -3470,7 +2731,6 @@
   surgery.%
   }
   \field{issn}{1176-6344}
-  \field{note}{{PMID:} 18078021 {PMCID:} {PMC2291314}}
   \field{number}{5}
   \field{pages}{701\bibrangedash 709}
   \field{shortjournal}{Vasc Health Risk Manag}
@@ -3528,7 +2788,7 @@
   \strng{fullhash}{SJSMPBSJOY1}
   \field{sortinit}{S}
   \field{abstract}{%
-  The prognostic assessment of a patient with intra-cerebral hemorrhage ({IH)}
+  The prognostic assessment of a patient with intra-cerebral hemorrhage ({IH})
   requires simultaneous appraisal of several parameters. We have attempted this
   with a multivariate method: discriminant analysis. We studied retrospectively
   142 patients with non-operated {IH}, not due to vascular malformation,
@@ -3545,7 +2805,6 @@
   from surgery, which we illustrated with a group of 23 operated patients.%
   }
   \field{issn}{0035-3787}
-  \field{note}{{PMID:} 3047834}
   \field{number}{4}
   \field{pages}{279\bibrangedash 283}
   \field{shortjournal}{Rev. Neurol. (Paris)}
@@ -3622,20 +2881,20 @@
   and non-brain has been developed. It is very robust and accurate and has been
   tested on thousands of data sets from a wide variety of scanners and taken
   with a wide variety of {MR} sequences. The method, Brain Extraction Tool
-  ({BET)}, uses a deformable model that evolves to fit the brain's surface by
+  ({BET}), uses a deformable model that evolves to fit the brain's surface by
   the application of a set of locally adaptive model forces. The method is very
   fast and requires no preregistration or other pre-processing before being
   applied. We describe the new method and give examples of results and the
-  results of extensive quantitative testing against ‚Äúgold-standard‚Äù
-  hand segmentations, and two other popular automated methods. Hum. Brain
-  Mapping 17:143‚Äì155, 2002. ¬© 2002 Wiley-Liss, Inc.%
+  results of extensive quantitative testing against “gold-standard” hand
+  segmentations, and two other popular automated methods. Hum. Brain Mapping
+  17:143–155, 2002. © 2002 Wiley-Liss, Inc.%
   }
   \verb{doi}
   \verb 10.1002/hbm.10062
   \endverb
   \field{issn}{1097-0193}
   \field{number}{3}
-  \field{pages}{143‚Äì155}
+  \field{pages}{143–155}
   \field{title}{Fast robust automated brain extraction}
   \verb{url}
   \verb http://onlinelibrary.wiley.com/doi/10.1002/hbm.10062/abstract
@@ -3698,7 +2957,7 @@
   package which utilize methods standard to the neuroimaging community. These
   features include spatial normalization to the {MNI} template brain (standard
   of the international consortium for brain mapping), and use of the volume
-  occupancy Talairach labels ({VOTL)} and automated anatomical labeling ({AAL)}
+  occupancy Talairach labels ({VOTL}) and automated anatomical labeling ({AAL})
   atlases for full brain quantification of structures impacted by the lesion.
   Methods for multi-subject studies including lesion-symptom mapping proposed
   by Bates et al. have been extended in {ABLe} to produce an exploratory
@@ -3715,7 +2974,7 @@
   \field{pages}{245\bibrangedash 254}
   \field{shortjournal}{Computer Methods and Programs in Biomedicine}
   \field{title}{User-friendly software for the analysis of brain lesions
-  ({ABLe)}}
+  ({ABLe})}
   \verb{url}
   \verb http://www.sciencedirect.com/science/article/pii/S016926070700034X
   \endverb
@@ -3732,83 +2991,6 @@
   \field{journaltitle}{Computer Methods and Programs in Biomedicine}
   \field{month}{06}
   \field{year}{2007}
-  \field{urlyear}{2014}
-\endentry
-
-\entry{swieten_interobserver_1988}{article}{}
-  \name{author}{5}{}{%
-    {{}%
-     {Swieten}{S.}%
-     {J.~C.~van}{J.~C.~v.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Koudstaal}{K.}%
-     {P.~J.}{P.~J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Visser}{V.}%
-     {M.~C.}{M.~C.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Schouten}{S.}%
-     {H.~J.}{H.~J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Gijn}{G.}%
-     {J.~van}{J.~v.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{SJCv+1}
-  \strng{fullhash}{SJCvKPJVMCSHJGJv1}
-  \field{sortinit}{S}
-  \field{abstract}{%
-  Interobserver agreement for the assessment of handicap in stroke patients was
-  investigated in a group of 10 senior neurologists and 24 residents from two
-  centers. One hundred patients were separately interviewed by two physicians
-  in different combinations. The degree of handicap was recorded by each
-  observer on the modified Rankin scale, which has six grades (0-5). The
-  agreement rates were corrected for chance (kappa statistics). Both physicians
-  agreed on the degree of handicap in 65 patients; they differed by one grade
-  in 32 patients and by two grades in 3 patients. Kappa for all pairwise
-  observations was 0.56; the value for weighted kappa (with quadratic
-  disagreement weights) was 0.91. Our results confirm the value of the modified
-  Rankin scale in the assessment of handicap in stroke patients; nevertheless,
-  further improvements are possible.%
-  }
-  \verb{doi}
-  \verb 10.1161/01.STR.19.5.604
-  \endverb
-  \field{issn}{0039-2499, 1524-4628}
-  \field{note}{{PMID:} 3363593}
-  \field{number}{5}
-  \field{pages}{604\bibrangedash 607}
-  \field{shortjournal}{Stroke}
-  \field{title}{Interobserver agreement for the assessment of handicap in
-  stroke patients.}
-  \verb{url}
-  \verb http://stroke.ahajournals.org/content/19/5/604
-  \endverb
-  \field{volume}{19}
-  \field{langid}{english}
-  \verb{file}
-  \verb Snapshot:/Users/johnmuschelli/Library/Application Support/Zotero/Profil
-  \verb es/9yinbn16.default/zotero/storage/FCB44WFV/604.html:text/html;Swieten
-  \verb et al. - 1988 - Interobserver agreement for the assessment of hand.pdf:
-  \verb /Users/johnmuschelli/Library/Application Support/Zotero/Profiles/9yinbn
-  \verb 16.default/zotero/storage/DK2I9PGF/Swieten et al. - 1988 - Interobserve
-  \verb r agreement for the assessment of hand.pdf:application/pdf
-  \endverb
-  \field{journaltitle}{Stroke}
-  \field{day}{01}
-  \field{month}{05}
-  \field{year}{1988}
-  \field{urlday}{07}
-  \field{urlmonth}{03}
   \field{urlyear}{2014}
 \endentry
 
@@ -3893,9 +3075,9 @@
   \field{abstract}{%
   A clinical scale has been evolved for assessing the depth and duration of
   impaired consciousness and coma. Three aspects of behaviour are independently
-  measured‚Äîmotor responsiveness, verbal performance, and eye opening.
-  These can be evaluated consistently by doctors and nurses and recorded on a
-  simple chart which has proved practical both in a neurosurgical unit and in a
+  measured—motor responsiveness, verbal performance, and eye opening. These
+  can be evaluated consistently by doctors and nurses and recorded on a simple
+  chart which has proved practical both in a neurosurgical unit and in a
   general hospital. The scale facilitates consultations between general and
   special units in cases of recent brain damage, and is useful also in defining
   the duration of prolonged coma.%
@@ -3909,7 +3091,7 @@
   \field{series}{Originally published as Volume 2, Issue 7872}
   \field{shortjournal}{The Lancet}
   \field{shorttitle}{{ASSESSMENT} {OF} {COMA} {AND} {IMPAIRED} {CONSCIOUSNESS}}
-  \field{title}{{ASSESSMENT} {OF} {COMA} {AND} {IMPAIRED} {CONSCIOUSNESS:} A
+  \field{title}{{ASSESSMENT} {OF} {COMA} {AND} {IMPAIRED} {CONSCIOUSNESS}: A
   Practical Scale}
   \verb{url}
   \verb http://www.sciencedirect.com/science/article/pii/S0140673674916390
@@ -3929,81 +3111,6 @@
   \field{year}{1974}
   \field{urlday}{25}
   \field{urlmonth}{04}
-  \field{urlyear}{2014}
-\endentry
-
-\entry{whitcher_working_2011}{article}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Whitcher}{W.}%
-     {Brandon}{B.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Schmid}{S.}%
-     {Volker~J.}{V.~J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Thornton}{T.}%
-     {Andrew}{A.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{WBSVJTA1}
-  \strng{fullhash}{WBSVJTA1}
-  \field{sortinit}{W}
-  \field{number}{6}
-  \field{pages}{1‚Äì28}
-  \field{title}{Working with the {DICOM} and {NIfTI} Data Standards in R}
-  \verb{url}
-  \verb http://www.jstatsoft.org/v44/i06/paper
-  \endverb
-  \field{volume}{44}
-  \verb{file}
-  \verb [PDF] from jstatsoft.org:/Users/johnmuschelli/Library/Application Suppo
-  \verb rt/Zotero/Profiles/9yinbn16.default/zotero/storage/DEP5MGIF/Whitcher et
-  \verb  al. - 2011 - Working with the DICOM and NIfTI Data Standards in.pdf:ap
-  \verb plication/pdf
-  \endverb
-  \field{journaltitle}{Journal of Statistical Software}
-  \field{year}{2011}
-  \field{urlday}{06}
-  \field{urlmonth}{05}
-  \field{urlyear}{2014}
-\endentry
-
-\entry{wickham_ggplot2:_2009}{book}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Wickham}{W.}%
-     {Hadley}{H.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Springer}%
-  }
-  \strng{namehash}{WH1}
-  \strng{fullhash}{WH1}
-  \field{sortinit}{W}
-  \field{shorttitle}{ggplot2}
-  \field{title}{ggplot2: elegant graphics for data analysis}
-  \verb{url}
-  \verb http://books.google.com/books?hl=en&lr=&id=bes-AAAAQBAJ&oi=fnd&pg=PR5&d
-  \verb q=ggplot2:+elegant+graphics+for+data+analysis&ots=Szg7OB5MVP&sig=Bu6aBT
-  \verb CJDIDfNyLZvl_KuQDoLtw
-  \endverb
-  \verb{file}
-  \verb [PDF] from murdoch.edu.au:/Users/johnmuschelli/Library/Application Supp
-  \verb ort/Zotero/Profiles/9yinbn16.default/zotero/storage/RBEVW7SD/Wickham -
-  \verb 2009 - ggplot2 elegant graphics for data analysis.pdf:application/pdf;S
-  \verb napshot:/Users/johnmuschelli/Library/Application Support/Zotero/Profile
-  \verb s/9yinbn16.default/zotero/storage/4HW6WQ6I/books.html:text/html
-  \endverb
-  \field{year}{2009}
-  \field{urlday}{06}
-  \field{urlmonth}{05}
   \field{urlyear}{2014}
 \endentry
 
@@ -4135,22 +3242,22 @@
   \field{pages}{n/a\bibrangedash n/a}
   \field{title}{A multicenter, randomized, double-blinded, placebo-controlled
   phase {III} study of Clot Lysis Evaluation of Accelerated Resolution of
-  Intraventricular Hemorrhage ({CLEAR} {III)}}
+  Intraventricular Hemorrhage ({CLEAR} {III})}
   \verb{url}
   \verb http://onlinelibrary.wiley.com/enhanced/doi/10.1111/ijs.12097/
   \endverb
   \field{langid}{english}
   \verb{file}
-  \verb A multicenter, randomized, double‚Äêblinded, placebo‚Äêcontroll
-  \verb ed phase III study of Clot Lysis Evaluation of Accelerated Resolution o
-  \verb f Intraventricular Hemorrhage (CLEAR III) - Ziai - 2013 - International
-  \verb  Journal of Stroke - Wiley Online Library:/Users/johnmuschelli/Library/
-  \verb Application Support/Zotero/Profiles/9yinbn16.default/zotero/storage/X6C
-  \verb 4NUFN/ijs.html:text/html;Ziai et al. - 2013 - A multicenter, randomized
-  \verb , double-blinded, placebo.pdf:/Users/johnmuschelli/Library/Application
-  \verb Support/Zotero/Profiles/9yinbn16.default/zotero/storage/DXWHHTTD/Ziai e
-  \verb t al. - 2013 - A multicenter, randomized, double-blinded, placebo.pdf:a
-  \verb pplication/pdf
+  \verb A multicenter, randomized, double‐blinded, placebo‐controlled phase
+  \verb  III study of Clot Lysis Evaluation of Accelerated Resolution of Intrav
+  \verb entricular Hemorrhage (CLEAR III) - Ziai - 2013 - International Journal
+  \verb  of Stroke - Wiley Online Library:/Users/johnmuschelli/Library/Applicat
+  \verb ion Support/Zotero/Profiles/9yinbn16.default/zotero/storage/X6C4NUFN/ij
+  \verb s.html:text/html;Ziai et al. - 2013 - A multicenter, randomized, double
+  \verb -blinded, placebo.pdf:/Users/johnmuschelli/Library/Application Support/
+  \verb Zotero/Profiles/9yinbn16.default/zotero/storage/DXWHHTTD/Ziai et al. -
+  \verb 2013 - A multicenter, randomized, double-blinded, placebo.pdf:applicati
+  \verb on/pdf
   \endverb
   \field{journaltitle}{International Journal of Stroke}
   \field{month}{09}

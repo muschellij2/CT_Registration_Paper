@@ -83,6 +83,7 @@
     </requires>
     <requires type="editable">
       <file>CT_Pipeline_l.bib</file>
+      <file>extra_pubs.bib</file>
     </requires>
     <requires type="static">
       <file>biblatex.bst</file>
