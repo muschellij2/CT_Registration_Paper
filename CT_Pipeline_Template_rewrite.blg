@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013)
+This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: CT_Pipeline_Template_rewrite.aux
 The style file: biblatex.bst
@@ -13,52 +13,52 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 10560 items from 5000.
+Reallocated field_info (elt_size=4) to 10004 items from 5000.
 Database file #1: CT_Pipeline_Template_rewrite-blx.bib
 Database file #2: CT_Pipeline_l.bib
-Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Database file #3: extra_pubs.bib
-Biblatex version: 2.8
+Biblatex version: 2.9
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-You've used 40 entries,
+You've used 36 entries,
             6047 wiz_defined-function locations,
-            1580 strings with 78447 characters,
-and the built_in function-call counts, 310325 in all, are:
-= -- 6807
-> -- 33288
-< -- 2287
-+ -- 27539
-- -- 27744
-* -- 19704
-:= -- 38794
+            1525 strings with 65739 characters,
+and the built_in function-call counts, 272161 in all, are:
+= -- 5981
+> -- 29610
+< -- 1803
++ -- 24724
+- -- 24828
+* -- 16630
+:= -- 34567
 add.period$ -- 0
-call.type$ -- 40
-change.case$ -- 408
-chr.to.int$ -- 2206
-cite$ -- 78
-duplicate$ -- 25769
-empty$ -- 21012
-format.name$ -- 4678
-if$ -- 42930
+call.type$ -- 36
+change.case$ -- 266
+chr.to.int$ -- 1954
+cite$ -- 70
+duplicate$ -- 22453
+empty$ -- 18398
+format.name$ -- 4136
+if$ -- 36915
 int.to.chr$ -- 0
-int.to.str$ -- 85
+int.to.str$ -- 75
 missing$ -- 0
-newline$ -- 2694
-num.names$ -- 1640
-pop$ -- 12842
+newline$ -- 2388
+num.names$ -- 1365
+pop$ -- 11563
 preamble$ -- 1
-purify$ -- 682
+purify$ -- 551
 quote$ -- 0
-skip$ -- 9892
+skip$ -- 8517
 stack$ -- 0
-substring$ -- 10141
-swap$ -- 10216
-text.length$ -- 2120
-text.prefix$ -- 49
+substring$ -- 8985
+swap$ -- 8764
+text.length$ -- 1700
+text.prefix$ -- 5
 top$ -- 1
-type$ -- 1508
+type$ -- 1356
 warning$ -- 0
-while$ -- 2517
+while$ -- 2168
 width$ -- 0
-write$ -- 2653
+write$ -- 2351
